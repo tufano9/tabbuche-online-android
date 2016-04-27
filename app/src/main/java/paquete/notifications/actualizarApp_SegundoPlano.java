@@ -18,9 +18,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import paquete.download_from_url.descargarArchivo;
 import paquete.global.Constantes;
 import paquete.global.Funciones;
+import paquete.global.download_from_url.descargarArchivo;
 import paquete.tufanoapp.R;
 
 /**
@@ -28,9 +28,64 @@ import paquete.tufanoapp.R;
  */
 public class actualizarApp_SegundoPlano extends BroadcastReceiver
 {
-    public static NotificationCompat.Builder builder;
-    public static NotificationManager nm;
-    private static boolean CANCELADO;
+    public static  NotificationCompat.Builder builder;
+    public static  NotificationManager        nm;
+    private static boolean                    CANCELADO;
+
+    /**
+     * Descarga la aplicacion a traves de un URL proporcionado.
+     *
+     * @param URL URL donde se encuentra la app.
+     * @return True si el proceso de descarga fue exitoso, False en caso contrario.
+     */
+    private static boolean downloadApplication(String URL)
+    {
+        //Descargar el archivo..
+        ByteArrayBuffer baf = descargarArchivo.DownloadFromUrl(URL, 1);
+
+        if (baf != null) // Si es null, significa que fue cancelado..
+        {
+            //Guardarlo en la carpeta downloads del dispositivo..
+            try
+            {
+                File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), Constantes.APP_FILE_NAME);
+
+                FileOutputStream outputStream = new FileOutputStream(file);
+                outputStream.write(baf.toByteArray());
+                outputStream.close();
+                return true;
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            // La descarga fue cancelada por el usuario
+            CANCELADO = true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Instala la aplicacion descargada.
+     *
+     * @param contexto Contexto de la aplicacion.
+     */
+    private static void instalarAplicacion(Context contexto)
+    {
+        /* Instalar aplicacion */
+        Log.d("instalarAplicacion", "Instalando paquete (No funciona)   : " + Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + File.separator + Constantes.APP_FILE_NAME);
+        Log.d("instalarAplicacion", "Instalando paquete (Funciona)      : " + Environment.getExternalStorageDirectory() + Constantes.APP_FILE_LOCATION);
+        File file = new File(Environment.getExternalStorageDirectory() + Constantes.APP_FILE_LOCATION);
+        //File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + Constantes.APP_FILE_NAME);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // Se usa cuando inicias un activity desde fuera de un contexto de activity
+        contexto.startActivity(intent);
+    }
 
     @Override
     public void onReceive(Context context, Intent intent)
@@ -38,10 +93,10 @@ public class actualizarApp_SegundoPlano extends BroadcastReceiver
         Log.i("onReceive", "actualizarApp_SegundoPlano");
 
         String newer_version = intent.getStringExtra("newer_version");
-        String url = intent.getStringExtra("url");
+        String url           = intent.getStringExtra("url");
 
         String contenido = context.getResources().getString(R.string.contenido_notificacion_descargarApp);
-        String titulo = context.getResources().getString(R.string.titulo_notificacion_descargarApp);
+        String titulo    = context.getResources().getString(R.string.titulo_notificacion_descargarApp);
         titulo = titulo.replace("%", newer_version);
 
         builder = new NotificationCompat.Builder(context);
@@ -95,7 +150,7 @@ public class actualizarApp_SegundoPlano extends BroadcastReceiver
     static class descargarApk extends AsyncTask<Void, Integer, Integer>
     {
         final Context contexto;
-        final String url;
+        final String  url;
         String error;
         //final File file;
 
@@ -177,7 +232,7 @@ public class actualizarApp_SegundoPlano extends BroadcastReceiver
             }
             else
             {
-                if(CANCELADO)
+                if (CANCELADO)
                     Toast.makeText(contexto, "La descarga fue cancelada", Toast.LENGTH_LONG).show();
                 else
                 {
@@ -186,59 +241,6 @@ public class actualizarApp_SegundoPlano extends BroadcastReceiver
                 }
             }
         }
-    }
-
-    /**
-     * Descarga la aplicacion a traves de un URL proporcionado.
-     * @param URL URL donde se encuentra la app.
-     * @return True si el proceso de descarga fue exitoso, False en caso contrario.
-     */
-    private static boolean downloadApplication(String URL)
-    {
-        //Descargar el archivo..
-        ByteArrayBuffer baf = descargarArchivo.DownloadFromUrl(URL, 1);
-
-        if (baf!=null) // Si es null, significa que fue cancelado..
-        {
-            //Guardarlo en la carpeta downloads del dispositivo..
-            try
-            {
-                File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), Constantes.APP_FILE_NAME);
-
-                FileOutputStream outputStream = new FileOutputStream(file);
-                outputStream.write(baf.toByteArray());
-                outputStream.close();
-                return true;
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace();
-            }
-        }
-        else
-        {
-            // La descarga fue cancelada por el usuario
-            CANCELADO = true;
-        }
-
-        return false;
-    }
-
-    /**
-     * Instala la aplicacion descargada.
-     * @param contexto Contexto de la aplicacion.
-     */
-    private static void instalarAplicacion(Context contexto)
-    {
-        /* Instalar aplicacion */
-        Log.d("instalarAplicacion", "Instalando paquete (No funciona)   : " + Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + File.separator + Constantes.APP_FILE_NAME);
-        Log.d("instalarAplicacion", "Instalando paquete (Funciona)      : " + Environment.getExternalStorageDirectory() + Constantes.APP_FILE_LOCATION);
-        File file = new File(Environment.getExternalStorageDirectory() + Constantes.APP_FILE_LOCATION);
-        //File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + Constantes.APP_FILE_NAME);
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // Se usa cuando inicias un activity desde fuera de un contexto de activity
-        contexto.startActivity(intent);
     }
 
     // usually, subclasses of AsyncTask are declared inside the activity class.

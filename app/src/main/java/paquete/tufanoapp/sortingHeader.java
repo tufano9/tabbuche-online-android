@@ -10,7 +10,7 @@ import paquete.recycle_bitmap.RecyclingImageView;
  * Desarrollado por Gerson el 19/6/2015.
  * Metodo de apoyo para ordenar tablas con datos (Tipo web)
  */
-class sortingHeader
+public class sortingHeader
 {
     private final ArrayList<RecyclingImageView> header;
 
@@ -27,7 +27,7 @@ class sortingHeader
 
     public void normalHeader()
     {
-        Log.d("normalHeader","INIT");
+        Log.d("normalHeader", "INIT");
         for (int i = 0; i < header.size(); i++)
         {
             header.get(i).setImageResource(R.drawable.sort_both);

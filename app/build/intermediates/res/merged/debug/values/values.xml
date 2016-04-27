@@ -438,6 +438,7 @@
     <string name="create_calendar_title">Create calendar event</string>
     <string name="datos_cliente">Datos del Cliente</string>
     <string name="decline">Decline</string>
+    <string name="destacado">Destacado</string>
     <string name="detalles">Detalles</string>
     <string name="dialogo_editar_cliente">¿Esta seguro que desea editar este cliente?</string>
     <string name="direccion">Direccion:</string>

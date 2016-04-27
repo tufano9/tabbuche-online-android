@@ -1,49 +1,47 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="{relativePackage}.${activityClass}"
-    android:orientation="vertical"
     android:background="#FFFFFF"
-    android:gravity="center">
+    android:gravity="center"
+    android:orientation="vertical">
 
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:gravity="center"
-        android:baselineAligned="false"
         android:layout_marginTop="15dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/horizontalScrollView"
             android:layout_weight="10">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
 
                 <com.devspark.robototextview.widget.RobotoTextView
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/nombre_producto"
-                    android:gravity="center"
-                    android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
-                    app:fontFamily="roboto"
-                    app:textWeight="bold"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    android:text="@string/nombre_producto"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:fontFamily="roboto"
+                    app:textWeight="bold"/>
 
                 <!--<TextView
                     android:layout_width="wrap_content"
@@ -58,16 +56,16 @@
                 <com.devspark.robototextview.widget.RobotoTextView
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/galeria_producto_nombre"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:id="@+id/galeria_producto_nombre"
-                    android:gravity="center"
-                    android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
-                    app:fontFamily="roboto"
-                    app:textWeight="medium"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
                     android:textSize="18sp"
-                    android:textStyle="normal"/>
+                    android:textStyle="normal"
+                    app:fontFamily="roboto"
+                    app:textWeight="medium"/>
 
                 <!--<TextView
                     android:layout_width="wrap_content"
@@ -83,14 +81,14 @@
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/color_producto"
-                    android:gravity="center"
-                    android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
-                    app:fontFamily="roboto"
-                    app:textWeight="bold"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:text="@string/color_producto"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:fontFamily="roboto"
+                    app:textWeight="bold"/>
 
                 <!--<TextView
                     android:layout_width="wrap_content"
@@ -105,16 +103,16 @@
                 <com.devspark.robototextview.widget.RobotoTextView
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/galeria_producto_color"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:id="@+id/galeria_producto_color"
-                    android:gravity="center"
-                    android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
-                    app:fontFamily="roboto"
-                    app:textWeight="medium"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
                     android:textSize="18sp"
-                    android:textStyle="normal"/>
+                    android:textStyle="normal"
+                    app:fontFamily="roboto"
+                    app:textWeight="medium"/>
 
                 <!--<TextView
                     android:layout_width="wrap_content"
@@ -151,14 +149,14 @@
                     xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/cantidad_bulto_producto"
-                    android:gravity="center"
-                    android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
-                    app:fontFamily="roboto"
-                    app:textWeight="bold"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:text="@string/cantidad_bulto_producto"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    app:fontFamily="roboto"
+                    app:textWeight="bold"/>
 
                 <!--<TextView
                     android:layout_width="wrap_content"
@@ -172,26 +170,26 @@
                 <com.devspark.robototextview.widget.RobotoTextView
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/galeria_producto_pares"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:id="@+id/galeria_producto_pares"
-                    android:gravity="center"
-                    android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
-                    app:fontFamily="roboto"
-                    app:textWeight="medium"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
                     android:textSize="18sp"
-                    android:textStyle="normal"/>
+                    android:textStyle="normal"
+                    app:fontFamily="roboto"
+                    app:textWeight="medium"/>
 
                 <Button
+                    android:id="@+id/btn_whatsapp"
+                    style="@style/ButtonText"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:background="@drawable/boton_azul"
-                    style="@style/ButtonText"
-                    android:text="@string/btn_whatsapp"
-                    android:layout_marginStart="15dp"
                     android:layout_marginLeft="15dp"
-                    android:id="@+id/btn_whatsapp" />
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/boton_azul"
+                    android:text="@string/btn_whatsapp"/>
 
                 <!--<TextView
                     android:layout_width="wrap_content"
@@ -205,10 +203,10 @@
         </HorizontalScrollView>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_weight="2">
+            android:layout_weight="2"
+            android:orientation="horizontal">
 
         <!--<com.devspark.robototextview.widget.RobotoCheckBox
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -224,24 +222,32 @@
             android:textSize="18sp"
             android:textStyle="normal"/>-->
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/check_pedido"
-            android:id="@+id/checkBox_galeria"
-            style="@style/texto_galeria_2"
-            android:layout_gravity="right"
-            android:gravity="end" />
+            <CheckBox
+                android:id="@+id/cb_destacado"
+                style="@style/texto_galeria_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/destacado"/>
+
+            <CheckBox
+                android:id="@+id/checkBox_galeria"
+                style="@style/texto_galeria_2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="end"
+                android:text="@string/check_pedido"/>
+
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
+        android:layout_weight="15"
         android:baselineAligned="false"
-        android:layout_weight="15">
+        android:orientation="horizontal">
 
         <FrameLayout
             android:id="@+id/FrameLayout_1"
@@ -263,24 +269,24 @@
 
             <view
                 android:id="@+id/imagen_principal"
+                class="paquete.recycle_bitmap.RecyclingImageView"
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
-                android:background="#FFFFFF"
-                android:src="@android:drawable/ic_menu_gallery"
-                android:contentDescription="@string/imagen"
                 android:layout_gravity="center"
                 android:adjustViewBounds="false"
+                android:background="#FFFFFF"
+                android:contentDescription="@string/imagen"
                 android:cropToPadding="false"
-                class="paquete.recycle_bitmap.RecyclingImageView" />
+                android:src="@android:drawable/ic_menu_gallery"/>
 
         </FrameLayout>
 
         <ListView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/ListView_listado"
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center_horizontal">
+                  android:id="@+id/ListView_listado"
+                  android:layout_width="200dp"
+                  android:layout_height="match_parent"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_weight="1">
         </ListView>
     </LinearLayout>
 

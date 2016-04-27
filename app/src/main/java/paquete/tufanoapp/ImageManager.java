@@ -34,7 +34,7 @@ public class ImageManager extends Activity
             URLConnection ucon = url.openConnection();
 
             /* Define InputStreams to read from the URLConnection. */
-            InputStream is = ucon.getInputStream();
+            InputStream         is  = ucon.getInputStream();
             BufferedInputStream bis = new BufferedInputStream(is);
 
             int fileLength = ucon.getContentLength();

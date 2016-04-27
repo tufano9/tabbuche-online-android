@@ -11,32 +11,55 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import static paquete.database.creates.CreateSentences.*;
-import static paquete.database.inserts.DefaultInserts.*;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_ACTUALIZACIONES_CLIENTES;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_ACTUALIZACIONES_FUNCIONES;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_ACTUALIZACIONES_GENERALES;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_ACTUALIZACIONES_LINEAS;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_ACTUALIZACIONES_MODELOS;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_ACTUALIZACIONES_PEDIDOS;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_ACTUALIZACIONES_PRODUCTOS;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_BULTOS;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_CLIENTES;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_COLORES;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_FUNCIONES;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_LINEA;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_MATERIALES;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_MODELO;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_PEDIDOS;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_PEDIDOS_DETALLES;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_PEDIDOS_LOCALES;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_PEDIDOS_LOCALES_DETALLES;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_PRIMER_LOGIN;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_PRODUCTO;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_PRODUCTOS_PEDIDOS;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_PRODUCTOS_PEDIDOS_EDITAR;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_PRODUCTO_SELECCIONADO;
+import static paquete.database.creates.CreateSentences.CREAR_TABLA_USUARIO;
+import static paquete.database.inserts.DefaultInserts.INSERTAR_TABLA_ACTUALIZACIONES_GENERALES;
+import static paquete.database.inserts.DefaultInserts.INSERTAR_TABLA_PRIMER_LOGIN;
 
 public class DBHelper extends SQLiteOpenHelper
 {
+    private static final String DB_NAME    = "tufano_BD.db";
+    private final static int    DB_VERSION = 15;
     //Ruta por defecto de las bases de datos en el sistema Android
     //private static String DB_PATH =  "/data/data/paquete.tufanoapp/databases/";
     private static String DB_RUTA;
-    private static final String DB_NAME = "tufano_BD.db";
-    private SQLiteDatabase myDataBase;
-    private final Context myContext;
     private static DBHelper mInstance = null;
-    private final static int DB_VERSION = 14;
+    private final Context        myContext;
+    private       SQLiteDatabase myDataBase;
 
     /**
      * Constructor
      * Toma referencia hacia el contexto de la aplicación que lo invoca para poder acceder a los
      * 'assets' y 'resources' de la aplicación.
-     *
+     * <p/>
      * Crea un objeto DBOpenHelper que nos permitirá controlar la apertura de la base de datos.
-     *
+     * <p/>
      * Constructor should be private to prevent direct instantiation. Make call to static factory
      * method "getInstance()" instead.
      *
      * @param context Contexto de la activity
-     *
      */
     private DBHelper(Context context)
     {
@@ -112,6 +135,10 @@ public class DBHelper extends SQLiteOpenHelper
 
         //------------------------------------------------------------------------------------------
         // DB Version 14: Editada la columna ID_COLOR en la tabla PRODUCTOS a STRING
+
+        //------------------------------------------------------------------------------------------
+        // DB Version 15: Agregada la columna CN_DESTACADO_PRODUCTO en la tabla PRODUCTOS
+
     }
 
     @Override
@@ -127,24 +154,29 @@ public class DBHelper extends SQLiteOpenHelper
     /**
      * Crea una base de datos vacía en el sistema y la reescribe con nuestro fichero de base de datos.
      */
-    private void createDataBase() {
+    private void createDataBase()
+    {
         boolean dbExist = checkDataBase();
         Log.i("DBHelper", "createDataBase!");
 
-        if (dbExist) {
+        if (dbExist)
+        {
             //la base de datos existe y no hacemos nada.
             Log.i("DBHelper", "dbExist!");
         }
-        else {
+        else
+        {
             //Llamando a este método se crea la base de datos vacía en la ruta por defecto del sistema
             //de nuestra aplicación por lo que podremos sobreescribirla con nuestra base de datos.
             this.getReadableDatabase();
             Log.i("DBHelper", "!dbExist!");
 
-            try {
+            try
+            {
                 copyDataBase();
             }
-            catch (IOException e) {
+            catch (IOException e)
+            {
                 throw new Error("Error copiando Base de Datos");
             }
         }
@@ -155,18 +187,22 @@ public class DBHelper extends SQLiteOpenHelper
      *
      * @return true si existe, false si no existe
      */
-    private boolean checkDataBase() {
+    private boolean checkDataBase()
+    {
         Log.i("checkDataBase", "INTRO");
         SQLiteDatabase checkDB = null;
 
-        try {
+        try
+        {
             //String myPath = DB_PATH + DB_NAME;
             checkDB = SQLiteDatabase.openDatabase(DB_RUTA, null, SQLiteDatabase.OPEN_READONLY);
         }
-        catch (SQLiteException e) {
+        catch (SQLiteException e)
+        {
             //si llegamos aqui es porque la base de datos no existe todavía.
         }
-        if (checkDB != null) {
+        if (checkDB != null)
+        {
             checkDB.close();
         }
         return checkDB != null;
@@ -177,7 +213,8 @@ public class DBHelper extends SQLiteOpenHelper
      * base de datos en la carpeta de sistema, desde dónde podremos acceder a ella.
      * Esto se hace con bytestream.
      */
-    private void copyDataBase() throws IOException {
+    private void copyDataBase() throws IOException
+    {
         Log.i("copyDataBase", "INTRO");
         //Abrimos el fichero de base de datos como entrada
         InputStream myInput = myContext.getAssets().open(DB_NAME);
@@ -190,9 +227,10 @@ public class DBHelper extends SQLiteOpenHelper
 
         //Transferimos los bytes desde el fichero de entrada al de salida
         byte[] buffer = new byte[1024];
-        int length;
+        int    length;
 
-        while ((length = myInput.read(buffer)) > 0) {
+        while ((length = myInput.read(buffer)) > 0)
+        {
             myOutput.write(buffer, 0, length);
         }
 
@@ -203,7 +241,8 @@ public class DBHelper extends SQLiteOpenHelper
     }
 
     @SuppressWarnings("unused")
-    public void open() {
+    public void open()
+    {
         //Abre la base de datos
         createDataBase();
         //String myPath = DB_PATH + DB_NAME;
@@ -211,7 +250,8 @@ public class DBHelper extends SQLiteOpenHelper
     }
 
     @Override
-    public synchronized void close() {
+    public synchronized void close()
+    {
         if (myDataBase != null)
             myDataBase.close();
         super.close();

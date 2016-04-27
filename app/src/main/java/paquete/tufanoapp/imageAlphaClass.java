@@ -25,36 +25,6 @@ public class imageAlphaClass
     }
 
     /**
-     * Agrega una linea a la clase.
-     *
-     * @param c Imagen de la linea.
-     */
-    public void agregar_linea(RecyclingImageView c)
-    {
-        array_lineas.add(c);
-    }
-
-    /**
-     * Agrega un modelo a la clase.
-     *
-     * @param c Imagen del modelo.
-     */
-    public void agregar_modelo(RecyclingImageView c)
-    {
-        array_modelos.add(c);
-    }
-
-    /**
-     * Agrega un producto a la clase.
-     *
-     * @param c Imagen del producto.
-     */
-    public void agregar_producto(RecyclingImageView c)
-    {
-        array_productos.add(c);
-    }
-
-    /**
      * Aplica un factor Alpha a todas las imagenes de las lineas que existan en esta clase. (Las
      * vuelve mas transparentes y claras)
      */
@@ -82,5 +52,35 @@ public class imageAlphaClass
     {
         for (int i = 0; i < array_productos.size(); i++)
             array_productos.get(i).setAlpha(Constantes.IMAGE_ALPHA);
+    }
+
+    /**
+     * Agrega una linea a la clase.
+     *
+     * @param c Imagen de la linea.
+     */
+    public void agregar_linea(RecyclingImageView c)
+    {
+        array_lineas.add(c);
+    }
+
+    /**
+     * Agrega un modelo a la clase.
+     *
+     * @param c Imagen del modelo.
+     */
+    public void agregar_modelo(RecyclingImageView c)
+    {
+        array_modelos.add(c);
+    }
+
+    /**
+     * Agrega un producto a la clase.
+     *
+     * @param c Imagen del producto.
+     */
+    public void agregar_producto(RecyclingImageView c)
+    {
+        array_productos.add(c);
     }
 }

@@ -18,14 +18,15 @@ public class Funciones_Pedidos
 {
     /**
      * Genera una cabecera de una tabla con la numeracion.
+     *
      * @param numeracion Numeracion para rellenar la tabla.
-     * @param contexto Contexto de la actividad.
-     * @param typeface Estilo de la Fuente.
+     * @param contexto   Contexto de la actividad.
+     * @param typeface   Estilo de la Fuente.
      * @return Cabecera generada.
      */
     public static TableLayout agregarCabecera_numeracion(String numeracion, Context contexto, Typeface typeface)
     {
-        TableRow fila;
+        TableRow       fila;
         RobotoTextView txtNombre;
 
         TableLayout.LayoutParams tableParams = new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT);
@@ -59,14 +60,15 @@ public class Funciones_Pedidos
 
     /**
      * Genera una tabla (Contenido) con la numeracion de algun producto.
+     *
      * @param numeracion Numeracion para rellenar la tabla.
-     * @param contexto Contexto de la actividad.
-     * @param typeface Estilo de la Fuente.
+     * @param contexto   Contexto de la actividad.
+     * @param typeface   Estilo de la Fuente.
      * @return Cabecera generada.
      */
     public static TableLayout agregarFilasTabla_numeracion(String numeracion, Context contexto, Typeface typeface)
     {
-        TableRow fila;
+        TableRow       fila;
         RobotoTextView txtNombre;
 
         TableLayout.LayoutParams tableParams = new TableLayout.LayoutParams(TableLayout.LayoutParams.WRAP_CONTENT, TableLayout.LayoutParams.WRAP_CONTENT);

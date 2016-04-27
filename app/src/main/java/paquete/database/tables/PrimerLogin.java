@@ -2,7 +2,7 @@ package paquete.database.tables;
 
 /**
  * Desarrollado por Gerson el 6/4/2016.
- *
+ * <p/>
  * Clase que contiene los campos necesarios para la tabla "Primer_Login"
  *
  * @author Gerson Figuera.C

@@ -1,9 +1,9 @@
 package paquete.tufanoapp;
 
-class Item_objct
+public class Item_objct
 {
     private final String titulo;
-    private final int icono;
+    private final int    icono;
 
     public Item_objct(String title, int icon)
     {

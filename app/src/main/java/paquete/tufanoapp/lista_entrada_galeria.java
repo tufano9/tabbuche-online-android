@@ -1,6 +1,6 @@
 package paquete.tufanoapp;
 
-class lista_entrada_galeria
+public class lista_entrada_galeria
 {
     //private final int idImagen;
     private final String textoDebajo, idProducto;

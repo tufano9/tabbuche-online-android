@@ -22,15 +22,15 @@ import java.util.ArrayList;
 
 class Httppostaux
 {
-    private InputStream is = null;
-    private String result = "";
+    private InputStream is     = null;
+    private String      result = "";
 
-    public JSONArray getserverdata(ArrayList<NameValuePair> parameters, String urlwebserver )
+    public JSONArray getserverdata(ArrayList<NameValuePair> parameters, String urlwebserver)
     {
         //conecta via http y envia un post.
-        httppostconnect(parameters,urlwebserver);
+        httppostconnect(parameters, urlwebserver);
 
-        if (is!=null)
+        if (is != null)
         {
             //si obtuvo una respuesta
             getpostresponse();
@@ -38,7 +38,7 @@ class Httppostaux
         }
         else
         {
-            Log.e("ERROR","getserverdata: InputStream = null");
+            Log.e("ERROR", "getserverdata: InputStream = null");
             return null;
         }
     }
@@ -48,17 +48,17 @@ class Httppostaux
         try
         {
             HttpClient httpclient = new DefaultHttpClient();
-            HttpPost httppost = new HttpPost(urlwebserver);
+            HttpPost   httppost   = new HttpPost(urlwebserver);
             httppost.setEntity(new UrlEncodedFormEntity(parametros));
             //ejecuto peticion enviando datos por POST
             HttpResponse response = httpclient.execute(httppost);
-            HttpEntity entity = response.getEntity();
+            HttpEntity   entity   = response.getEntity();
             is = entity.getContent();
             //EntityUtils.consume(entity);
         }
-        catch(Exception e)
+        catch (Exception e)
         {
-            Log.e("log_tag", "Error in http connection "+e.toString());
+            Log.e("log_tag", "Error in http connection " + e.toString());
         }
     }
 
@@ -67,10 +67,10 @@ class Httppostaux
         //Convierte respuesta a String
         try
         {
-            String ENCODING = "UTF-8"; //ISO-8859-1
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is, ENCODING),8);
-            StringBuilder sb = new StringBuilder();
-            String line;
+            String         ENCODING = "UTF-8"; //ISO-8859-1
+            BufferedReader reader   = new BufferedReader(new InputStreamReader(is, ENCODING), 8);
+            StringBuilder  sb       = new StringBuilder();
+            String         line;
 
             while ((line = reader.readLine()) != null)
             {
@@ -78,12 +78,12 @@ class Httppostaux
             }
 
             is.close();
-            result=sb.toString();
-            Log.e("getpostresponse"," result= "+sb.toString());
+            result = sb.toString();
+            Log.e("getpostresponse", " result= " + sb.toString());
         }
-        catch(Exception e)
+        catch (Exception e)
         {
-            Log.e("log_tag", "Error converting result "+e.toString());
+            Log.e("log_tag", "Error converting result " + e.toString());
         }
     }
 
@@ -94,9 +94,9 @@ class Httppostaux
         {
             return new JSONArray(result);
         }
-        catch(JSONException e)
+        catch (JSONException e)
         {
-            Log.e("log_tag", "Error parsing data "+e.toString());
+            Log.e("log_tag", "Error parsing data " + e.toString());
             return null;
         }
     }

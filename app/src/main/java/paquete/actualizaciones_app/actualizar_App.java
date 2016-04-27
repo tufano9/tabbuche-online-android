@@ -22,46 +22,150 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import paquete.Droidlogin.library.Httppostaux;
-import paquete.download_from_url.descargarArchivo;
 import paquete.global.Constantes;
-import paquete.comparing_versions.DefaultArtifactVersion;
 import paquete.global.Funciones;
+import paquete.global.comparing_versions.DefaultArtifactVersion;
+import paquete.global.download_from_url.descargarArchivo;
+import paquete.global.library.Httppostaux;
 import paquete.tufanoapp.R;
 
 /**
  * Desarrollado por Gerson el 21/10/2015.
- *
+ * <p/>
  * Clase encargada de verificar actualizaciones de la app, descargarlas e instalarlas.
  */
 public class actualizar_App
 {
-    private final Context contexto;
     public static ProgressDialog pDialog;
-    private final Httppostaux post = new Httppostaux();
-    private String version_web = "";
+    private final Context        contexto;
+    private final Httppostaux post        = new Httppostaux();
+    private       String      version_web = "";
     private String URL;
     private String version_actual = "";
     private boolean CANCELADO;
 
     /**
      * Constructor de la clase
-     * @param contexto Contexto de la aplicacion.
+     *
+     * @param contexto       Contexto de la aplicacion.
      * @param version_actual Version actual de la app, por ej 2.1.25
      */
     public actualizar_App(Context contexto, String version_actual)
     {
         Log.d("actualizarApp", "FragmentOpciones");
         this.contexto = contexto;
-        this.version_actual =version_actual;
+        this.version_actual = version_actual;
         new buscarVersionWeb().execute();
+    }
+
+    /**
+     * Used for comparing different versions of software
+     *
+     * @param local_version_string  the version name of the app installed on the system
+     * @param online_version_string the version name of the app released on the Google Play
+     * @return true if a the online_version_string is greater than the local_version_string
+     */
+    private static boolean newer_version_available(String local_version_string, String online_version_string)
+    {
+        DefaultArtifactVersion local_version_mvn  = new DefaultArtifactVersion(local_version_string);
+        DefaultArtifactVersion online_version_mvn = new DefaultArtifactVersion(online_version_string);
+        return local_version_mvn.compareTo(online_version_mvn) == -1 && !local_version_string.equals("");
+    }
+
+    /**
+     * Consulta la version mas actualizada de la aplicacion en la web.
+     *
+     * @return La ultima version estable de la aplicacion cargada en la web.
+     */
+    private String consultarVersionWeb()
+    {
+        Log.d("Opciones", "consultarVersionWeb");
+
+        ArrayList<NameValuePair> postparameters2send = new ArrayList<>();
+        String                   URL                 = Constantes.IP_Server + "consultar_ult_version.php";
+        JSONArray                jdata               = post.getserverdata(postparameters2send, URL);
+
+        if (jdata != null && jdata.length() > 0)
+        {
+            JSONObject json_data;
+            try
+            {
+                json_data = jdata.getJSONObject(0);
+                this.version_web = json_data.getString("version");
+                this.URL = json_data.getString("url");
+                return this.version_web;
+            }
+            catch (JSONException e)
+            {
+                Log.e("Error consultarVers", "" + e);
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            Log.e("JSON  ", "ERROR: NO DATA");
+            return null;
+        }
+        return null;
+    }
+
+    /**
+     * Descarga un archivo desde el internet, en este caso la aplicacion que se va a instalar.
+     *
+     * @return True si la aplicacion/archivo fue descargado exitosamente, False en caso contrario.
+     */
+    private boolean downloadApplication()
+    {
+        //Descargar el archivo..
+        ByteArrayBuffer baf = descargarArchivo.DownloadFromUrl(URL, 2);
+
+        if (baf != null) // Si es null, significa que fue cancelado..
+        {
+            //Guardarlo en la carpeta downloads del dispositivo..
+            try
+            {
+                File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), Constantes.APP_FILE_NAME);
+
+                FileOutputStream outputStream = new FileOutputStream(file);
+                outputStream.write(baf.toByteArray());
+                outputStream.close();
+                return true;
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            // La descarga fue cancelada por el usuario
+            CANCELADO = true;
+        }
+
+        return false;
+    }
+
+    /**
+     * Instala la aplicacion una vez fue descargada.
+     */
+    private void instalarAplicacion()
+    {
+        Log.d("instalarAplicacion", "Instalando paquete (No funciona)   : " + Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + File.separator + Constantes.APP_FILE_NAME);
+        Log.d("instalarAplicacion", "Instalando paquete (Funciona)      : " + Environment.getExternalStorageDirectory() + Constantes.APP_FILE_LOCATION);
+
+        File file = new File(Environment.getExternalStorageDirectory() + Constantes.APP_FILE_LOCATION);
+        //File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + Constantes.APP_FILE_NAME);
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
+        contexto.startActivity(intent);
     }
 
     /**
      * Clase de consulta en segundo plano la ultima version disponible de la aplicacion, si hay una
      * version mas nueva, avisa al usuario y lo invita a descargarla.
      */
-    private class buscarVersionWeb extends AsyncTask< String, String, String >
+    private class buscarVersionWeb extends AsyncTask<String, String, String>
     {
         @Override
         protected void onPreExecute()
@@ -79,7 +183,7 @@ public class actualizar_App
         {
             try
             {
-                if (consultarVersionWeb()!=null )
+                if (consultarVersionWeb() != null)
                     return "ok";
                 else
                     return "err";
@@ -87,7 +191,7 @@ public class actualizar_App
             catch (RuntimeException e)
             {
                 e.printStackTrace();
-                return ""+e;
+                return "" + e;
             }
         }
 
@@ -104,7 +208,7 @@ public class actualizar_App
 
                     AlertDialog.Builder dialog = new AlertDialog.Builder(contexto);
 
-                    dialog.setTitle( contexto.getResources().getString(R.string.actualizar_app_dialogo5) + " (Version "+version_web+")");
+                    dialog.setTitle(contexto.getResources().getString(R.string.actualizar_app_dialogo5) + " (Version " + version_web + ")");
                     dialog.setMessage(R.string.actualizar_app_dialogo4);
                     dialog.setCancelable(false);
                     dialog.setPositiveButton("Si", new DialogInterface.OnClickListener()
@@ -159,51 +263,15 @@ public class actualizar_App
             else
             {
                 Toast.makeText(contexto, "Ha ocurrido un error al consultar los datos.." + result, Toast.LENGTH_LONG).show();
-                Log.d("ERROR",result);
+                Log.d("ERROR", result);
             }
         }
-    }
-
-    /**
-     * Consulta la version mas actualizada de la aplicacion en la web.
-     * @return La ultima version estable de la aplicacion cargada en la web.
-     */
-    private String consultarVersionWeb()
-    {
-        Log.d("Opciones", "consultarVersionWeb");
-
-        ArrayList<NameValuePair> postparameters2send = new ArrayList<>();
-        String URL = Constantes.IP_Server + "consultar_ult_version.php";
-        JSONArray jdata = post.getserverdata(postparameters2send, URL);
-
-        if (jdata!=null && jdata.length() > 0)
-        {
-            JSONObject json_data;
-            try
-            {
-                json_data = jdata.getJSONObject(0);
-                this.version_web = json_data.getString("version");
-                this.URL = json_data.getString("url");
-                return this.version_web;
-            }
-            catch (JSONException e)
-            {
-                Log.e("Error consultarVers",""+e);
-                e.printStackTrace();
-            }
-        }
-        else
-        {
-            Log.e("JSON  ", "ERROR: NO DATA");
-            return null;
-        }
-        return null;
     }
 
     /**
      * Clase para descargar en 2do plano la apk de la aplicacion actualizada desde la web.
      */
-    private class descargarApk extends AsyncTask< String, String, String >
+    private class descargarApk extends AsyncTask<String, String, String>
     {
         @Override
         protected void onPreExecute()
@@ -241,7 +309,7 @@ public class actualizar_App
             catch (RuntimeException e)
             {
                 e.printStackTrace();
-                return ""+e;
+                return "" + e;
             }
         }
 
@@ -255,11 +323,11 @@ public class actualizar_App
             }
             else
             {
-                if(CANCELADO)
+                if (CANCELADO)
                     Toast.makeText(contexto, "La descarga fue cancelada", Toast.LENGTH_LONG).show();
                 else
                     Toast.makeText(contexto, "Ha ocurrido un error al descargar la aplicacion.." + result, Toast.LENGTH_LONG).show();
-                Log.d("ERROR",result);
+                Log.d("ERROR", result);
             }
         }
 
@@ -273,72 +341,8 @@ public class actualizar_App
             pDialog.setMax(100);
             pDialog.setProgress(0);
 
-            if(CANCELADO)
+            if (CANCELADO)
                 Toast.makeText(contexto, "La descarga fue cancelada", Toast.LENGTH_LONG).show();
         }
-    }
-
-    /**
-     * Descarga un archivo desde el internet, en este caso la aplicacion que se va a instalar.
-     * @return True si la aplicacion/archivo fue descargado exitosamente, False en caso contrario.
-     */
-    private boolean downloadApplication()
-    {
-        //Descargar el archivo..
-        ByteArrayBuffer baf = descargarArchivo.DownloadFromUrl(URL, 2);
-
-        if (baf!=null) // Si es null, significa que fue cancelado..
-        {
-            //Guardarlo en la carpeta downloads del dispositivo..
-            try
-            {
-                File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), Constantes.APP_FILE_NAME);
-
-                FileOutputStream outputStream = new FileOutputStream(file);
-                outputStream.write(baf.toByteArray());
-                outputStream.close();
-                return true;
-            }
-            catch (IOException e)
-            {
-                e.printStackTrace();
-            }
-        }
-        else
-        {
-            // La descarga fue cancelada por el usuario
-            CANCELADO = true;
-        }
-
-        return false;
-    }
-
-    /**
-     * Used for comparing different versions of software
-     * @param local_version_string the version name of the app installed on the system
-     * @param online_version_string the version name of the app released on the Google Play
-     * @return true if a the online_version_string is greater than the local_version_string
-     */
-    private static boolean newer_version_available(String local_version_string, String online_version_string)
-    {
-        DefaultArtifactVersion local_version_mvn = new DefaultArtifactVersion(local_version_string);
-        DefaultArtifactVersion online_version_mvn = new DefaultArtifactVersion(online_version_string);
-        return local_version_mvn.compareTo(online_version_mvn) == -1 && !local_version_string.equals("");
-    }
-
-    /**
-     * Instala la aplicacion una vez fue descargada.
-     */
-    private void instalarAplicacion()
-    {
-        Log.d("instalarAplicacion","Instalando paquete (No funciona)   : "+Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + File.separator + Constantes.APP_FILE_NAME);
-        Log.d("instalarAplicacion","Instalando paquete (Funciona)      : "+Environment.getExternalStorageDirectory() + Constantes.APP_FILE_LOCATION);
-
-        File file = new File(Environment.getExternalStorageDirectory() + Constantes.APP_FILE_LOCATION);
-        //File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + Constantes.APP_FILE_NAME);
-
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
-        contexto.startActivity(intent);
     }
 }

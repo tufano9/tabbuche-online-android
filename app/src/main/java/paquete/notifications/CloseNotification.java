@@ -6,12 +6,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import paquete.download_from_url.descargarArchivo;
 import paquete.global.Constantes;
+import paquete.global.download_from_url.descargarArchivo;
 
 /**
  * Desarrollado por Gerson el 30/5/2015.
- *
+ * <p/>
  * Clase para cerrar una notificacion.
  */
 public class CloseNotification extends BroadcastReceiver
@@ -20,10 +20,10 @@ public class CloseNotification extends BroadcastReceiver
     public void onReceive(Context context, Intent intent)
     {
         Log.v("onReceive", "CloseNotification");
-        NotificationManager nm = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
-        int id_notification = intent.getIntExtra("notificationID",0);
+        NotificationManager nm              = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        int                 id_notification = intent.getIntExtra("notificationID", 0);
         nm.cancel(id_notification);
-        if(id_notification== Constantes.NOTIFICACIONID2)
+        if (id_notification == Constantes.NOTIFICACIONID2)
         {
             Log.v("onReceive", "CancelNotification2");
             descargarArchivo.cancelar();

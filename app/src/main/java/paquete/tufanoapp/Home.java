@@ -23,24 +23,30 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import paquete.adapters.NavigationAdapter;
 import paquete.database.DBAdapter;
 import paquete.global.Funciones;
+import paquete.tufanoapp.cliente.FragmentCliente;
+import paquete.tufanoapp.muestrario.FragmentMuestrario;
+import paquete.tufanoapp.opciones.FragmentOpciones;
+import paquete.tufanoapp.pedido.FragmentPedido_Menu;
+import paquete.tufanoapp.perfil.FragmentPerfil;
 
 @SuppressWarnings("deprecation")
 @SuppressLint({"InflateParams", "Recycle"})
 public class Home extends Activity
 {
-    private String[] titulos;
-    private ActionBarDrawerToggle mDrawerToggle;
-    private DrawerLayout NavDrawerLayout;
-    public static ListView NavList;
+    public static ListView              NavList;
+    public static String                TAG;
+    private       String[]              titulos;
+    private       ActionBarDrawerToggle mDrawerToggle;
+    private       DrawerLayout          NavDrawerLayout;
     private String ci = "";
-    private String id_vendedor;
-    public static String TAG;
-    private CharSequence mTitle;
+    private String                id_vendedor;
+    private CharSequence          mTitle;
     private ArrayList<Item_objct> navItms;
-    private Context contexto;
-    private String nombre_vendedor, apellido_vendedor, email_vendedor;
+    private Context               contexto;
+    private String                nombre_vendedor, apellido_vendedor, email_vendedor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -148,7 +154,7 @@ public class Home extends Activity
     private void initTextView(View header)
     {
         TextView online_user = (TextView) header.findViewById(R.id.online_user);
-        String user_name = String.format(getResources().getString(R.string.user_name), nombre_vendedor, apellido_vendedor);
+        String   user_name   = String.format(getResources().getString(R.string.user_name), nombre_vendedor, apellido_vendedor);
         online_user.setText(user_name);
 
         TextView online_email = (TextView) header.findViewById(R.id.online_email);
@@ -222,7 +228,7 @@ public class Home extends Activity
         {
             //Iba a partir de 1 antes de la modificacion..
             /*case "Home":
-	            fragment = new FragmentHome();
+                fragment = new FragmentHome();
 	            break;*/
             case "Muestrario":
                 fragment = new FragmentMuestrario();

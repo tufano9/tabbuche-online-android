@@ -31,23 +31,23 @@ import paquete.global.Constantes;
 import paquete.global.Funciones;
 import paquete.horizontal_list_view.HorizontalListView;
 import paquete.recycle_bitmap.RecyclingImageView;
-import paquete.tufanoapp.FragmentPedido_Editar;
 import paquete.tufanoapp.R;
 import paquete.tufanoapp.imageAlphaClass;
+import paquete.tufanoapp.pedido.FragmentPedido_Editar;
 
 /**
  * Desarrollado por Gerson el 18/6/2015.
  */
 public class DialogoAgregar_Productos_Editar extends DialogFragment
 {
-    private Context contexto;
-    private View rootView;
-    private static int num_checks;
+    private static int               num_checks;
     private static ArrayList<String> ids_agregar;
-    private String id_pedido, ci, estatus;
-    private DBAdapter manager;
+    private        Context           contexto;
+    private        View              rootView;
+    private        String            id_pedido, ci, estatus;
+    private DBAdapter       manager;
     private imageAlphaClass imagenAlpha;
-    private String[] ids_lineas,nombres_lineas;
+    private String[]        ids_lineas, nombres_lineas;
 
     @SuppressLint("InflateParams")
     @Override
@@ -60,7 +60,7 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
 
         imagenAlpha = new imageAlphaClass();
         ids_agregar = new ArrayList<>();
-        num_checks=0;
+        num_checks = 0;
         rootView = inflater.inflate(R.layout.dialogo_agregar_productos, null);
 
         getExtrasVar();
@@ -69,6 +69,7 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
 
     /**
      * Inicializa el dialogo de alerta
+     *
      * @return
      */
     private Dialog initAlertDialog()
@@ -81,8 +82,10 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
                 .setTitle(R.string.seleccione_productos_agregar)
                 .setCancelable(true)
                 .setIcon(android.R.drawable.ic_menu_close_clear_cancel)
-                .setNegativeButton(R.string.btn_cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
+                .setNegativeButton(R.string.btn_cancel, new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog, int id)
+                    {
                         DialogoAgregar_Productos_Editar.this.getDialog().cancel();
                     }
                 });
@@ -118,7 +121,7 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
                 if (num_checks > 0)
                 {
                     AlertDialog.Builder dialogo = new AlertDialog.Builder(contexto);
-                    String mensaje = contexto.getResources().getString(R.string.confirmacion_agregar_producto);
+                    String              mensaje = contexto.getResources().getString(R.string.confirmacion_agregar_producto);
                     mensaje = mensaje.replace("%", "" + num_checks);
 
                     dialogo.setMessage(mensaje)
@@ -126,7 +129,8 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
                             .setIcon(android.R.drawable.ic_menu_close_clear_cancel)
                             .setTitle(R.string.pedido_btn_6);
 
-                    dialogo.setPositiveButton("Agregar Productos", new DialogInterface.OnClickListener() {
+                    dialogo.setPositiveButton("Agregar Productos", new DialogInterface.OnClickListener()
+                    {
 
                         @Override
                         public void onClick(DialogInterface dialogo2, int which)
@@ -137,9 +141,9 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
 
                             dialog.dismiss();
 
-                            String TAG = "fragment_pedido";
+                            String   TAG      = "fragment_pedido";
                             Fragment fragment = new FragmentPedido_Editar();
-                            Bundle args = new Bundle();
+                            Bundle   args     = new Bundle();
                             args.putString("id_pedido", id_pedido);
                             args.putString("cedula", ci);
                             args.putString("estatus", estatus);
@@ -151,9 +155,11 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
                         }
                     });
 
-                    dialogo.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    dialogo.setNegativeButton("Cancelar", new DialogInterface.OnClickListener()
+                    {
                         @Override
-                        public void onClick(DialogInterface dialog, int which) {
+                        public void onClick(DialogInterface dialog, int which)
+                        {
                             dialog.cancel();
                         }
                     });
@@ -184,17 +190,16 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
     /**
      * Inicializa la 1era lista horizontal de las lineas
      */
-    private class  HAdapter extends BaseAdapter {
+    private class HAdapter extends BaseAdapter
+    {
 
-        public HAdapter()
+        private final View.OnClickListener mOnButtonClicked = new View.OnClickListener()
         {
-            super();
-        }
-        private final View.OnClickListener mOnButtonClicked = new View.OnClickListener() {
 
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
 
-                Object r = v.getTag();
+                Object r        = v.getTag();
                 String valor2[] = String.valueOf(r).split("&");
 
                 imageAlphaClass.ocultar_lineas();
@@ -209,21 +214,29 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
             }
         };
 
+        public HAdapter()
+        {
+            super();
+        }
 
-        public int getCount() {
+        public int getCount()
+        {
             return ids_lineas.length;
         }
 
-        public Object getItem(int position) {
+        public Object getItem(int position)
+        {
             return null;
         }
 
-        public long getItemId(int position) {
+        public long getItemId(int position)
+        {
             return 0;
         }
 
 
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(int position, View convertView, ViewGroup parent)
+        {
 
             //View retval;
 
@@ -250,21 +263,21 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
 
             // Creo la imagen de la linea
             RecyclingImageView imagen = (RecyclingImageView) convertView.findViewById(R.id.image);
-            File file = new File(contexto.getFilesDir(), nombres_lineas[position]+".jpg");
+            File               file   = new File(contexto.getFilesDir(), nombres_lineas[position] + ".jpg");
 
             imagen.setOnClickListener(mOnButtonClicked);
 
-            if(file.exists())
+            if (file.exists())
             {
                 //Log.d("Buscando imagen", "Encontrada");
                 imagen.setImageBitmap(Funciones.decodeSampledBitmapFromResource(file, 130, 130));
                 imagenAlpha.agregar_linea(imagen);
                 String id_linea_seleccionado = "";
-                if( ! id_linea_seleccionado.equals(ids_lineas[position]) )
+                if (!id_linea_seleccionado.equals(ids_lineas[position]))
                     imagen.setAlpha(Constantes.IMAGE_ALPHA);
             }
 
-            imagen.setTag(ids_lineas[position]+"&"+nombres_lineas[position]);
+            imagen.setTag(ids_lineas[position] + "&" + nombres_lineas[position]);
 
             return convertView;
         }
@@ -273,19 +286,41 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
     /**
      * Inicializa la 2da lista horizontal de los modelos
      */
-    private class  HAdapter2 extends BaseAdapter {
+    private class HAdapter2 extends BaseAdapter
+    {
 
         private final String id_linea_buscador;
-        String[] valores_modelo_id = new String[0];
+        private final View.OnClickListener mOnButtonClicked = new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                Object r        = v.getTag();
+                String valor2[] = String.valueOf(r).split("&");
+
+                imageAlphaClass.ocultar_modelos();
+                RecyclingImageView bt = (RecyclingImageView) v;
+                bt.setAlpha(1f);
+
+                /*String lin2 = valor2[1];
+
+                TextView tv = (TextView) rootView.findViewById(R.id.textView8);
+                tv.setText(lin2);*/
+
+                HorizontalListView listview3 = (HorizontalListView) rootView.findViewById(R.id.listview3);
+                listview3.setVisibility(View.VISIBLE);
+                listview3.setAdapter(new HAdapter3(valor2[0], id_linea_buscador));
+            }
+        };
+        String[] valores_modelo_id     = new String[0];
         String[] valores_modelo_nombre = new String[0];
-        String[] valores_modelo_img = new String[0];
+        String[] valores_modelo_img    = new String[0];
 
         public HAdapter2(String s)
         {
             super();
-            Log.i("HAdapter2",s);
+            Log.i("HAdapter2", s);
             id_linea_buscador = s;
-            String res = (manager.cargarCursorModelos_Lineas(id_linea_buscador,ci));
+            String res = (manager.cargarCursorModelos_Lineas(id_linea_buscador, ci));
             if (!res.equals(""))
             {
                 String[] modelos = res.split("\\|");
@@ -304,38 +339,18 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
             //manager.cerrar();
         }
 
-        private final View.OnClickListener mOnButtonClicked = new View.OnClickListener()
+        public int getCount()
         {
-            public void onClick(View v)
-            {
-                Object r = v.getTag();
-                String valor2[] = String.valueOf(r).split("&");
-
-                imageAlphaClass.ocultar_modelos();
-                RecyclingImageView bt = (RecyclingImageView) v;
-                bt.setAlpha(1f);
-
-                /*String lin2 = valor2[1];
-
-                TextView tv = (TextView) rootView.findViewById(R.id.textView8);
-                tv.setText(lin2);*/
-
-                HorizontalListView listview3 = (HorizontalListView) rootView.findViewById(R.id.listview3);
-                listview3.setVisibility(View.VISIBLE);
-                listview3.setAdapter(new HAdapter3(valor2[0],id_linea_buscador));
-            }
-        };
-
-
-        public int getCount() {
             return valores_modelo_id.length;
         }
 
-        public Object getItem(int position) {
+        public Object getItem(int position)
+        {
             return null;
         }
 
-        public long getItemId(int position) {
+        public long getItemId(int position)
+        {
             return 0;
         }
 
@@ -365,21 +380,21 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
             //Crea la imagen del modelo
             RecyclingImageView imagen = (RecyclingImageView) convertView.findViewById(R.id.image);
 
-            File file = new File(contexto.getFilesDir(), valores_modelo_nombre[position]+".jpg");
+            File file = new File(contexto.getFilesDir(), valores_modelo_nombre[position] + ".jpg");
             imagen.setOnClickListener(mOnButtonClicked);
             //Log.d("Buscando imagen", valores_modelo_nombre[position] + ".jpg");
 
-            if(file.exists())
+            if (file.exists())
             {
                 //Log.d("Buscando imagen", "Encontrada");
                 imagen.setImageBitmap(Funciones.decodeSampledBitmapFromResource(file, 130, 130));
                 imagenAlpha.agregar_modelo(imagen);
                 String id_modelo_seleccionado = "";
-                if( ! id_modelo_seleccionado.equals(valores_modelo_id[position]) )
+                if (!id_modelo_seleccionado.equals(valores_modelo_id[position]))
                     imagen.setAlpha(Constantes.IMAGE_ALPHA);
             }
 
-            imagen.setTag(valores_modelo_id[position]+"&"+valores_modelo_nombre[position]); // aca le pondre el id_modelo (variable global)
+            imagen.setTag(valores_modelo_id[position] + "&" + valores_modelo_nombre[position]); // aca le pondre el id_modelo (variable global)
 
             return convertView;
         }
@@ -388,31 +403,59 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
     /**
      * Inicializa la 3era lista horizontal de los productos
      */
-    private class  HAdapter3 extends BaseAdapter {
+    private class HAdapter3 extends BaseAdapter
+    {
 
         private final String id_linea_buscador;
         private final String id_modelo_buscador;
-        String[] valores_producto_id = new String[0];
-        String[] valores_producto_nombre = new String[0];
-        String[] valores_producto_nombre_real = new String[0];
-        String[] precios = new String[0];
+        private final View.OnClickListener mOnButtonClicked = new View.OnClickListener()
+        {
 
-        public HAdapter3(String id_modelo,String id_linea)
+            public void onClick(View v)
+            {
+                Object r        = v.getTag();
+                String valor2[] = String.valueOf(r).split("&");
+                String pos      = valor2[0];
+
+                RecyclingImageView bt = (RecyclingImageView) v;
+                if (bt.getAlpha() == 1f)
+                {
+                    // Si el producto estaba seleccionado, lo presiono de nuevo y lo des-selecciono..
+                    num_checks--;
+                    bt.setAlpha(Constantes.IMAGE_ALPHA);
+                    ids_agregar.remove(pos);
+                    Toast.makeText(contexto, "Producto " + valor2[1] + " eliminado", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    num_checks++;
+                    bt.setAlpha(1f);
+                    ids_agregar.add(pos);
+                    Toast.makeText(contexto, "Producto " + valor2[1] + " agregado", Toast.LENGTH_SHORT).show();
+                }
+            }
+        };
+        String[] valores_producto_id          = new String[0];
+        String[] valores_producto_nombre      = new String[0];
+        String[] valores_producto_nombre_real = new String[0];
+        String[] precios                      = new String[0];
+
+        public HAdapter3(String id_modelo, String id_linea)
         {
             super();
             id_linea_buscador = id_linea;
             id_modelo_buscador = id_modelo;
 
-            Log.i("HAdapter3","linea: "+id_linea+", modelo: "+id_modelo);
+            Log.i("HAdapter3", "linea: " + id_linea + ", modelo: " + id_modelo);
 
-            Cursor cur = manager.cargarCursorPedidos_Editar();
+            Cursor   cur         = manager.cargarCursorPedidos_Editar();
             String[] ids_ocultar = new String[cur.getCount()];
-            int z = 0;
+            int      z           = 0;
 
-            for(cur.moveToFirst(); !cur.isAfterLast(); cur.moveToNext())
+            for (cur.moveToFirst(); !cur.isAfterLast(); cur.moveToNext())
             {
                 ids_ocultar[z] = cur.getString(3);
-                Log.d("ID PRODUCTO","No mostrar: "+cur.getString(3));
+                Log.d("ID PRODUCTO", "No mostrar: " + cur.getString(3));
                 z++;
             }
 
@@ -438,47 +481,22 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
             }
             else
             {
-                Log.d("HAdapter3","No hay productos a mostrar.");
+                Log.d("HAdapter3", "No hay productos a mostrar.");
             }
         }
 
-        private final View.OnClickListener mOnButtonClicked = new View.OnClickListener()
+        public int getCount()
         {
-
-            public void onClick(View v)
-            {
-                Object r = v.getTag();
-                String valor2[] = String.valueOf(r).split("&");
-                String pos = valor2[0];
-
-                RecyclingImageView bt = (RecyclingImageView) v;
-                if(bt.getAlpha()==1f)
-                {
-                    // Si el producto estaba seleccionado, lo presiono de nuevo y lo des-selecciono..
-                    num_checks--;
-                    bt.setAlpha(Constantes.IMAGE_ALPHA);
-                    ids_agregar.remove(pos);
-                    Toast.makeText(contexto,"Producto "+valor2[1]+" eliminado",Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
-                    num_checks++;
-                    bt.setAlpha(1f);
-                    ids_agregar.add(pos);
-                    Toast.makeText(contexto,"Producto "+valor2[1]+" agregado",Toast.LENGTH_SHORT).show();
-                }
-            }
-        };
-
-        public int getCount() {
             return valores_producto_id.length;
         }
 
-        public Object getItem(int position) {
+        public Object getItem(int position)
+        {
             return null;
         }
 
-        public long getItemId(int position) {
+        public long getItemId(int position)
+        {
             return 0;
         }
 
@@ -502,17 +520,17 @@ public class DialogoAgregar_Productos_Editar extends DialogFragment
             // Crea la imagen del producto
             RecyclingImageView imagen = (RecyclingImageView) convertView.findViewById(R.id.image);
 
-            File file = new File(contexto.getFilesDir(), valores_producto_nombre_real[position]+"_01.jpg");
+            File file = new File(contexto.getFilesDir(), valores_producto_nombre_real[position] + "_01.jpg");
             imagen.setOnClickListener(mOnButtonClicked);
 
-            if(file.exists())
+            if (file.exists())
             {
                 imagen.setImageBitmap(Funciones.decodeSampledBitmapFromResource(file, 130, 130));
                 imagenAlpha.agregar_producto(imagen);
                 imagen.setAlpha(Constantes.IMAGE_ALPHA);
             }
 
-            imagen.setTag(valores_producto_id[position]+"&"+valores_producto_nombre[position]+"&"+position); // aca le pondre el id_linea (variable global)
+            imagen.setTag(valores_producto_id[position] + "&" + valores_producto_nombre[position] + "&" + position); // aca le pondre el id_linea (variable global)
 
             return convertView;
         }

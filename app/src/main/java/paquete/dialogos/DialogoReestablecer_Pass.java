@@ -23,19 +23,20 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import paquete.Droidlogin.library.Httppostaux;
 import paquete.global.Constantes;
 import paquete.global.Funciones;
+import paquete.global.library.Httppostaux;
 import paquete.tufanoapp.R;
 
 public class DialogoReestablecer_Pass extends DialogFragment
 {
-    private EditText email_text;
+    private EditText       email_text;
     private ProgressDialog pDialog;
-    private Dialog dialogo;
+    private Dialog         dialogo;
 
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
+    public Dialog onCreateDialog(Bundle savedInstanceState)
+    {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Get the layout inflater
         final LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -70,15 +71,15 @@ public class DialogoReestablecer_Pass extends DialogFragment
                 //Boolean wantToCloseDialog = false;
                 //Do stuff, possibly set wantToCloseDialog to true then...
                 Editable value = email_text.getText();
-                if(Funciones.isValidEmail(value.toString()))
+                if (Funciones.isValidEmail(value.toString()))
                 {
                     Log.i("PRUEBA", "Email invalido " + value);
                     Toast.makeText(getActivity(), "Por favor ingrese un email valido!", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    Log.i("PRUEBA","Email: "+value);
-                    if(Funciones.isOnline(getActivity()))
+                    Log.i("PRUEBA", "Email: " + value);
+                    if (Funciones.isOnline(getActivity()))
                     {
                         new enviarCorreo().execute(value.toString());
                         dialogo = dialog;
@@ -96,30 +97,32 @@ public class DialogoReestablecer_Pass extends DialogFragment
 
     /**
      * Envia un email a la direccion indicada para re-establecer la cuenta y su password.
+     *
      * @param email Correo electronico donde la cuenta esta registrada.
      * @return True si la operacion fue exitosa, False en caso contrario.
      */
     private boolean enviarCorreo(String email)
     {
-        boolean bandera = false;
-        Httppostaux post = new Httppostaux();
+        boolean     bandera = false;
+        Httppostaux post    = new Httppostaux();
 
-        ArrayList<NameValuePair> listaParametros= new ArrayList<>();
-        listaParametros.add(new BasicNameValuePair("email",email));
+        ArrayList<NameValuePair> listaParametros = new ArrayList<>();
+        listaParametros.add(new BasicNameValuePair("email", email));
 
-        String URL_connect = Constantes.IP_Server +"recuperar_pass.php";
-        JSONArray jdata= post.getserverdata(listaParametros, URL_connect);
+        String    URL_connect = Constantes.IP_Server + "recuperar_pass.php";
+        JSONArray jdata       = post.getserverdata(listaParametros, URL_connect);
 
-        if (jdata!=null && jdata.length() > 0)
+        if (jdata != null && jdata.length() > 0)
         {
             JSONObject json_data;
             try
             {
                 json_data = jdata.getJSONObject(0);
 
-                String logstatus=json_data.getString("logstatus");
+                String logstatus = json_data.getString("logstatus");
 
-                switch (logstatus) {
+                switch (logstatus)
+                {
                     case "1":
                         bandera = true;
                         //cliente_existe=false;
@@ -152,9 +155,10 @@ public class DialogoReestablecer_Pass extends DialogFragment
     /**
      * Clase para el envio del correo de re-establecimiento de la cuenta en segundo plano.
      */
-    class enviarCorreo extends AsyncTask< String, String, String >
+    class enviarCorreo extends AsyncTask<String, String, String>
     {
         String email;
+
         @Override
         protected void onPreExecute()
         {
@@ -170,7 +174,7 @@ public class DialogoReestablecer_Pass extends DialogFragment
         protected String doInBackground(String... params)
         {
             //obtnemos usr y pass
-            email=params[0];
+            email = params[0];
 
             try
             {

@@ -47,39 +47,41 @@ public class alarmNotification
 
     /**
      * Inicializa una notificacion persistente con el tiempo
+     *
      * @param contexto Contexto de la aplicacion.
      */
     public static void notificaciones_persistentes(Context contexto)
     {
-        Log.i("alarmNotification","notificaciones_persistentes");
-        Intent intent = new Intent(contexto, MyAlarmBroadcastReceiver.class);
+        Log.i("alarmNotification", "notificaciones_persistentes");
+        Intent        intent = new Intent(contexto, MyAlarmBroadcastReceiver.class);
         PendingIntent sender = PendingIntent.getBroadcast(contexto, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager am = (AlarmManager) contexto.getSystemService(Context.ALARM_SERVICE);
+        AlarmManager  am     = (AlarmManager) contexto.getSystemService(Context.ALARM_SERVICE);
 
         //boolean alarmUp = (PendingIntent.getBroadcast(contexto, 0, intent, PendingIntent.FLAG_NO_CREATE) != null);
 
         /*if (alarmUp)
             Log.i("myTag", "Alarm is already active");
         else*/
-            am.setRepeating(AlarmManager.RTC, Calendar.getInstance().getTimeInMillis(), paquete.global.Constantes.TIEMPO_NOTIFICACION, sender);
+        am.setRepeating(AlarmManager.RTC, Calendar.getInstance().getTimeInMillis(), paquete.global.Constantes.TIEMPO_NOTIFICACION, sender);
     }
 
     /**
      * Inicializa una notificacion persistente con el tiempo para la actualizacion de la app.
+     *
      * @param contexto Contexto de la aplicacion.
      */
     public static void notificaciones_persistentes_actualizarApp(Context contexto)
     {
-        Log.i("alarmNotification","notificaciones_persistentes_actualizarApp");
-        Intent broadcastedIntent = new Intent(contexto, verificarActualizacionesApp.class);
-        PendingIntent sender = PendingIntent.getBroadcast(contexto, 0, broadcastedIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager am = (AlarmManager) contexto.getSystemService(Context.ALARM_SERVICE);
+        Log.i("alarmNotification", "notificaciones_persistentes_actualizarApp");
+        Intent        broadcastedIntent = new Intent(contexto, verificarActualizacionesApp.class);
+        PendingIntent sender            = PendingIntent.getBroadcast(contexto, 0, broadcastedIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager  am                = (AlarmManager) contexto.getSystemService(Context.ALARM_SERVICE);
 
         /*boolean alarmUp = (PendingIntent.getBroadcast(contexto, 0, intent, PendingIntent.FLAG_NO_CREATE) != null);
 
         if (alarmUp)
             Log.i("myTag", "La alarma [actualizar_app] ya esta activa");
         else*/
-            am.setRepeating(AlarmManager.RTC, Calendar.getInstance().getTimeInMillis(), paquete.global.Constantes.TIEMPO_NOTIFICACION_ACTUALIZAR_APP, sender);
+        am.setRepeating(AlarmManager.RTC, Calendar.getInstance().getTimeInMillis(), paquete.global.Constantes.TIEMPO_NOTIFICACION_ACTUALIZAR_APP, sender);
     }
 }

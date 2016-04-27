@@ -8,7 +8,7 @@ import paquete.global.Funciones;
 
 /**
  * Desarrollado por Gerson el 21/10/2015.
- *
+ * <p/>
  * Clase que se encargara de verificar las actualizaciones que tenga la app en segundo plano.
  */
 public class verificarActualizacionesApp extends MyBroadcastReceiver
@@ -17,7 +17,7 @@ public class verificarActualizacionesApp extends MyBroadcastReceiver
     public void onReceive(Context context, Intent intent)
     {
         Log.v("onReceive", "verificarActualizacionesApp");
-        if (context!=null && intent!=null)
+        if (context != null && intent != null)
         {
             Funciones.verificar_ActualizacionesApp(context);
         }

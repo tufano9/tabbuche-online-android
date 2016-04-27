@@ -32,8 +32,8 @@ import java.util.ArrayList;
 import paquete.database.DBAdapter;
 import paquete.global.Funciones;
 import paquete.recycle_bitmap.RecyclingImageView;
-import paquete.tufanoapp.FragmentPedido_Editar;
 import paquete.tufanoapp.R;
+import paquete.tufanoapp.pedido.FragmentPedido_Editar;
 //import paquete.tufanoapp.R;
 
 /**
@@ -42,15 +42,15 @@ import paquete.tufanoapp.R;
 @SuppressWarnings("SameParameterValue")
 public class DialogoEliminar_Productos_Editar extends DialogFragment
 {
-    private Context contexto;
-    private TableLayout tabla, cabecera;
-    private TableRow.LayoutParams layoutFila, layout_producto, layout_eliminar;
-    private View rootView;
-    public static int num_checks;
-    private Resources rs;
+    public static int               num_checks;
     public static ArrayList<String> ids_eliminar;
-    private String id_pedido, ci, estatus;
-    private DBAdapter manager;
+    private       Context           contexto;
+    private       TableLayout       tabla, cabecera;
+    private TableRow.LayoutParams layoutFila, layout_producto, layout_eliminar;
+    private View      rootView;
+    private Resources rs;
+    private String    id_pedido, ci, estatus;
+    private DBAdapter            manager;
     private checkBoxClass_Editar clase_checks;
 
     @SuppressLint("InflateParams")
@@ -60,7 +60,7 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
         final LayoutInflater inflater = getActivity().getLayoutInflater();
         rootView = inflater.inflate(R.layout.dialogo_eliminar_productos, null);
 
-        num_checks=0;
+        num_checks = 0;
         contexto = getActivity();
         manager = new DBAdapter(contexto);
         clase_checks = new checkBoxClass_Editar();
@@ -74,11 +74,11 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
 
     /**
      * Inicializa el dialogo
+     *
      * @return Dialogo inicializado.
      */
     private Dialog initDialog()
     {
-
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -90,8 +90,10 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
                 .setTitle(R.string.seleccione_productos)
                 .setCancelable(true)
                 .setIcon(android.R.drawable.ic_menu_close_clear_cancel)
-                .setNegativeButton(R.string.btn_cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
+                .setNegativeButton(R.string.btn_cancel, new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog, int id)
+                    {
                         DialogoEliminar_Productos_Editar.this.getDialog().cancel();
                     }
                 });
@@ -112,7 +114,7 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
                 if (num_checks > 0)
                 {
                     AlertDialog.Builder dialogo = new AlertDialog.Builder(contexto);
-                    String mensaje = contexto.getResources().getString(R.string.confirmacion_eliminar_producto);
+                    String              mensaje = contexto.getResources().getString(R.string.confirmacion_eliminar_producto);
                     mensaje = mensaje.replace("%", "" + num_checks);
 
                     dialogo.setMessage(mensaje)
@@ -138,9 +140,9 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
                             //dialogo.dismiss();
                             dialog.dismiss();
 
-                            String TAG = "fragment_pedido";
+                            String   TAG      = "fragment_pedido";
                             Fragment fragment = new FragmentPedido_Editar();
-                            Bundle args = new Bundle();
+                            Bundle   args     = new Bundle();
                             args.putString("id_pedido", id_pedido);
                             args.putString("cedula", ci);
                             args.putString("estatus", estatus);
@@ -193,8 +195,8 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
         tabla = (TableLayout) rootView.findViewById(R.id.tableLayout_Contenido);
         cabecera = (TableLayout) rootView.findViewById(R.id.tableLayout_Cabecera);
         layoutFila = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
-        layout_producto = new TableRow.LayoutParams(200,TableRow.LayoutParams.MATCH_PARENT);
-        layout_eliminar = new TableRow.LayoutParams(100,TableRow.LayoutParams.MATCH_PARENT);
+        layout_producto = new TableRow.LayoutParams(200, TableRow.LayoutParams.MATCH_PARENT);
+        layout_eliminar = new TableRow.LayoutParams(100, TableRow.LayoutParams.MATCH_PARENT);
 
         new cargar_data_pedido().execute();
     }
@@ -216,9 +218,9 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
                         @Override
                         public void run()
                         {
-                            TableRow fila;
-                            TextView txtProducto;
-                            LinearLayout vertical_layout2;
+                            TableRow       fila;
+                            TextView       txtProducto;
+                            LinearLayout   vertical_layout2;
                             final CheckBox Eliminar;
 
                             fila = new TableRow(contexto);
@@ -244,12 +246,17 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
                             txtProducto.setBackgroundResource(R.drawable.tabla_celda_cabecera);
                             txtProducto.setLayoutParams(layout_producto);
 
-                            Eliminar.setOnClickListener(new View.OnClickListener() {
+                            Eliminar.setOnClickListener(new View.OnClickListener()
+                            {
                                 @Override
-                                public void onClick(View v) {
-                                    if (Eliminar.isChecked()) {
+                                public void onClick(View v)
+                                {
+                                    if (Eliminar.isChecked())
+                                    {
                                         checkBoxClass_Editar.seleccionarTodos();
-                                    } else {
+                                    }
+                                    else
+                                    {
                                         checkBoxClass_Editar.limpiarTodos();
                                     }
                                 }
@@ -291,18 +298,18 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
         //DBAdapter manager = new DBAdapter(contexto);
         Cursor cursor = manager.cargarCursorProductosPedidos_editar();
 
-        final String[] nombre_producto = new String[cursor.getCount()];
+        final String[] nombre_producto      = new String[cursor.getCount()];
         final String[] nombre_producto_real = new String[cursor.getCount()];
-        final String[] ids = new String[cursor.getCount()];
+        final String[] ids                  = new String[cursor.getCount()];
         ids_eliminar = new ArrayList<>(cursor.getCount());
 
-        for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
         {
             nombre_producto[y] = cursor.getString(0);
             ids[y] = cursor.getString(5);
 
             Cursor cursor2 = manager.buscarProducto(ids[y]);
-            for(cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
+            for (cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
             {
                 nombre_producto_real[y] = cursor2.getString(1);
             }
@@ -313,7 +320,7 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
         //manager.cerrar();
         cursor.close();
 
-        for(int i = 0;i< nombre_producto.length;i++)
+        for (int i = 0; i < nombre_producto.length; i++)
         {
             final int finalI = i;
             final Thread hilo_base = new Thread()
@@ -328,11 +335,11 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
                             @Override
                             public void run()
                             {
-                                TableRow fila;
+                                TableRow           fila;
                                 RecyclingImageView imageView1;
-                                LinearLayout vertical_layout, vertical_layout2;
-                                TextView txtId;
-                                final CheckBox cb;
+                                LinearLayout       vertical_layout, vertical_layout2;
+                                TextView           txtId;
+                                final CheckBox     cb;
 
                                 fila = new TableRow(contexto);
                                 fila.setLayoutParams(layoutFila);
@@ -373,7 +380,7 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
 
                                 //txtId.setTextAppearance(contexto, R.style.etiqueta);
                                 txtId.setBackgroundColor(Color.WHITE);
-                                txtId.setLayoutParams(new TableRow.LayoutParams(180,30));
+                                txtId.setLayoutParams(new TableRow.LayoutParams(180, 30));
 
                                 vertical_layout = new LinearLayout(contexto);
                                 vertical_layout.setOrientation(LinearLayout.VERTICAL);
@@ -389,9 +396,11 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
                                 cb = new CheckBox(contexto);
                                 clase_checks.agregar(cb, ids[finalI]);
 
-                                cb.setOnClickListener(new View.OnClickListener() {
+                                cb.setOnClickListener(new View.OnClickListener()
+                                {
                                     @Override
-                                    public void onClick(View v) {
+                                    public void onClick(View v)
+                                    {
                                         if (cb.isChecked())
                                         {
                                             num_checks++;
@@ -403,7 +412,7 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
                                             ids_eliminar.remove(ids[finalI]);
                                         }
 
-                                        Log.w("CheckBox onClick","CLICK ID:"+ids[finalI]);
+                                        Log.w("CheckBox onClick", "CLICK ID:" + ids[finalI]);
                                     }
                                 });
 
@@ -431,6 +440,7 @@ public class DialogoEliminar_Productos_Editar extends DialogFragment
     private class cargar_data_pedido extends AsyncTask<String, Void, String>
     {
         ProgressDialog pDialog;
+
         @Override
         protected void onPreExecute()
         {

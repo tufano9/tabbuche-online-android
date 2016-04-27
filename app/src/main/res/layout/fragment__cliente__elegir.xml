@@ -2,21 +2,21 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="paquete.tufanoapp.Fragment_Cliente_Elegir">
+             tools:context=".cliente.Fragment_Cliente_Elegir">
 
     <ScrollView
+        android:id="@+id/scrollView7"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/scrollView7"
-        android:background="@drawable/bordes"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                      android:orientation="vertical"
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
-                      android:gravity="center_horizontal"
                       android:layout_margin="10dp"
+                      android:gravity="center_horizontal"
+                      android:orientation="vertical"
             >
 
             <com.devspark.robototextview.widget.RobotoTextView
@@ -24,13 +24,13 @@
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/seleccionar_cliente"
-                android:layout_marginTop="5dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="@string/seleccionar_cliente"
                 android:textColor="#000000"
+                android:textSize="18sp"
                 app:fontFamily="roboto"
-                app:textWeight="bold"
-                android:textSize="18sp" />
+                app:textWeight="bold"/>
 
             <!--<TextView
                 style="@style/texto_galeria_1"
@@ -41,74 +41,74 @@
                 android:layout_marginTop="20dp" />-->
 
             <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView_buscarCliente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/buscar_cliente"
-                android:id="@+id/autoCompleteTextView_buscarCliente"
-                android:layout_marginTop="10dp"
-                android:singleLine="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/buscar_cliente"
+                android:singleLine="true"/>
 
             <ListView
+                android:id="@+id/listView_clientes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/listView_clientes"
                 android:layout_marginBottom="15dp"
-                android:layout_marginTop="15dp"
-                android:divider="@android:color/transparent"
-                android:dividerHeight="1.0sp"
-                android:choiceMode="singleChoice"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1.0sp"/>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:orientation="horizontal"
                 >
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/boton_editar_cliente"
-                    style="@style/ButtonText_normal"
-                    android:textStyle="normal"
-                    android:background="@drawable/boton_verde"
                     android:id="@+id/btn_editar_cliente"
-                    android:gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:layout_weight="1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
-
-                <Button
                     style="@style/ButtonText_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/agregar_cliente"
-                    android:textStyle="normal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
                     android:background="@drawable/boton_verde"
-                    android:id="@+id/btn_agregar_cliente"
-                    android:layout_marginBottom="10dp"
                     android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:text="@string/boton_editar_cliente"
+                    android:textStyle="normal"/>
 
                 <Button
+                    android:id="@+id/btn_agregar_cliente"
                     style="@style/ButtonText_normal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/continuar"
-                    android:textStyle="normal"
-                    android:background="@drawable/boton_azul"
-                    android:id="@+id/btn_continuar"
                     android:layout_marginBottom="10dp"
-                    android:gravity="center"
-                    android:layout_weight="1"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boton_verde"
+                    android:gravity="center"
+                    android:text="@string/agregar_cliente"
+                    android:textStyle="normal"/>
+
+                <Button
+                    android:id="@+id/btn_continuar"
+                    style="@style/ButtonText_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boton_azul"
+                    android:gravity="center"
+                    android:text="@string/continuar"
+                    android:textStyle="normal"/>
 
 
             </LinearLayout>

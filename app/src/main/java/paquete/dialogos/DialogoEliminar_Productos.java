@@ -32,8 +32,8 @@ import java.util.ArrayList;
 import paquete.database.DBAdapter;
 import paquete.global.Funciones;
 import paquete.recycle_bitmap.RecyclingImageView;
-import paquete.tufanoapp.FragmentPedido_Muestrario;
 import paquete.tufanoapp.R;
+import paquete.tufanoapp.pedido.FragmentPedido_Muestrario;
 
 /**
  * Desarrollado por Gerson el 14/4/2015.
@@ -41,15 +41,15 @@ import paquete.tufanoapp.R;
 @SuppressWarnings("SameParameterValue")
 public class DialogoEliminar_Productos extends DialogFragment
 {
-    private Context contexto;
-    private TableLayout tabla, cabecera;
-    private TableRow.LayoutParams layoutFila, layout_producto, layout_eliminar;
-    private View rootView;
-    public static int num_checks;
-    private Resources rs;
+    public static int               num_checks;
     public static ArrayList<String> ids_eliminar;
-    private String id_vendedor;
-    private DBAdapter manager;
+    private       Context           contexto;
+    private       TableLayout       tabla, cabecera;
+    private TableRow.LayoutParams layoutFila, layout_producto, layout_eliminar;
+    private View          rootView;
+    private Resources     rs;
+    private String        id_vendedor;
+    private DBAdapter     manager;
     private checkBoxClass clase_checks;
 
     @SuppressLint("InflateParams")
@@ -58,9 +58,9 @@ public class DialogoEliminar_Productos extends DialogFragment
     {
         final LayoutInflater inflater = getActivity().getLayoutInflater();
 
-        Log.v("onCreateDialog","INIT");
+        Log.v("onCreateDialog", "INIT");
 
-        num_checks=0;
+        num_checks = 0;
         contexto = getActivity();
         manager = new DBAdapter(contexto);
 
@@ -76,6 +76,7 @@ public class DialogoEliminar_Productos extends DialogFragment
 
     /**
      * Inicializa el dialogo
+     *
      * @return
      */
     private Dialog initDialog()
@@ -90,8 +91,10 @@ public class DialogoEliminar_Productos extends DialogFragment
                 .setTitle(R.string.seleccione_productos)
                 .setCancelable(true)
                 .setIcon(android.R.drawable.ic_menu_close_clear_cancel)
-                .setNegativeButton(R.string.btn_cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
+                .setNegativeButton(R.string.btn_cancel, new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog, int id)
+                    {
                         DialogoEliminar_Productos.this.getDialog().cancel();
                     }
                 });
@@ -109,40 +112,41 @@ public class DialogoEliminar_Productos extends DialogFragment
                 //Boolean wantToCloseDialog = false;
                 //Do stuff, possibly set wantToCloseDialog to true then...
                 //Editable value = email_text.getText();
-                if( num_checks>0 )
+                if (num_checks > 0)
                 {
                     AlertDialog.Builder dialogo = new AlertDialog.Builder(contexto);
 
                     String mensaje = contexto.getResources().getString(R.string.confirmacion_eliminar_producto);
-                    mensaje = mensaje.replace("%",""+num_checks);
+                    mensaje = mensaje.replace("%", "" + num_checks);
 
                     dialogo.setMessage(mensaje)
                             .setCancelable(false)
                             .setIcon(android.R.drawable.ic_menu_close_clear_cancel)
                             .setTitle(R.string.pedido_btn_2);
 
-                    dialogo.setPositiveButton("Eliminar Productos", new DialogInterface.OnClickListener() {
+                    dialogo.setPositiveButton("Eliminar Productos", new DialogInterface.OnClickListener()
+                    {
 
                         @Override
                         public void onClick(DialogInterface dialogo2, int which)
                         {
                             for (int i = 0; i < ids_eliminar.size(); i++)
                             {
-                                Log.i("Ids a eliminar",ids_eliminar.get(i));
+                                Log.i("Ids a eliminar", ids_eliminar.get(i));
                                 //DBAdapter manager = new DBAdapter(contexto);
                                 manager.eliminar_producto_pedidoByID(ids_eliminar.get(i));
                                 //manager.cerrar();
 
                             }
-                            Toast.makeText(getActivity(), ids_eliminar.size()+" Productos eliminados exitosamente!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), ids_eliminar.size() + " Productos eliminados exitosamente!", Toast.LENGTH_LONG).show();
 
                             //dialogo.dismiss();
                             dialog.dismiss();
 
-                            String TAG = "fragment_pedido";
+                            String   TAG      = "fragment_pedido";
                             Fragment fragment = new FragmentPedido_Muestrario();
-                            Bundle args = new Bundle();
-                            args.putString("id_usuario",id_vendedor);
+                            Bundle   args     = new Bundle();
+                            args.putString("id_usuario", id_vendedor);
                             fragment.setArguments(args);
 
                             FragmentManager fragmentManager = getFragmentManager();
@@ -191,8 +195,8 @@ public class DialogoEliminar_Productos extends DialogFragment
         tabla = (TableLayout) rootView.findViewById(R.id.tableLayout_Contenido);
         cabecera = (TableLayout) rootView.findViewById(R.id.tableLayout_Cabecera);
         layoutFila = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
-        layout_producto = new TableRow.LayoutParams(200,TableRow.LayoutParams.MATCH_PARENT);
-        layout_eliminar = new TableRow.LayoutParams(65,TableRow.LayoutParams.MATCH_PARENT);
+        layout_producto = new TableRow.LayoutParams(200, TableRow.LayoutParams.MATCH_PARENT);
+        layout_eliminar = new TableRow.LayoutParams(65, TableRow.LayoutParams.MATCH_PARENT);
 
         new cargar_data_pedido().execute();
 
@@ -216,9 +220,9 @@ public class DialogoEliminar_Productos extends DialogFragment
                         @Override
                         public void run()
                         {
-                            TableRow fila;
-                            TextView txtProducto;
-                            LinearLayout vertical_layout2;
+                            TableRow       fila;
+                            TextView       txtProducto;
+                            LinearLayout   vertical_layout2;
                             final CheckBox Eliminar;
 
                             fila = new TableRow(contexto);
@@ -246,12 +250,17 @@ public class DialogoEliminar_Productos extends DialogFragment
                             //Eliminar.setLayoutParams(layout_eliminar);
                             //Eliminar.setGravity(Gravity.CENTER);
                             //Eliminar.setBackgroundResource(R.drawable.tabla_celda_cabecera);
-                            Eliminar.setOnClickListener(new View.OnClickListener() {
+                            Eliminar.setOnClickListener(new View.OnClickListener()
+                            {
                                 @Override
-                                public void onClick(View v) {
-                                    if (Eliminar.isChecked()) {
+                                public void onClick(View v)
+                                {
+                                    if (Eliminar.isChecked())
+                                    {
                                         checkBoxClass.seleccionarTodos();
-                                    } else {
+                                    }
+                                    else
+                                    {
                                         checkBoxClass.limpiarTodos();
                                     }
                                 }
@@ -291,18 +300,18 @@ public class DialogoEliminar_Productos extends DialogFragment
         //DBAdapter manager = new DBAdapter(contexto);
         Cursor cursor = manager.cargarCursorProductosPedidos();
 
-        final String[] nombre_producto = new String[cursor.getCount()];
+        final String[] nombre_producto      = new String[cursor.getCount()];
         final String[] nombre_producto_real = new String[cursor.getCount()];
-        final String[] ids = new String[cursor.getCount()];
+        final String[] ids                  = new String[cursor.getCount()];
         ids_eliminar = new ArrayList<>(cursor.getCount());
 
-        for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
         {
             nombre_producto[y] = cursor.getString(0);
             ids[y] = cursor.getString(5);
 
             Cursor cursor2 = manager.buscarProducto(ids[y]);
-            for(cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
+            for (cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
             {
                 nombre_producto_real[y] = cursor2.getString(1);
             }
@@ -313,7 +322,7 @@ public class DialogoEliminar_Productos extends DialogFragment
         //manager.cerrar();
         cursor.close();
 
-        for(int i = 0;i< nombre_producto.length;i++)
+        for (int i = 0; i < nombre_producto.length; i++)
         {
             final int finalI = i;
             final Thread hilo_base = new Thread()
@@ -329,11 +338,11 @@ public class DialogoEliminar_Productos extends DialogFragment
                             @Override
                             public void run()
                             {
-                                TableRow fila;
+                                TableRow           fila;
                                 RecyclingImageView imageView1;
-                                LinearLayout vertical_layout, vertical_layout2;
-                                TextView txtId;
-                                final CheckBox cb;
+                                LinearLayout       vertical_layout, vertical_layout2;
+                                TextView           txtId;
+                                final CheckBox     cb;
 
                                 fila = new TableRow(contexto);
                                 fila.setLayoutParams(layoutFila);
@@ -375,7 +384,7 @@ public class DialogoEliminar_Productos extends DialogFragment
                                 //txtId.setTextAppearance(contexto, R.style.etiqueta);
                                 txtId.setBackgroundColor(Color.WHITE);
                                 //layout_producto = new TableRow.LayoutParams(180,30);
-                                txtId.setLayoutParams(new TableRow.LayoutParams(180,30));
+                                txtId.setLayoutParams(new TableRow.LayoutParams(180, 30));
 
                                 vertical_layout = new LinearLayout(contexto);
                                 vertical_layout.setOrientation(LinearLayout.VERTICAL);
@@ -395,9 +404,11 @@ public class DialogoEliminar_Productos extends DialogFragment
                                 //cb.setLayoutParams(layout_eliminar);
                                 //cb.setBackgroundResource(R.drawable.tabla_celda);
 
-                                cb.setOnClickListener(new View.OnClickListener() {
+                                cb.setOnClickListener(new View.OnClickListener()
+                                {
                                     @Override
-                                    public void onClick(View v) {
+                                    public void onClick(View v)
+                                    {
                                         if (cb.isChecked())
                                         {
                                             num_checks++;
@@ -440,6 +451,7 @@ public class DialogoEliminar_Productos extends DialogFragment
     private class cargar_data_pedido extends AsyncTask<String, Void, String>
     {
         ProgressDialog pDialog;
+
         @Override
         protected void onPreExecute()
         {

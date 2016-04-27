@@ -12,10 +12,10 @@ import paquete.recycle_bitmap.RecyclingImageView;
  * Desarrollado por Gerson el 29/6/2015.
  */
 @SuppressWarnings("SameParameterValue")
-class Gallery_Selected_Item
+public class Gallery_Selected_Item
 {
     private static ArrayList<RecyclingImageView> array_c;
-    private final Context contexto;
+    private final  Context                       contexto;
 
     /**
      * Constructor de la clase.

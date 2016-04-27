@@ -34,9 +34,9 @@ import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
-import paquete.Droidlogin.library.Httppostaux;
-import paquete.comparing_versions.DefaultArtifactVersion;
 import paquete.database.DBAdapter;
+import paquete.global.comparing_versions.DefaultArtifactVersion;
+import paquete.global.library.Httppostaux;
 import paquete.notifications.MyBroadcastReceiver;
 import paquete.notifications.actualizarApp_SegundoPlano;
 import paquete.tufanoapp.Home;
@@ -44,7 +44,7 @@ import paquete.tufanoapp.R;
 
 /**
  * Desarrollado por Gerson el 11/5/2015.
- *
+ * <p/>
  * Clase que engloba las funciones que se utilizan muy a menudo por distintas clases a lo largo
  * del proyecto.
  */
@@ -53,6 +53,7 @@ public class Funciones
 {
     /**
      * Verifica si el email introducido es valido.
+     *
      * @param email Email a validar.
      * @return True si el e-mail es valido en el formato 'name@company.com'
      */
@@ -63,6 +64,7 @@ public class Funciones
 
     /**
      * Verifica si el dispositivo esta con alguna conexion a internet disponible.
+     *
      * @param contexto Contexto de la actividad.
      * @return True si el dispositivo posee una conexion activa a internet.
      */
@@ -70,15 +72,16 @@ public class Funciones
     {
         //if (networkInfo != null && networkInfo.isConnected())
 
-        ConnectivityManager cm = (ConnectivityManager) contexto.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        ConnectivityManager cm      = (ConnectivityManager) contexto.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo         netInfo = cm.getActiveNetworkInfo();
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
     /**
      * Comprime una imagen con las dimensiones indicadas por los parametros.
-     * @param file Archivo a comprimir.
-     * @param reqWidth Ancho requerido.
+     *
+     * @param file      Archivo a comprimir.
+     * @param reqWidth  Ancho requerido.
      * @param reqHeight Alto requerido.
      * @return Imagen escalada a las dimensiones requeridas.
      */
@@ -100,7 +103,6 @@ public class Funciones
     }
 
     /**
-     *
      * @param options
      * @param reqWidth
      * @param reqHeight
@@ -109,19 +111,21 @@ public class Funciones
     private static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight)
     {
         // Raw height and width of image
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
+        final int height       = options.outHeight;
+        final int width        = options.outWidth;
+        int       inSampleSize = 1;
 
-        if (height > reqHeight || width > reqWidth) {
+        if (height > reqHeight || width > reqWidth)
+        {
 
             final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
+            final int halfWidth  = width / 2;
 
             // Calculate the largest inSampleSize value that is a power of 2 and keeps both
             // height and width larger than the requested height and width.
             while ((halfHeight / inSampleSize) > reqHeight
-                    && (halfWidth / inSampleSize) > reqWidth) {
+                    && (halfWidth / inSampleSize) > reqWidth)
+            {
                 inSampleSize *= 2;
             }
         }
@@ -131,6 +135,7 @@ public class Funciones
 
     /**
      * Obtiene la version actual de la aplicacion, definida en el manifest como 'versionName'
+     *
      * @param contexto Contexto de la activity
      * @return Version de la app en formato similar a '2.3.20'
      * @throws PackageManager.NameNotFoundException
@@ -138,19 +143,21 @@ public class Funciones
     public static String getAppVersion(Context contexto) throws PackageManager.NameNotFoundException
     {
         PackageManager manager = contexto.getPackageManager();
-        PackageInfo info = manager.getPackageInfo(contexto.getPackageName(), 0);
+        PackageInfo    info    = manager.getPackageInfo(contexto.getPackageName(), 0);
         return info.versionName;
     }
 
     /**
      * Encripta un texto proporcionado segun un KEY indicado.
-     * @param key KEY con el cual se encriptara, se aconseja que sea generado de forma aleatoria y
-     *            guardado para su uso posterior al momento de Des-Encriptar.
+     *
+     * @param key  KEY con el cual se encriptara, se aconseja que sea generado de forma aleatoria y
+     *             guardado para su uso posterior al momento de Des-Encriptar.
      * @param text Texto a encriptar.
      * @return Texto encriptado.
      * @throws GeneralSecurityException
      */
-    public static byte[] encrypt(String key, String text) throws GeneralSecurityException {
+    public static byte[] encrypt(String key, String text) throws GeneralSecurityException
+    {
 
         SecretKey secret_key = new SecretKeySpec(key.getBytes(), Constantes.ALGORITM);
 
@@ -162,12 +169,14 @@ public class Funciones
 
     /**
      * Des-Encripta un texto proporcionado segun un KEY indicado.
-     * @param key KEY con el cual el texto fue encriptado, para poder des-encriptarlo nuevamente.
+     *
+     * @param key           KEY con el cual el texto fue encriptado, para poder des-encriptarlo nuevamente.
      * @param encryptedText Texto encriptado.
      * @return Texto sin encriptacion.
      * @throws GeneralSecurityException
      */
-    public static String decrypt(String key, byte[] encryptedText) throws GeneralSecurityException {
+    public static String decrypt(String key, byte[] encryptedText) throws GeneralSecurityException
+    {
 
         SecretKey secret_key = new SecretKeySpec(key.getBytes(), Constantes.ALGORITM);
 
@@ -254,7 +263,8 @@ public class Funciones
 
     /**
      * Crea una notificacion con el numero de pedidos pendientes por enviar (Pedidos Locales)
-     * @param contexto Contexto de la actividad.
+     *
+     * @param contexto            Contexto de la actividad.
      * @param num_pedidos_locales Numero de pedidos pendientes.
      */
     public static void createNotification(Context contexto, int num_pedidos_locales)
@@ -263,7 +273,7 @@ public class Funciones
         String contenido = contexto.getResources().getString(R.string.contenido_notificacion);
 
         String titulo = contexto.getResources().getString(R.string.titulo_notificacion);
-        titulo = titulo.replace("%",""+num_pedidos_locales);
+        titulo = titulo.replace("%", "" + num_pedidos_locales);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(contexto);
 
@@ -293,9 +303,10 @@ public class Funciones
 
     /**
      * Crea una notificacion para la descarga de la app.
-     * @param contexto Contexto de la aplicacion.
+     *
+     * @param contexto    Contexto de la aplicacion.
      * @param new_version Version mas actualizada de la app (Extraida de la BD.Externa)
-     * @param url Url donde se encuentra la app.
+     * @param url         Url donde se encuentra la app.
      */
     private static void createNotificationDownloadApp(Context contexto, String new_version, String url)
     {
@@ -303,7 +314,7 @@ public class Funciones
         String contenido = contexto.getResources().getString(R.string.contenido_notificacion_descargarApp);
 
         String titulo = contexto.getResources().getString(R.string.titulo_notificacion_descargarApp);
-        titulo = titulo.replace("%",new_version);
+        titulo = titulo.replace("%", new_version);
 
         NotificationCompat.Builder builder2 = new NotificationCompat.Builder(contexto);
 
@@ -342,9 +353,9 @@ public class Funciones
      */
     public static int verificar_Notificacion(Context contexto)
     {
-        DBAdapter manager = new DBAdapter(contexto);
-        Cursor cursor = manager.cargarCursorProductosPedidos_Locales();
-        int numero_pedidos = cursor.getCount();
+        DBAdapter manager        = new DBAdapter(contexto);
+        Cursor    cursor         = manager.cargarCursorProductosPedidos_Locales();
+        int       numero_pedidos = cursor.getCount();
         cursor.close();
 
         Log.i("verificar_Notificacion", "Hay " + numero_pedidos + " pedidos locales.");
@@ -361,29 +372,32 @@ public class Funciones
 
     /**
      * Incluye un formato predefinido al telefono ingresado.
+     *
      * @param telefono Numero de telefono al cual se le incluira el formato (Guiones y Puntos), como
      *                 por ejemplo 04121234567
      * @return El telefono bajo un formato predefinido, como por ejemplo: 0412-123.4567
      */
     public static String formatoTelefono(String telefono)
     {
-        return telefono.substring(0,4) + "-" + telefono.substring(4, 7) + "." + telefono.substring(7);
+        return telefono.substring(0, 4) + "-" + telefono.substring(4, 7) + "." + telefono.substring(7);
     }
 
     /**
      * Elimina el formato del telefono (Guiones y puntos)
+     *
      * @param telefono El telefono bajo un formato 0000-000.0000
      * @return El telefono sin el formato 12345677901
      */
     public static String quitarFormatoTelefono(String telefono)
     {
-        return telefono.replace("-","").replace(".","");
+        return telefono.replace("-", "").replace(".", "");
     }
 
     /**
      * Cambia el titulo de la barra de navegacion superior y selecciona el item correspondiente
      * en el menu lateral.
-     * @param titulo Titulo por el cual se va a cambiar.
+     *
+     * @param titulo   Titulo por el cual se va a cambiar.
      * @param activity Actividad a la cual se le cambiara el titulo.
      */
     public static void cambiarTitulo(String titulo, Activity activity)
@@ -396,7 +410,8 @@ public class Funciones
 
     /**
      * Busca la posicion de un estado dentro de la lista predefinida de estados del sistema.
-     * @param estado Estado a consultar la posicion dentro de la lista.
+     *
+     * @param estado   Estado a consultar la posicion dentro de la lista.
      * @param contexto Contexto de la actividad.
      * @return La posicion del estado. Retornara -1 de no haberse encontrado.
      */
@@ -406,7 +421,7 @@ public class Funciones
 
         for (int i = 0; i < estados_lista.length; i++)
         {
-            if(estados_lista[i].equals(estado))
+            if (estados_lista[i].equals(estado))
             {
                 return i;
             }
@@ -416,6 +431,7 @@ public class Funciones
 
     /**
      * Formatea un precio con separadores de unidades de miles (Puntos y comas)
+     *
      * @param price Precio actual a formatear, por lo general seria algo como 12500.05
      * @return El precio ya formateado, como por ejemplo 12,500.05
      */
@@ -428,20 +444,21 @@ public class Funciones
     /**
      * Funcion utilizada para verificar si el usuario actual tiene permiso para ver la opcion
      * indicada en los parametros
+     *
      * @param opcion La opcion a la cual se desea verificar su estado de habilitado. por ejemplo:
-     * homes, muestrario, pedidos, clientes, perfil, opciones, edo_cuenta. Notese que estos son
-     * campos de la base de datos de la tabla TABLA_FUNCIONES
-     * @param num El numero de la opcion correspondiente, por ejemplo 0, 1, 2 ,3 (Con respecto a la
-     * opcion señalada en el String anterior.
-     * @param id El id del usuario en cuestion.
+     *               homes, muestrario, pedidos, clientes, perfil, opciones, edo_cuenta. Notese que estos son
+     *               campos de la base de datos de la tabla TABLA_FUNCIONES
+     * @param num    El numero de la opcion correspondiente, por ejemplo 0, 1, 2 ,3 (Con respecto a la
+     *               opcion señalada en el String anterior.
+     * @param id     El id del usuario en cuestion.
      * @return True si la funcionalidad se permite, false de lo contrario.
      */
     public static boolean FuncionalidadPermitida(String opcion, int num, String id, DBAdapter manager)
     {
-        Cursor cursor = manager.buscarFuncionesUsuario(id, opcion);
+        Cursor cursor  = manager.buscarFuncionesUsuario(id, opcion);
         String funcion = "";
 
-        for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
         {
             funcion = cursor.getString(0);
         }
@@ -449,9 +466,9 @@ public class Funciones
 
         String[] f = funcion.split(",");
 
-        for (int i=0; i<f.length; i++)
+        for (int i = 0; i < f.length; i++)
         {
-            if (i==num)
+            if (i == num)
             {
                 return f[i].equals("1");
             }
@@ -463,27 +480,28 @@ public class Funciones
     /**
      * Funcion utilizada para verificar si el usuario actual tiene permiso para ver la opcion
      * indicada en los parametros
+     *
      * @param opcion La opcion a la cual se desea verificar su estado de habilitado. por ejemplo:
-     * homes, muestrario, pedidos, clientes, perfil, opciones, edo_cuenta. Notese que estos son
-     * campos de la base de datos de la tabla TABLA_FUNCIONES     *
-     * @param id El id del usuario en cuestion.
+     *               homes, muestrario, pedidos, clientes, perfil, opciones, edo_cuenta. Notese que estos son
+     *               campos de la base de datos de la tabla TABLA_FUNCIONES     *
+     * @param id     El id del usuario en cuestion.
      * @return True si la funcionalidad se permite, es decir, todas las funcionalidad que lo contienen
      * estan deshabilitadas, false de lo contrario.
      */
     public static boolean Funcionalidad_Menu_Permitida(String opcion, String id, DBAdapter manager)
     {
-        Cursor cursor = manager.buscarFuncionesUsuario(id, opcion);
+        Cursor cursor  = manager.buscarFuncionesUsuario(id, opcion);
         String funcion = "";
 
-        for(cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
         {
             funcion = cursor.getString(0);
         }
         cursor.close();
 
-        String[] f = funcion.split(",");
-        int contador = 0;
-        int num_comas = numero_ocurrencias_caracter(funcion,",");
+        String[] f         = funcion.split(",");
+        int      contador  = 0;
+        int      num_comas = numero_ocurrencias_caracter(funcion, ",");
 
         for (String aF : f)
         {
@@ -496,7 +514,8 @@ public class Funciones
 
     /**
      * Calcula el numero de ocurrencias del caracter indicado, en la cadena introducida
-     * @param cadena La cadena donde se buscaran el numero de ocurrencias de un caracter
+     *
+     * @param cadena   La cadena donde se buscaran el numero de ocurrencias de un caracter
      * @param caracter El caracter a buscar en la cadena señalada.
      * @return El numero de ocurrencias del caracter en la cadena.
      */
@@ -507,6 +526,7 @@ public class Funciones
 
     /**
      * Funcion para la verificacion de las actualizaciones de la app (Segun la version)
+     *
      * @param context Contexto de la actividad.
      */
     public static void verificar_ActualizacionesApp(Context context)
@@ -515,10 +535,78 @@ public class Funciones
     }
 
     /**
+     * Consulta la version actual de la aplicacion en la web.
+     *
+     * @return Array con la version mas nueva en la web y la url donde se consigue dicha actualiz.
+     */
+    private static String[] consultarVersionWeb()
+    {
+        Log.d("Opciones", "consultarVersionWeb");
+        Httppostaux post = new Httppostaux();
+
+        ArrayList<NameValuePair> postparameters2send = new ArrayList<>();
+        String                   URL                 = Constantes.IP_Server + "consultar_ult_version.php";
+        JSONArray                jdata               = post.getserverdata(postparameters2send, URL);
+        String                   version_web;
+
+        if (jdata != null && jdata.length() > 0)
+        {
+            JSONObject json_data;
+            try
+            {
+                json_data = jdata.getJSONObject(0);
+                version_web = json_data.getString("version");
+                URL = json_data.getString("url");
+
+                return new String[]{version_web, URL};
+            }
+            catch (JSONException e)
+            {
+                Log.e("Error consultarVers", "" + e);
+                e.printStackTrace();
+            }
+        }
+        else
+        {
+            Log.e("JSON  ", "ERROR: NO DATA");
+            return null;
+        }
+        return null;
+    }
+
+    /**
+     * Used for comparing different versions of software
+     *
+     * @param local_version_string  the version name of the app installed on the system
+     * @param online_version_string the version name of the app released on the Google Play
+     * @return true if a the online_version_string is greater than the local_version_string
+     */
+    private static boolean newer_version_available(String local_version_string, String online_version_string)
+    {
+        DefaultArtifactVersion local_version_mvn  = new DefaultArtifactVersion(local_version_string);
+        DefaultArtifactVersion online_version_mvn = new DefaultArtifactVersion(online_version_string);
+        return local_version_mvn.compareTo(online_version_mvn) == -1 && !local_version_string.equals("");
+    }
+
+    /**
+     * Formatea el tamaño de un archivo introducido a un formato legible y entendible por usuario.
+     *
+     * @param size Tamaño del archivo a formatear.
+     * @return Tamaño del archivo formateado con la unidad correspondiente, por ej 534.1 MB
+     */
+    public static String readableFileSize(long size)
+    {
+        if (size <= 0) return "0";
+        final String[] units       = new String[]{"B", "kB", "MB", "GB", "TB"};
+        int            digitGroups = (int) (Math.log10(size) / Math.log10(1024));
+        return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
+    }
+
+    /**
      * Clase para la busqueda en segundo plano de la version mas actualizada de la aplicacion
      * hasta el momento.
      */
-    static class buscarVersionWeb extends AsyncTask< String, String, String >
+    static class buscarVersionWeb extends AsyncTask<String, String, String>
     {
         final Context contexto;
         String version_actual, version_web, url;
@@ -548,7 +636,7 @@ public class Funciones
                     version_web = response[0];
                     url = response[1];
                 }
-                if (version_web!=null )
+                if (version_web != null)
                     return "ok";
                 else
                     return "err";
@@ -556,7 +644,7 @@ public class Funciones
             catch (RuntimeException e)
             {
                 e.printStackTrace();
-                return ""+e;
+                return "" + e;
             }
         }
 
@@ -568,86 +656,21 @@ public class Funciones
                 if (newer_version_available(version_actual, version_web))
                 {
                     // Hay que actualizar..
-                    Log.d("onPostExecute","Hay que actualizar a la version "+version_web);
+                    Log.d("onPostExecute", "Hay que actualizar a la version " + version_web);
                     Funciones.createNotificationDownloadApp(contexto, version_web, url);
                 }
                 else
                 {
                     // Ya esta actualizado
-                    Log.d("onPostExecute","Ya esta actualizado..");
+                    Log.d("onPostExecute", "Ya esta actualizado..");
                 }
             }
             else
             {
-                if(!result.equals("err"))
+                if (!result.equals("err"))
                     Toast.makeText(contexto, "Ha ocurrido un error al consultar los datos.." + result, Toast.LENGTH_LONG).show();
-                Log.d("ERROR",result);
+                Log.d("ERROR", result);
             }
         }
-    }
-
-    /**
-     * Consulta la version actual de la aplicacion en la web.
-     * @return Array con la version mas nueva en la web y la url donde se consigue dicha actualiz.
-     */
-    private static String[] consultarVersionWeb()
-    {
-        Log.d("Opciones", "consultarVersionWeb");
-        Httppostaux post = new Httppostaux();
-
-        ArrayList<NameValuePair> postparameters2send= new ArrayList<>();
-        String URL = Constantes.IP_Server + "consultar_ult_version.php";
-        JSONArray jdata = post.getserverdata(postparameters2send, URL);
-        String version_web;
-
-        if (jdata!=null && jdata.length() > 0)
-        {
-            JSONObject json_data;
-            try
-            {
-                json_data = jdata.getJSONObject(0);
-                version_web = json_data.getString("version");
-                URL = json_data.getString("url");
-
-                return new String[]{version_web,URL};
-            }
-            catch (JSONException e)
-            {
-                Log.e("Error consultarVers",""+e);
-                e.printStackTrace();
-            }
-        }
-        else
-        {
-            Log.e("JSON  ", "ERROR: NO DATA");
-            return null;
-        }
-        return null;
-    }
-
-    /**
-     * Used for comparing different versions of software
-     * @param local_version_string the version name of the app installed on the system
-     * @param online_version_string the version name of the app released on the Google Play
-     * @return true if a the online_version_string is greater than the local_version_string
-     */
-    private static boolean newer_version_available(String local_version_string, String online_version_string)
-    {
-        DefaultArtifactVersion local_version_mvn = new DefaultArtifactVersion(local_version_string);
-        DefaultArtifactVersion online_version_mvn = new DefaultArtifactVersion(online_version_string);
-        return local_version_mvn.compareTo(online_version_mvn) == -1 && !local_version_string.equals("");
-    }
-
-    /**
-     * Formatea el tamaño de un archivo introducido a un formato legible y entendible por usuario.
-     * @param size Tamaño del archivo a formatear.
-     * @return Tamaño del archivo formateado con la unidad correspondiente, por ej 534.1 MB
-     */
-    public static String readableFileSize(long size)
-    {
-        if(size <= 0) return "0";
-        final String[] units = new String[] { "B", "kB", "MB", "GB", "TB" };
-        int digitGroups = (int) (Math.log10(size)/Math.log10(1024));
-        return new DecimalFormat("#,##0.#").format(size/Math.pow(1024, digitGroups)) + " " + units[digitGroups];
     }
 }

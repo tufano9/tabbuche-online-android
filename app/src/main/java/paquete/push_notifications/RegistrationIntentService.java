@@ -35,7 +35,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import paquete.Droidlogin.library.Httppostaux;
+import paquete.global.library.Httppostaux;
 import paquete.tufanoapp.R;
 
 public class RegistrationIntentService extends IntentService
@@ -68,7 +68,7 @@ public class RegistrationIntentService extends IntentService
 
             boolean correcto = sendRegistrationToServer(token);
 
-            if(correcto)
+            if (correcto)
             {
                 // Subscribe to topic channels
                 //subscribeTopics(token);
@@ -92,7 +92,7 @@ public class RegistrationIntentService extends IntentService
     }
 
     /**
-     * <p>
+     * <p/>
      * Persist registration to third-party servers.
      * <p/>
      * Modify this method to associate the user's GCM registration token with any server-side account
@@ -102,34 +102,34 @@ public class RegistrationIntentService extends IntentService
      */
     private boolean sendRegistrationToServer(String token)
     {
-        boolean exito = false;
-        Httppostaux post= new Httppostaux();
+        boolean     exito = false;
+        Httppostaux post  = new Httppostaux();
 
-        ArrayList<NameValuePair> listaParametros= new ArrayList<>();
-        listaParametros.add(new BasicNameValuePair("token",token));
+        ArrayList<NameValuePair> listaParametros = new ArrayList<>();
+        listaParametros.add(new BasicNameValuePair("token", token));
 
-        String URL_connect = "http://tabbuche.net/tufano/android/add_token.php";
-        JSONArray jdata = post.getserverdata(listaParametros, URL_connect);
+        String    URL_connect = "http://tabbuche.net/tufano/android/add_token.php";
+        JSONArray jdata       = post.getserverdata(listaParametros, URL_connect);
 
-        if (jdata!=null && jdata.length() > 0)
+        if (jdata != null && jdata.length() > 0)
         {
             JSONObject json_data;
             try
             {
                 json_data = jdata.getJSONObject(0);
-                int logstatus=json_data.getInt("salida");
+                int logstatus = json_data.getInt("salida");
 
-                if(logstatus==1)
+                if (logstatus == 1)
                 {
                     // Accion exitosa..
                     Log.i(TAG, "Token agregado exitosamente..");
-                    exito=true;
+                    exito = true;
                 }
-                else if(logstatus==2)
+                else if (logstatus == 2)
                 {
                     // Accion exitosa, pero el token ya habia sido agregado en BD..
                     Log.i(TAG, "Token ya existente..");
-                    exito=true;
+                    exito = true;
                 }
             }
             catch (JSONException e)

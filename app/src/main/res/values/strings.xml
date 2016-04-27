@@ -210,6 +210,7 @@
     <string name="editar_usuario">Modificar datos</string>
     <string name="agregar_productos">Agregar productos seleccionados</string>
     <string name="seleccione_productos_agregar">Seleccione los productos que desea agregar..</string>
+    <string name="destacado">Destacado</string>
 
     <!-- Lista de tipos de estatus -->
     <string-array name="estatus_lista">

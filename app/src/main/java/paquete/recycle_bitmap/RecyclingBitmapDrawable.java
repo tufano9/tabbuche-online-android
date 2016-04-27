@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
+
 import paquete.tufanoapp.BuildConfig;
 
 /**
@@ -13,13 +14,14 @@ import paquete.tufanoapp.BuildConfig;
  */
 class RecyclingBitmapDrawable extends BitmapDrawable
 {
-    private static final String LOG_TAG = "CountingBitmapDrawable";
-    private int mCacheRefCount = 0;
-    private int mDisplayRefCount = 0;
+    private static final String LOG_TAG          = "CountingBitmapDrawable";
+    private              int    mCacheRefCount   = 0;
+    private              int    mDisplayRefCount = 0;
     private boolean mHasBeenDisplayed;
 
     @SuppressWarnings("unused")
-    public RecyclingBitmapDrawable(Resources res, Bitmap bitmap) {
+    public RecyclingBitmapDrawable(Resources res, Bitmap bitmap)
+    {
         super(res, bitmap);
     }
 
