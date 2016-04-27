@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/nav_drawer_header">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical|left">
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/online_user"
+            android:layout_marginLeft="24dp"
+            android:textColor="#FFFFFF"
+            app:fontFamily="roboto"
+            app:textWeight="medium"
+            android:textSize="14sp" />
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/online_email"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="#FFFFFF"
+            app:fontFamily="roboto"
+            android:textSize="14sp" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/online_user"
+            android:textColor="#ff282828"
+            android:layout_marginLeft="24dp"
+            android:textStyle="bold" />-->
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/online_email"
+            android:textColor="#ff282828"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="16dp" />-->
+    </LinearLayout>
+</FrameLayout>
