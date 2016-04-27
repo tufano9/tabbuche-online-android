@@ -1,126 +1,135 @@
-<resources>
-    <string name="app_name" translatable="false">Tufano Móvil</string>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- OTROS GENERICOS -->
-    <string name="imagesContentDescription">Imagen</string>
-    <string name="guion">&#8211;</string>
-    <string name="formato_rif">(Formato: J&#8211;12345678&#8211;1)</string>
-    <string name="cerrar_sesion">¿Estas seguro que deseas cerrar sesión?</string>
+    <string name="app_name">TABBUCHE… Es algo diferente</string>
+    <string name="hello_world">Hola mundo!</string>
+    <!--<string name="action_settings">Configuraciones</string>-->
+    <!--<string name="usuario">Usuario</string>-->
+    <!--<<string name="contrasena">Contraseña</string>-->
+    <string name="ingresar">Ingresar</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="hint_usuario_login">Cedula de identidad..</string>
+    <string name="hint_contrasena_login">Contraseña..</string>
+    <string name="cerrar_sesion">"¿Desea cerrar sesion?"</string>
+    <!--<<string name="btn_muestrario_home">Muestrario</string>
+    <string name="btn_pedidos_home">Pedidos</string>
+    <string name="btn_clientes_home">Clientes</string>-->
+    <!--<<string name="btn_estadocuenta_home">Estados de cuenta</string>-->
+    <!--<<string name="conectado_home">Conectado como: </string>
+    <string name="title_activity_catalogo">Catalogo</string>
+    <string name="title_activity_menuprincipal">Home</string>-->
+    <string name="title_activity_home">Home</string>
+    <string name="lineas">Lineas</string>
+    <string name="modelos">Modelos</string>
+    <string name="productos">Productos</string>
+    <string name="nombre_producto">Nombre del producto:</string>
+    <string name="cantidad_bulto_producto">Pares:</string>
+    <string name="check_pedido">Agregar al pedido</string>
+    <string name="color_producto">Color:</string>
 
-    <!-- Elementos del menù contextual genericos -->
-    <string name="profile_menu">Perfil</string>
-    <string name="settings_menu">Configuración</string>
-    <string name="talla_menu">Gestion de Tallas</string>
-    <string name="tipo_menu">Gestion de Tipos</string>
-    <string name="color_menu">Gestion de Colores</string>
+    <string name="pedido_sin_talla" tools:ignore="StringFormatInvalid">No hay articulos de talla % agregados al pedido.</string>
 
-    <!-- Elementos de inicio de Sesion -->
-    <string name="btn_login_1">Usuario</string>
-    <string name="btn_login_2">Contraseña</string>
-    <string name="btn_login_3">Iniciar sesión</string>
-    <string name="logoContentDescription">Logotipo App</string>
-    <string name="ayuda_login">¿Necesitas ayuda para iniciar sesión?</string>
+    <string name="modificar_clientes">Modificar Clientes</string>
+    <string name="agregar_clientes">Agregar Clientes</string>
 
-    <!-- Elementos de Home -->
-    <string name="menu1">Consultas</string>
-    <string name="menu2">Productos</string>
-    <string name="menu3">Clientes</string>
-    <string name="menu4">Pedidos</string>
-    <string name="menu5">Facturas</string>
-    <string name="menu6">Cobranzas</string>
-    <string name="home_subtitulo">Home</string>
+    <string name="razon_social">Razon Social:</string>
+    <string name="razon_social_hint">Ingrese una razon social..</string>
+    <string name="direccion">Direccion:</string>
+    <string name="direccion_hint">Ingrese una direccion..</string>
+    <string name="estado">Estado:</string>
+    <string name="telefono">Telefono:</string>
+    <string name="telefono_hint">Ingrese un telefono..</string>
+    <string name="fecha">Fecha</string>
+    <string name="rif">RIF:</string>
+    <string name="email">Email:</string>
+    <string name="email_hint">Ingrese un email..</string>
+    <string name="agregar_cliente">Agregar Cliente</string>
+    <string name="seleccionar_cliente">Seleccionar Cliente</string>
+    <string name="buscar_cliente">Buscar cliente por razon social..</string>
+    <string name="guion">-</string>
+    <string name="precios_moneda">% $</string>
 
-    <!-- Elementos de Gestion de Productos -->
-    <string name="menu_gestion_productos_1">Agregar</string>
-    <string name="menu_gestion_productos_2">Editar</string>
-    <string name="gestion_producto_subtitulo">Gestion de Productos</string>
+    <string name="confirmacion_editar_usuario">¿Desea editar sus datos?</string>
 
-    <!-- Elementos de Agregar Productos -->
-    <string name="hint_modelo">Inserte el modelo.. (Por ej. 1215–05P)</string>
-    <string name="hint_precio">Inserte el precio..</string>
-    <string name="agregar_producto_btn">Agregar Producto</string>
-    <string name="error_tipo">Seleccione un tipo!</string>
-    <string name="error_talla">Seleccione una talla!"</string>
-    <string name="error_color">Seleccione un color!"</string>
+    <string name="confirmacion_agregar_cliente">¿Desea agregar este cliente?</string>
+    <string name="olvide_contrasena">¿Olvido su contraseña?</string>
+    <string name="email_restablecer">Ingrese su email</string>
+    <string name="titulo_restablecer">Reestablecer contraseña</string>
+    <string name="btn_ok">Enviar Email</string>
+    <string name="btn_cancel">Cancelar</string>
 
-    <string name="agregar_producto_subtitulo">Agregar Producto</string>
-    <string name="confirmacion_agregar_producto">¿Está seguro que desea agregar este producto?"</string>
-
-    <!-- Elementos de Editar Productos -->
-    <string name="editar_producto_subtitulo">Editar Producto</string>
-    <string name="hint_autoCModelo">Buscar por modelo..</string>
-    <string name="cabecera_tabla_editar_producto_0">Imagen</string>
-    <string name="cabecera_tabla_editar_producto_1">Talla</string>
-    <string name="cabecera_tabla_editar_producto_2">Tipo</string>
-    <string name="cabecera_tabla_editar_producto_3">Modelo</string>
-    <string name="cabecera_tabla_editar_producto_4">Color</string>
-    <string name="cabecera_tabla_editar_producto_5">Precio</string>
-    <string name="cabecera_tabla_editar_producto_6">Numeracion</string>
-    <string name="cabecera_tabla_editar_producto_7">Opciones</string>
-
-    <!-- Elementos de Editar Productos Detalles -->
-    <string name="editar_producto_detalles_subtitulo">Editar Producto</string>
-    <string name="confirmacion_editar_producto">¿Está seguro que desea editar este producto?"</string>
-
-    <!-- Gestion de Tallas -->
-    <string name="cabecera_tabla_gestionTallas_1">Talla</string>
-    <string name="cabecera_tabla_gestionTallas_2">Numeracion</string>
-    <string name="cabecera_tabla_gestionTallas_3">Opciones</string>
-    <string name="confirmacion_editar_talla">¿Está seguro que desea editar esta talla?"</string>
-    <string name="confirmacion_agregar_talla">¿Está seguro que desea agregar esta talla?"</string>
-    <string name="gestion_talla_subtitulo">Gestion de Tallas"</string>
-
-    <!-- Agregar Tallas -->
-    <string name="hint_nombre_talla">Inserte un nombre de talla..</string>
-    <string name="btn_agregar_talla">Agregar Talla</string>
-
-    <!-- Editar Tallas -->
-    <string name="btn_editar_talla">Editar Talla</string>
-
-    <!-- Gestion de Tipos -->
-    <string name="gestion_tipo_subtitulo">Gestion de Tipos"</string>
-    <string name="cabecera_tabla_gestionTipos_1">Tipo</string>
-    <string name="cabecera_tabla_gestionTipos_2">Opciones</string>
-
-    <!-- Agregar Tipos -->
-    <string name="confirmacion_agregar_tipo">¿Está seguro que desea agregar este tipo?</string>
-    <string name="hint_tipo_agregar">Inserte el nombre del tipo..</string>
-    <string name="btn_agregar_tipo">Agregar tipo</string>
-
-    <!-- Editar Tipos -->
-    <string name="btn_editar_tipo">Editar tipo</string>
-    <string name="confirmacion_editar_tipo">¿Está seguro que desea editar este tipo?</string>
-
-    <!-- Gestion de Colores -->
-    <string name="confirmacion_agregar_color">¿Está seguro que desea agregar este color?</string>
-    <string name="confirmacion_editar_color">¿Está seguro que desea editar este color?</string>
-    <string name="gestion_color_subtitulo">Gestion de Colores</string>
-    <string name="cabecera_tabla_gestionColores_1">Color</string>
-    <string name="cabecera_tabla_gestionColores_2">Opciones</string>
-    <string name="btn_agregar_color">Agregar color</string>
-    <string name="hint_color_agregar">Inserte el nombre del color</string>
-    <string name="btn_editar_color">Editar color</string>
-
-    <!-- Gestion de Clientes -->
-    <string name="gestion_cliente_subtitulo">Gestion de Clientes</string>
-    <string name="menu_gestion_clientes_1">Agregar</string>
-    <string name="menu_gestion_clientes_2">Editar</string>
-    <string name="agregar_cliente_subtitulo">Agregar Cliente</string>
+    <string name="numeracion">Numeracion</string>
+    <string name="producto_pedido">Producto</string>
+    <string name="color_pedido">Color</string>
+    <string name="pares_pedido">Pares por bulto</string>
+    <string name="bultos_pedido">Bultos</string>
+    <string name="precio_unitario">Precio Unitario</string>
+    <string name="precio_total">SubTotal</string>
+    <string name="total_pedido">Monto total del pedido:</string>
+    <string name="unidad_bolivar">Bs.F</string>
 
 
-    <!-- Agregar Clientes -->
-    <string name="hint_razon_social">Inserte la razon social..</string>
-    <string name="hint_telefono">Inserte el telefono..</string>
-    <string name="hint_email">Inserte el email..</string>
-    <string name="hint_direccion">Inserte la direccion..</string>
-    <string name="hint_rif1">Inserte el rif..</string>
-    <string name="hint_rif2">Terminal..</string>
-    <string name="btn_agregar_cliente">Agregar Cliente</string>
-    <string name="confirmacion_agregar_cliente">¿Está seguro que desea agregar este cliente?</string>
-    <string name="error_rif">¡Seleccione un rif!</string>
-    <string name="error_estado">¡Seleccione un estado!</string>
+
+    <string name="sinPedidos">No hay pedidos realizados.</string>
+    <string name="sinPedidosEncontrados">No se encontraron pedidos..</string>
+    <string name="sinPedidosP">No hay articulos de talla P agregados al pedido.</string>
+    <string name="sinPedidosM">No hay articulos de talla M agregados al pedido.</string>
+    <string name="sinPedidosG">No hay articulos de talla G agregados al pedido.</string>
+    <string name="verDetalles">Ver mas detalles</string>
+    <string name="pedido_btn_1">Cancelar Pedido</string>
+    <string name="pedido_btn_2">Eliminar Producto</string>
+    <string name="pedido_btn_3">Realizar Pedido</string>
+    <string name="pedido_btn_4">Edicion de Pedido</string>
+    <string name="pedido_btn_5">Enviar Pedidos</string>
+    <string name="pedido_btn_6">Agregar Producto</string>
+    <string name="confirmacion_cancelar_pedido">¿Esta seguro que desea cancelar el pedido?</string>
+    <string name="confirmacion_eliminar_producto">¿Esta seguro que desea eliminar % producto(s)?</string>
+    <string name="confirmacion_agregar_producto">¿Esta seguro que desea agregar % producto(s)?</string>
+    <string name="confirmacion_realizar_pedido">¿Esta seguro que desea realizar el pedido?</string>
+    <string name="confirmacion_enviar_pedido">¿Esta seguro que desea enviar los pedidos?</string>
+    <string name="confirmacion_editar_pedido">¿Esta seguro que desea editar el pedido?</string>
+
+    <string name="actualizar_app">Actualizar datos</string>
+    <string name="actualizar_application">Actualizar aplicacion</string>
+
+    <string name="actualizar_app_dialogo">¿Desea actualizar los datos de la aplicacion?</string>
+    <string name="actualizar_app_dialogo2">¿Desea verificar si hay una nueva version de la aplicacion?</string>
+    <string name="actualizar_app_dialogo3">¡Ya posees la ultima version de la aplicacion!</string>
+    <string name="actualizar_app_dialogo4">¿Deseas descargar e instalar la nueva version de la aplicacion?</string>
+    <string name="actualizar_app_dialogo5">¡Actualizacion disponible!</string>
+    <string name="onbackPressed_AddCliente">¿Esta seguro que desea volver sin guardar el cliente?</string>
+    <string name="dialogo_editar_cliente">¿Esta seguro que desea editar este cliente?</string>
+    <string name="boton_editar_cliente">Editar Cliente</string>
+
+    <string name="btn_whatsapp">Compartir via WhatsApp</string>
+
+    <string name="user_name">%1$s %2$s</string>
+
+    
+    <!-- Lista de opciones de navegacion-->
+    <string-array name="opciones_home">
+        <item >Home</item>
+        <item >Muestrario</item>
+        <item >Pedidos</item>
+        <item >Clientes</item>
+        <item >E_Cuenta</item>
+        <item >Perfil</item>
+        <item >Opciones</item>
+    </string-array>
+    
+    <!-- Lista de iconos de navegacion-->
+    <array name="navigation_iconos">
+        <item>@drawable/ic_action_action_home</item>  <!-- Home -->
+        <item>@drawable/ic_action_action_shopping_cart</item>  <!-- Muestrario -->
+        <item>@drawable/ic_action_paste</item>   <!-- Pedidos -->
+        <item>@drawable/ic_action_group</item> <!-- Clientes -->
+        <item>@drawable/ic_action_view_as_list</item> <!-- Estados de cuenta -->
+        <item>@drawable/ic_action_edit</item>  <!-- Perfil -->
+        <item>@drawable/ic_action_settings</item>  <!-- Opciones -->
+    </array>
+
+    <!-- Lista de estados-->
     <array name="estados_lista">
-        <item>Seleccione un estado..</item>
         <item>Amazonas</item>
         <item>Anzoátegui</item>
         <item>Apure</item>
@@ -146,117 +155,70 @@
         <item>Zulia</item>
         <item>Vargas</item>
     </array>
-    <array name="rif_lista">
-        <item>Seleccione un tipo..</item>
+
+    <!-- Lista de tipos de RIF-->
+    <string-array name="rif_lista">
         <item >V</item>
         <item >E</item>
         <item >P</item>
         <item >J</item>
         <item >G</item>
-    </array>
+    </string-array>
 
-    <!-- Editar Clientes -->
-    <string name="editar_cliente_subtitulo">Editar Cliente</string>
-    <string name="hint_autoCRazonSocial">Buscar por razon social..</string>
-    <string name="cabecera_tabla_editar_cliente_0">Razon Social</string>
-    <string name="cabecera_tabla_editar_cliente_1">Rif</string>
-    <string name="cabecera_tabla_editar_cliente_2">Estado</string>
-    <string name="cabecera_tabla_editar_cliente_3">Telefono</string>
-    <string name="cabecera_tabla_editar_cliente_4">E-mail</string>
-    <string name="cabecera_tabla_editar_cliente_5">Opciones</string>
-    <string name="btn_editar_cliente">Editar Cliente</string>
-    <string name="confirmacion_editar_cliente">¿Está seguro que desea editar este cliente?</string>
-
-    <!-- Gestion de Pedidos -->
-    <string name="menu_gestion_pedidos_1">Realizar</string>
-    <string name="menu_gestion_pedidos_2">Editar</string>
-    <string name="gestion_pedidos_subtitulo">Gestion de Pedidos</string>
-
-    <!-- Realizar Pedidos -->
-    <string name="cantidad_productos">Cant. Productos:</string>
-    <string name="cantidad_bultos">Cant. Bultos</string>
-    <string name="cantidad_pares">Cant. Pares</string>
-    <string name="totalBsF">Total Bs.F:</string>
-    <string name="agregar_pedido_subtitulo">Realizar Pedido</string>
-    <string name="btn_continuar_agregar_pedidos">Continuar</string>
-    <string name="btn_cancelar_agregar_pedidos">Cancelar</string>
     <string name="imagen">Imagen</string>
-    <string name="modelo">Modelo</string>
-    <string name="cabecera_tabla_agregar_pedido_2">Talla</string>
-    <string name="precio">Precio</string>
-    <string name="numeracion">Numeracion</string>
-    <string name="bultos">Bultos</string>
-    <string name="subtotal">Sub-total</string>
-    <string name="confirmacion_cancelar_pedido">¿Está seguro que desea cancelar este pedido?</string>
-    <string name="confirmacion_aprobar_pedido">¿Está seguro que desea aprobar este pedido?</string>
-    <string name="confirmacion_editar_pedido">¿Está seguro que desea editar este pedido?</string>
-
-    <string name="agregar_productos_pedido">Agregar productos seleccionados al pedido</string>
-    <string name="cabecera_tabla_agregar_producto_7">Seleccionar</string>
-    <string name="confirmacion_eliminar_producto_pedido">¿Está seguro que desea eliminar este producto del pedido?</string>
-
-
-
-    <string name="msj_pedido_vacio">Pedido vacio, por favor agregue algún producto utilizando el boton inferior.</string>
-    <string name="msj_sin_pedidos">No se han realizado pedidos aun, por favor realice alguno para mostrar la informacion aca.</string>
-    <string name="msj_cliente_vacio">No hay cliente, por favor agregue alguno utilizando la opcion correspondiente del menú de inicio.</string>
-    <string name="msj_producto_vacio">No hay productos, por favor agregue algún producto utilizando la opcion correspondiente del menú de inicio.</string>
-    <string name="msj_producto_nodisponible">No hay productos disponibles para escoger, por favor agregue algún producto utilizando la opcion correspondiente del menú de inicio o asegurese de que quede algun producto sin agregar al pedido.</string>
-    <string name="msj_color_vacio">No hay colores, por favor agregue algún color utilizando el boton inferior.</string>
-
-    <string name="msj_tipo_vacio">No hay tipos, por favor agregue algún tipo utilizando el boton inferior.</string>
-    <string name="msj_talla_vacio">No hay tallas, por favor agregue alguna talla utilizando el boton inferior.</string>
-
-    <string name="realizar_pedido_subtitulo">Realizar Pedido</string>
-    <string name="direccion">Direccion</string>
-    <string name="observaciones">Observaciones</string>
-    <string name="btn_cancelar_pedido">Cancelar Pedido</string>
-    <string name="btn_realizar_pedido">Realizar Pedido</string>
-    <string name="confirmacion_realizar_pedido">¿Esta seguro que desea realizar el pedido?</string>
-
-    <!-- NOTA: SI MODIFICO ESTO, DEBO MODIFICAR LA FUNCION obtenerIDEstatus(String estatus) -->
-    <array name="estatus">
-        <item>Seleccione un estatus..</item>
-        <item >En espera de aprobacion</item>
-        <item >Aprobado</item>
-        <item >Cancelado</item>
-    </array>
-
-    <string name="pedido_num">Pedido #</string>
-    <string name="vendedor">Vendedor</string>
     <string name="cliente">Cliente</string>
-    <string name="fecha">Fecha</string>
     <string name="monto">Monto</string>
     <string name="estatus">Estatus</string>
-    <string name="opciones">Opciones</string>
-    <string name="btn_aprobar_pedido">Aprobar Pedido</string>
-    <string name="btn_editar_pedido">Editar Pedido</string>
-    <string name="pares_bulto">Pares por bulto</string>
-    <string name="color">Color</string>
-    <string name="sin_resultados">No se encontraron registros con los filtros indicados.</string>
-    <string name="talla">Talla</string>
-    <string name="tipo">Tipo</string>
-    <string name="editar_perfil">Editar perfil</string>
-    <string name="hint_nombre">Inserte el nombre..</string>
-    <string name="hint_apellido">Inserte el apellido..</string>
-    <string name="hint_cedula">Inserte la cedula..</string>
-    <string name="hint_password">Contraseña actual..</string>
-    <string name="hint_password_nuevo">Contraseña nueva..</string>
-    <string name="hint_repetir_password">Confirme su contraseña..</string>
-    <string name="checkBoxCambiarPassword">Deseo cambiar mi contraseña</string>
+    <string name="datos_cliente">Datos del Cliente</string>
+    <string name="observaciones">Observaciones</string>
+    <string name="continuar">Continuar</string>
+    <string name="eliminar_productos">Eliminar productos seleccionados</string>
+    <string name="opcional_pedido">(Opcional)</string>
+    <string name="seleccione_productos">Seleccione los productos que desee eliminar..</string>
+    <string name="realizar_pedido">Realizar pedido</string>
+    <string name="consultar_pedidos">Consultar pedidos</string>
+    <string name="enviar_pedidos">Enviar pedidos pendientes</string>
+    <string name="texto_pedido_consulta">\t\tA continuacion, se muestran un resumen de todos los pedidos realizados, puede ver los mas detalladamente el pedido haciendo click en el enlace \"Ver mas detalles\" de cada pedido respectivamente. \n \n \t\tPara los pedidos con estatus de \"Envio pendiente\", debe utilizarse el boton inferior para que estos pedidos se hagan efectivo, de lo contrario estos pedidos nunca estaran completos para su aprobacion.</string>
+    <string name="detalles">Detalles</string>
 
-    <string name="confirmacion">Confirmar accion</string>
-    <string name="confirmacion_editar_perfil">¿Está seguro que desea modificar los datos de usuario?</string>
-    <string name="numeral">#</string>
-    <string name="agregar_tipo">Agregar Tipo</string>
-    <string name="editar_tipo">Editar Tipo</string>
-    <string name="agregar_talla">Agregar Talla</string>
-    <string name="editar_talla">Editar Talla</string>
-    <string name="agregar_color">Agregar Color</string>
-    <string name="editar_color">Editar Color</string>
-    <string name="description_zoom_touch_close">Imagen tamaño real</string>
-    <string name="confirmacion_agregar_producto_pedido">¿Está seguro que desea agregar los productos seleccionados al pedido?</string>
-    <string name="dialog_compartir_whatsapp_extra">Seleccione la informacion que desea incluir en el mensaje a compartir.</string>
-    <string name="compartir_via_whatsapp">Compartir via WhatsApp</string>
+    <string name="total_productos">Total de productos: </string>
+    <string name="total_bultos">Total de bultos: </string>
+    <string name="total_pares">Total de pares: </string>
+    <string name="total_bultos_P">Total de bultos (P):</string>
+    <string name="total_pares_P">Total de pares (P):</string>
+    <string name="total_monto_P">Monto total (P):</string>
+
+    <string name="total_bultos_M">Total de bultos (M):</string>
+    <string name="total_pares_M">Total de pares (M):</string>
+    <string name="total_monto_M">Monto total (M):</string>
+
+    <string name="total_bultos_G">Total de bultos (G):</string>
+    <string name="total_pares_G">Total de pares (G):</string>
+    <string name="total_monto_G">Monto total (G):</string>
+    <string name="editar_pedido">Editar Pedido</string>
+
+    <string name="buscar_cliente_sp">Buscar por Cliente</string>
+    <string name="buscar_estatus_sp">Buscar por Estatus </string>
+    <string name="codigo_pedido">Codigo del Pedido </string>
+
+    <string name="titulo_notificacion">% pedido(s) pendiente(s)</string>
+    <string name="titulo_notificacion_descargarApp">¡Existe una version de la app mas actualizada! (%)</string>
+    <string name="contenido_notificacion">Haga click aca para enviar los pedidos.</string>
+    <string name="contenido_notificacion_descargarApp">Haga click aca para descargar la nueva version.</string>
+    <string name="nombre_usuario">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="editar_usuario">Modificar datos</string>
+    <string name="agregar_productos">Agregar productos seleccionados</string>
+    <string name="seleccione_productos_agregar">Seleccione los productos que desea agregar..</string>
+
+    <!-- Lista de tipos de estatus -->
+    <string-array name="estatus_lista">
+        <item >Todos</item>
+        <item >En espera de aprobacion</item>
+        <item >Envio Pendiente</item>
+        <item >Aprobado</item>
+        <item >Anulado</item>
+        <item >Rechazado</item>
+    </string-array>
 
 </resources>

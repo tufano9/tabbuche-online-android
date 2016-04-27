@@ -1,0 +1,707 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <TabHost android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TabWidget android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@android:id/tabs"
+                       android:layout_weight="4"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@android:id/tabcontent"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="2">
+
+                <LinearLayout android:id="@+id/tab1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/horizontalScrollView11">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TableLayout
+                                android:id="@+id/cabecera1"
+                                android:layout_width="match_parent"
+                                android:stretchColumns="*"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2">
+                            </TableLayout>
+
+                            <ScrollView
+                                android:id="@+id/scroll1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="vertical"
+                                android:layout_weight="1">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TableLayout
+                                        android:id="@+id/tabla1"
+                                        android:layout_width="match_parent"
+                                        android:stretchColumns="*"
+                                        android:layout_height="wrap_content">
+                                    </TableLayout>
+                                </LinearLayout>
+                            </ScrollView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bordes">
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_bultos_P"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="200dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            app:fontFamily="roboto"
+                            app:textWeight="bold"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_bultos_P"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="200dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_bultos_P"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            app:fontFamily="roboto"
+                            app:textWeight="normal"
+                            android:textSize="18sp"
+                            android:textStyle="normal"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_bultos_P"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_pares_P"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            app:fontFamily="roboto"
+                            app:textWeight="bold"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_pares_P"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_pares_P"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            app:fontFamily="roboto"
+                            app:textWeight="normal"
+                            android:textSize="18sp"
+                            android:textStyle="normal"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_pares_P"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_monto_P"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            app:fontFamily="roboto"
+                            app:textWeight="bold"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_monto_P"
+                            android:id="@+id/textView37"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_monto_P"
+                            android:layout_marginRight="200dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            app:fontFamily="roboto"
+                            app:textWeight="normal"
+                            android:textSize="18sp"
+                            android:textStyle="normal"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_monto_P"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_marginRight="200dp" />-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/tab2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/horizontalScrollView12">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TableLayout
+                                android:id="@+id/cabecera2"
+                                android:layout_width="match_parent"
+                                android:stretchColumns="*"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2">
+                            </TableLayout>
+
+                            <ScrollView
+                                android:id="@+id/scroll2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="vertical"
+                                android:layout_weight="1">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TableLayout
+                                        android:id="@+id/tabla2"
+                                        android:layout_width="match_parent"
+                                        android:stretchColumns="*"
+                                        android:layout_height="wrap_content">
+                                    </TableLayout>
+                                </LinearLayout>
+                            </ScrollView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bordes">
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_bultos_M"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="200dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            app:fontFamily="roboto"
+                            app:textWeight="bold"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_bultos_M"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="200dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_bultos_M"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            app:fontFamily="roboto"
+                            app:textWeight="normal"
+                            android:textSize="18sp"
+                            android:textStyle="normal"/>
+
+                        <!-- <TextView
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:id="@+id/total_bultos_M"
+                             style="@style/texto_galeria_2"
+                             android:layout_gravity="center"
+                             android:gravity="center"
+                             android:layout_weight="0.5" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_pares_M"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            app:fontFamily="roboto"
+                            app:textWeight="bold"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_pares_M"
+                            android:id="@+id/textView46"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_pares_M"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            app:fontFamily="roboto"
+                            app:textWeight="normal"
+                            android:textSize="18sp"
+                            android:textStyle="normal"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_pares_M"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_monto_M"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            app:fontFamily="roboto"
+                            app:textWeight="bold"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_monto_M"
+                            android:id="@+id/textView47"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_monto_M"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginRight="200dp"
+                            android:layout_weight="0.5"
+                            app:fontFamily="roboto"
+                            app:textWeight="normal"
+                            android:textSize="18sp"
+                            android:textStyle="normal"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_monto_M"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_marginRight="200dp" />-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/tab3"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/horizontalScrollView13">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TableLayout
+                                android:id="@+id/cabecera3"
+                                android:layout_width="match_parent"
+                                android:stretchColumns="*"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2">
+                            </TableLayout>
+
+                            <ScrollView
+                                android:id="@+id/scroll3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="vertical"
+                                android:layout_weight="1">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <TableLayout
+                                        android:id="@+id/tabla3"
+                                        android:layout_width="match_parent"
+                                        android:stretchColumns="*"
+                                        android:layout_height="wrap_content">
+                                    </TableLayout>
+                                </LinearLayout>
+                            </ScrollView>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bordes">
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_bultos_G"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="200dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            app:fontFamily="roboto"
+                            app:textWeight="bold"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_bultos_G"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="200dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_bultos_G"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            app:fontFamily="roboto"
+                            app:textWeight="normal"
+                            android:textSize="18sp"
+                            android:textStyle="normal"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_bultos_G"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_pares_G"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            app:fontFamily="roboto"
+                            app:textWeight="bold"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_pares_G"
+                            android:id="@+id/textView56"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_pares_G"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            app:fontFamily="roboto"
+                            app:textWeight="normal"
+                            android:textSize="18sp"
+                            android:textStyle="normal"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_pares_G"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_monto_G"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            app:fontFamily="roboto"
+                            app:textWeight="bold"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total_monto_G"
+                            android:id="@+id/textView57"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:textStyle="bold" />-->
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_monto_G"
+                            android:layout_marginRight="200dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            app:fontFamily="roboto"
+                            app:textWeight="normal"
+                            android:textSize="18sp"
+                            android:textStyle="normal"/>
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_monto_G"
+                            style="@style/texto_galeria_2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.5"
+                            android:layout_marginRight="200dp" />-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/fragment_pedido_footer"
+                android:layout_weight="4"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:layout_marginBottom="5dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pedido_btn_1"
+                    android:id="@+id/btn_pedido1"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/boton_rojo"
+                    android:textStyle="normal"
+                    style="@style/ButtonText_normal"
+                    android:textSize="12sp"
+                    android:textAlignment="gravity"
+                    android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="center"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pedido_btn_2"
+                    android:id="@+id/btn_pedido2"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/boton_amarillo"
+                    android:textStyle="normal"
+                    style="@style/ButtonText_normal"
+                    android:textSize="12sp"
+                    android:textAlignment="gravity"
+                    android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="center"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/continuar"
+                    android:id="@+id/btn_pedido3"
+                    android:layout_weight="1"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/boton_verde"
+                    android:textStyle="normal"
+                    style="@style/ButtonText_normal"
+                    android:textSize="12sp"
+                    android:textAlignment="gravity"
+                    android:gravity="bottom|center_horizontal"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>

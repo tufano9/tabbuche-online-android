@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="?android:attr/activatedBackgroundIndicator" >
+
+
+        <!--android:background="?android:attr/activatedBackgroundIndicator"-->
+
+        <view
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:contentDescription="@string/imagen"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="5"
+            class="paquete.recycle_bitmap.RecyclingImageView" />
+
+        <!--<ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:contentDescription="@string/imagen"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="5" />-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="0dp"
+            android:paddingRight="16dp"
+            android:textColor="#000000"
+            android:id="@+id/title_item"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="32dp"
+            app:fontFamily="roboto"
+            app:textWeight="medium"
+            android:alpha="87"
+            android:textSize="14sp" />
+
+        <!--<TextView
+            android:id="@+id/title_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="0dp"
+            android:paddingRight="16dp"
+            android:textColor="#ff000000"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:minHeight="?android:attr/listPreferredItemHeightSmall"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="32dp"
+            android:alpha="87" />-->
+    </LinearLayout>
+
+</LinearLayout>

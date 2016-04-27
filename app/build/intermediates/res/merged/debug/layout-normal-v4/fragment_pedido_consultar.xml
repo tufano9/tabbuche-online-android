@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView6">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center">
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/texto_pedido_consulta"
+                    android:textColor="#ff000000"
+                    app:fontFamily="roboto"
+                    app:textWeight="normal"
+                    android:textSize="15sp"
+                    android:textStyle="normal"
+                    android:textAlignment="center"/>
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/texto_pedido_consulta"
+                    android:id="@+id/textView31"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:textColor="#ff000000" />-->
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontalScrollView2">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="25dp">
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/buscar_cliente_sp"
+                            app:fontFamily="roboto"
+                            app:textWeight="medium"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:text="@string/buscar_cliente_sp"
+                            android:id="@+id/textView38"
+                            android:textStyle="bold"
+                            android:layout_gravity="center" />-->
+
+                        <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sp_clientes"
+                            android:layout_marginLeft="10dp" />
+
+                        <com.devspark.robototextview.widget.RobotoTextView
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/buscar_estatus_sp"
+                            android:layout_marginLeft="15dp"
+                            app:fontFamily="roboto"
+                            app:textWeight="medium"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:text="@string/buscar_estatus_sp"
+                            android:id="@+id/textView39"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp" />-->
+
+                        <Spinner
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sp_estatus"
+                            android:layout_marginLeft="10dp" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TableLayout
+                            android:id="@+id/tableLayout_Cabecera"
+                            android:layout_width="match_parent"
+                            android:stretchColumns="*"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp">
+                        </TableLayout>
+
+                        <TableLayout
+                            android:id="@+id/tableLayout_Contenido"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:stretchColumns="*"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="8"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <com.devspark.robototextview.widget.RobotoButton
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:background="@drawable/boton_azul"
+                    style="@style/ButtonText_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:text="@string/enviar_pedidos"
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_enviar_pendientes"
+                    app:fontFamily="roboto"
+                    app:textWeight="medium"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <!--<Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enviar_pedidos"
+                    android:id="@+id/btn_enviar_pendientes"
+                    android:background="@drawable/boton_azul"
+                    style="@style/ButtonText" />-->
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

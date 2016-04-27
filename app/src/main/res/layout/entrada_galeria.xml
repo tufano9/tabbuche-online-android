@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <!--<ImageView
+        android:id="@+id/imageView_imagen"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/imagen"
+        android:src="@android:drawable/ic_menu_gallery" /> -->
+
+    <view
+        android:id="@+id/imageView_imagen"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/imagen"
+        android:src="@android:drawable/ic_menu_gallery"
+        class="paquete.recycle_bitmap.RecyclingImageView" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_inferior"
+        app:fontFamily="roboto"
+        app:textWeight="medium"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <!--<TextView
+        android:id="@+id/textView_inferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Medium" />-->
+
+</LinearLayout>

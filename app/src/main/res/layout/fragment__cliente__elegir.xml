@@ -1,0 +1,119 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="paquete.tufanoapp.Fragment_Cliente_Elegir">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView7"
+        android:background="@drawable/bordes"
+        android:layout_margin="10dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_horizontal"
+                      android:layout_margin="10dp"
+            >
+
+            <com.devspark.robototextview.widget.RobotoTextView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seleccionar_cliente"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                app:fontFamily="roboto"
+                app:textWeight="bold"
+                android:textSize="18sp" />
+
+            <!--<TextView
+                style="@style/texto_galeria_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seleccionar_cliente"
+                android:id="@+id/textView13"
+                android:layout_marginTop="20dp" />-->
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/buscar_cliente"
+                android:id="@+id/autoCompleteTextView_buscarCliente"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView_clientes"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="1.0sp"
+                android:choiceMode="singleChoice"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boton_editar_cliente"
+                    style="@style/ButtonText_normal"
+                    android:textStyle="normal"
+                    android:background="@drawable/boton_verde"
+                    android:id="@+id/btn_editar_cliente"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <Button
+                    style="@style/ButtonText_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agregar_cliente"
+                    android:textStyle="normal"
+                    android:background="@drawable/boton_verde"
+                    android:id="@+id/btn_agregar_cliente"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <Button
+                    style="@style/ButtonText_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/continuar"
+                    android:textStyle="normal"
+                    android:background="@drawable/boton_azul"
+                    android:id="@+id/btn_continuar"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

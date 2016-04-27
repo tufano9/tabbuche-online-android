@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pedido_footer"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="4"
+    android:layout_marginBottom="15dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:gravity="center">
+
+    <!--<LinearLayout
+        android:id="@+id/pedido_footer"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center">-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_productos"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:fontFamily="roboto"
+            app:textWeight="bold"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_productos"
+            android:id="@+id/textView35"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textStyle="bold" />-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_cantidad_productos"
+            android:layout_marginLeft="0dp"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:layout_weight="0.5"
+            app:fontFamily="roboto"
+            app:textWeight="normal"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:layout_marginRight="0dp" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_cantidad_productos"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_marginLeft="10dp" />-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_bultos"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:fontFamily="roboto"
+            app:textWeight="bold"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp"
+            android:text="@string/total_bultos"/>-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_cantidad_bultos"
+            android:layout_marginLeft="0dp"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:layout_weight="0.5"
+            app:fontFamily="roboto"
+            app:textWeight="normal"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:layout_marginRight="0dp" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/txt_cantidad_bultos" />-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_pares"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:fontFamily="roboto"
+            app:textWeight="bold"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp"
+            android:text="@string/total_pares" />-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_cantidad_pares"
+            android:layout_marginLeft="0dp"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:layout_weight="0.5"
+            app:fontFamily="roboto"
+            app:textWeight="normal"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:layout_marginRight="0dp" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/txt_cantidad_pares" />-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_pedido"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            app:fontFamily="roboto"
+            app:textWeight="bold"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total_pedido"
+            android:id="@+id/textView27"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp" />-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/texto_total_pedido"
+            android:layout_marginLeft="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            app:fontFamily="roboto"
+            app:textWeight="normal"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:layout_marginRight="0dp" />
+
+        <!-- <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/texto_total_pedido"
+             android:layout_marginLeft="15dp"
+             style="@android:style/TextAppearance.DeviceDefault.Medium" />-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unidad_bolivar"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:gravity="center|left"
+            android:layout_weight="1"
+            app:fontFamily="roboto"
+            app:textWeight="normal"
+            android:textSize="18sp"
+            android:textStyle="normal"/>
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unidad_bolivar"
+            android:id="@+id/textView34"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_marginLeft="10dp" />-->
+
+        <!--</LinearLayout>-->
+
+</LinearLayout>

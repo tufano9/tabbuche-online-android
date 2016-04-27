@@ -1,0 +1,351 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="{relativePackage}.${activityClass}"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:gravity="center"
+        android:baselineAligned="false"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalScrollView"
+            android:layout_weight="10">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent">
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/nombre_producto"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    app:fontFamily="roboto"
+                    app:textWeight="bold"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/nombre_producto"
+                    android:id="@+id/textView"
+                    style="@style/texto_galeria_1"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp" />-->
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/galeria_producto_nombre"
+                    android:gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:fontFamily="roboto"
+                    app:textWeight="medium"
+                    android:textSize="18sp"
+                    android:textStyle="normal"/>
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/galeria_producto_nombre"
+                    style="@style/texto_galeria_2"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center" />-->
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/color_producto"
+                    android:gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:fontFamily="roboto"
+                    app:textWeight="bold"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/color_producto"
+                    android:id="@+id/textViewColorGaleria"
+                    style="@style/texto_galeria_1"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center" />-->
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/galeria_producto_color"
+                    android:gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:fontFamily="roboto"
+                    app:textWeight="medium"
+                    android:textSize="18sp"
+                    android:textStyle="normal"/>
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/galeria_producto_color"
+                    style="@style/texto_galeria_2"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center" />-->
+
+               <!-- <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/precio_producto"
+                    android:id="@+id/textView3"
+                    style="@style/texto_galeria_1"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:id="@+id/galeria_producto_precio"
+                    style="@style/texto_galeria_2"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center" /> -->
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/cantidad_bulto_producto"
+                    android:gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:fontFamily="roboto"
+                    app:textWeight="bold"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cantidad_bulto_producto"
+                    android:id="@+id/textView5"
+                    style="@style/texto_galeria_1"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp" />-->
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/galeria_producto_pares"
+                    android:gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    app:fontFamily="roboto"
+                    app:textWeight="medium"
+                    android:textSize="18sp"
+                    android:textStyle="normal"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/boton_azul"
+                    style="@style/ButtonText"
+                    android:text="@string/btn_whatsapp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/btn_whatsapp" />
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/galeria_producto_pares"
+                    style="@style/texto_galeria_2"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp" />-->
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="2">
+
+        <!--<com.devspark.robototextview.widget.RobotoCheckBox
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/check_pedido"
+            android:id="@+id/checkBox_galeria"
+            android:layout_gravity="right"
+            android:gravity="end"
+            app:fontFamily="roboto"
+            app:textWeight="medium"
+            android:textSize="18sp"
+            android:textStyle="normal"/>-->
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/check_pedido"
+            android:id="@+id/checkBox_galeria"
+            style="@style/texto_galeria_2"
+            android:layout_gravity="right"
+            android:gravity="end" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:layout_weight="15">
+
+        <FrameLayout
+            android:id="@+id/FrameLayout_1"
+            android:layout_width="fill_parent"
+            android:layout_height="535dp"
+            android:layout_gravity="center"
+            android:layout_weight="4">
+
+        <!--<ImageView
+                android:id="@+id/image1"
+                android:layout_width="fill_parent"
+                android:layout_height="590dp"
+                android:background="#FFFFFF"
+                android:src="@drawable/producto1"
+                android:contentDescription="@string/imagen"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true" /> -->
+
+            <view
+                android:id="@+id/imagen_principal"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:contentDescription="@string/imagen"
+                android:layout_gravity="center"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
+                class="paquete.recycle_bitmap.RecyclingImageView" />
+
+        </FrameLayout>
+
+        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ListView_listado"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal">
+        </ListView>
+    </LinearLayout>
+
+    <!--<Gallery
+        android:id="@+id/gallery1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start|end" />-->
+
+    <!--<LinearLayout
+        android:id="@+id/mygallery"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">-->
+
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView"
+            android:src="@drawable/icn_editar_cliente"
+            android:contentDescription="@string/imagen"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView22"
+            android:src="@drawable/icn_agregar_cliente"
+            android:contentDescription="@string/imagen"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView33"
+            android:src="@drawable/icn_editar_cliente"
+            android:contentDescription="@string/imagen"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView4"
+            android:src="@drawable/icn_agregar_cliente"
+            android:contentDescription="@string/imagen"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView5"
+            android:src="@drawable/icn_editar_cliente"
+            android:contentDescription="@string/imagen"
+            android:layout_weight="1" />-->
+
+        <!--<ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView"
+            android:src="@drawable/icn_editar_cliente"
+            android:contentDescription="@string/imagen"
+            android:layout_weight="1"
+            android:background="@drawable/gallery_border" />-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

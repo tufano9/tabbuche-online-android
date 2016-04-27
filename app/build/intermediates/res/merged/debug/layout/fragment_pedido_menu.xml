@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <view
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/imagen"
+            android:id="@+id/imageView_Consultar"
+            android:src="@drawable/icn_editar_cliente"
+            android:layout_gravity="center"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            class="paquete.recycle_bitmap.RecyclingImageView" />
+
+        <!--<ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView_Consultar"
+            android:contentDescription="@string/imagen"
+            android:src="@drawable/icn_editar_cliente" />-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consultar_pedidos"
+            android:layout_marginTop="20dp"
+            app:fontFamily="roboto"
+            app:textWeight="medium"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/consultar_pedidos"
+            android:id="@+id/textView30"
+            style="@style/texto_pedido_2"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <view
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/imagen"
+            android:id="@+id/imageView_Realizar"
+            android:src="@drawable/icn_agregar_cliente"
+            android:layout_gravity="center"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            class="paquete.recycle_bitmap.RecyclingImageView" />
+
+        <!--<ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/imagen"
+            android:id="@+id/imageView_Realizar"
+            android:src="@drawable/icn_agregar_cliente" />-->
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/realizar_pedido"
+            android:layout_marginTop="20dp"
+            app:fontFamily="roboto"
+            app:textWeight="medium"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/realizar_pedido"
+            android:id="@+id/textView32"
+            style="@style/texto_pedido_2"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold" />-->
+    </LinearLayout>
+</LinearLayout>

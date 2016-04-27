@@ -1,214 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tufano.tufanomovil">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="paquete.tufanoapp"
+    android:versionCode="1"
+    android:versionName="2.3.30" >
 
+    <!--El nombre de los paquetes solo puede contener letras minusculas..-->
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission android:name="com.example.gcm.permission.C2D_MESSAGE"
+                android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.gcm.permission.C2D_MESSAGE" />
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:logo="@drawable/ic_drawer"
         android:label="@string/app_name"
-        android:supportsRtl="true"
-        android:fullBackupContent="@xml/backupsheme"
         android:largeHeap="true"
-        android:theme="@style/AppTheme">
+        android:supportsRtl="true"
+        android:theme="@style/CustomTheme" >
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:screenOrientation="landscape"
+            android:theme="@style/NoActionBar"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
-
-                <!-- action.VIEW: Use this action in an intent with startActivity() when you have
-                some information that an activity can show to the user, such as a photo to view
-                in a gallery app, or an address to view in a map app.-->
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
             android:name=".Home"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-         <!-- ACTIVITIES PRODUCTOS -->
-
-        <activity
-            android:name=".gestion.productos.GestionProductos"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
+            android:theme="@style/CustomTheme"
+            android:screenOrientation="landscape"
+            android:label="@string/title_activity_home" >
         </activity>
 
         <activity
-            android:name=".gestion.productos.AgregarProducto"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
+            android:name=".ImageManager"
+            android:screenOrientation="landscape"
+            android:label="@string/title_activity_home" >
         </activity>
 
-        <activity
-            android:name=".gestion.productos.EditarProducto"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
+        <receiver android:name="paquete.notifications.CloseNotification" />
+        <receiver android:name="paquete.notifications.MyBroadcastReceiver" />
+        <receiver android:name="paquete.notifications.MyAlarmBroadcastReceiver" />
+        <receiver android:name="paquete.notifications.verificarActualizacionesApp" />
+        <receiver android:name="paquete.notifications.actualizarApp_SegundoPlano" />
 
-        <activity
-            android:name=".gestion.productos.EditarProductoDetalles"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
 
-        <!-- ACTIVITIES TALLAS -->
+        <receiver android:name="paquete.notifications.MyRebootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
 
-        <activity
-            android:name=".gestion.talla.GestionTallas"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
+        <!-- [START gcm_receiver] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="paquete.push_notifications" />
+            </intent-filter>
+        </receiver>
+        <!-- [END gcm_receiver] -->
 
-        <activity
-            android:name=".gestion.talla.AgregarTalla"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
+        <!-- [START gcm_listener] -->
+        <service
+            android:name="paquete.push_notifications.MyGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <!-- [END gcm_listener] -->
 
-        <activity
-            android:name=".gestion.talla.EditarTalla"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
+        <!-- [START instanceId_listener] -->
+        <service
+            android:name="paquete.push_notifications.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <!-- [END instanceId_listener] -->
 
-        <!-- ACTIVITIES TIPOS -->
+        <service
+            android:name="paquete.push_notifications.RegistrationIntentService"
+            android:exported="false">
+        </service>
 
-        <activity
-            android:name=".gestion.tipo.GestionTipos"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.tipo.AgregarTipo"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.tipo.EditarTipo"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <!-- ACTIVITIES COLORES -->
-
-        <activity
-            android:name=".gestion.colores.GestionColores"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.colores.AgregarColor"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.colores.EditarColor"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <!-- ACTIVITIES CLIENTES -->
-
-        <activity
-            android:name=".gestion.clientes.GestionClientes"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.clientes.AgregarCliente"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.clientes.EditarCliente"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.clientes.EditarClienteDetalles"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <!-- ACTIVITIES PEDIDOS -->
-        <activity
-            android:name=".gestion.pedidos.Menu"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.pedidos.ArmarPedido"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.pedidos.AgregarProductoPedido"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.pedidos.SeleccionarCliente"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.pedidos.Consultar"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.pedidos.DetallesPedido"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.perfil.EditarPerfil"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".global.FullScreenImage"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.pedidos.EditarPedido"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".gestion.pedidos.AgregarProductoPedidoEditar"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name" >
-        </activity>
+        <!--<receiver android:name="paquete.notifications.MyAlarmBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>-->
 
     </application>
 
