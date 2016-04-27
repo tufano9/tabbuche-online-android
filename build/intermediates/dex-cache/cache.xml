@@ -1,3 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="697679619b00837e3d09e9988a2e1e2a9009d502">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-fitness-8.3.0_ba34c8aee2036cccfa0bfdc863a85ca53aab424f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-22.2.0_07fceb66040ba405612efef6c9085341d7d55891.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.github.johnkil.android-robototextview\robototextview\2.4.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="b041169a5dce7f40a0b6162be23f0f000e8278c9">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.github.johnkil.android-robototextview-robototextview-2.4.0_930d7620edeb05ba444fbc87ff1205643cbf1c42.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="0a1897426566e408a5c20a3d931f77d89771d07f">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-drive-8.3.0_adc060af2dcda7be859c5c373ed30243bdd41c2e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="2c6fcd6267cbac6509a2e72a61127534a1d616cf">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-games-8.3.0_d8c70fdac480fc313e2662c55277caeec87a4b2a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="742665361f6662cf5604eee43a04dadef277af44">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_5b0a4105d702c1af64baa361575b22819353edf0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="58adcfbe2c8393765e84c5489d01bba6a5159eb2">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appinvite-8.3.0_dfea81fd6cc01a9f3ce0fb10eb7e683603954fad.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="9c9bdb4b2497465a6cf7d5e8f57c5298f828a380">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wallet-8.3.0_2f5d39b9862392d17e50676ab095d29fa5076dfc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="fd76d95678a6b2b8a49bb8a9fb5bcef7aedb70e7">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-auth-8.3.0_be83ef5634494c5edd2b6bd54ff83aef0f581dc7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1_18424f585f86b6bd9dbd17ced3670d5e9d3f1ec3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="4b8df1b1e51fe14b0e89b3845dc2e215a024a09f">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-identity-8.3.0_cc453d09334c920550a8b7f227cd1796950bd60c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\.gradle\caches\modules-2\files-2.1\org.jbundle.util.osgi.wrapped\org.jbundle.util.osgi.wrapped.org.apache.http.client\4.1.2\98c86e42679fe7ac066f6c242e0d14f0bce0bb7c\org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="98c86e42679fe7ac066f6c242e0d14f0bce0bb7c">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2_cbce17d784960ad0954059c6abba5967110c8d0e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1_50fea65143536196a67f7839df27ec6ead805d8e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.1_5e22b5eec3590e55affe9cbf9f96c6f359a01d86.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="0632f06970823b7e3436f649bfa65b47035c91d0">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0_3285f9c7c1a39cd4e2ffc5d0628a2c495485e742.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="724ce977487ab3a215d4d2eb47d8dccd9f30013f">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-vision-8.3.0_6d180567fe46b33cda2fd6bd537267943fa5595f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="cb4af597d079ffdc0984a3ec2c03cbf6a1b9f869">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-cast-8.3.0_080a4f55a928181829a98eff81799cab07a88f30.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="71eda10e33212e44245524b5087366ff8d805825">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-gcm-8.3.0_77e5b4cdc36b23dc57fce08d7d19941efb09dff6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="744c49c02a27569cc4cc049685d3649e4ef439f2">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-panorama-8.3.0_d4bb72aed17d28cc14f781a08be34af43e976af1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="99ba6915bac9a5e06ed2518293ca3565e3601851">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\instant-run_1379292bc5e1ed2c2572726a9bc4c209bb1f6f43.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.3.0_f8460ec7bd05bdc6392486692c63bbabd1a767fc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="ea34579b1be157cd792376362157e9c54ebb4cd7">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-safetynet-8.3.0_c28ec32f34e17bc4e6958850526d9c560955ab86.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="9aedc597d74c6d77258ce5236e9abff0c3cc65e3">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-wearable-8.3.0_1ce39933c5e4a75457bc84bed53fa0eeeda05e98.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-measurement\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="b000ecceb9877fefcdc7ab1959ff03df91551656">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-measurement-8.3.0_7b6aed95a1d78280fd6a45d177d8a7795cb7486e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="77f9593d979f4347344be233bd0d888315f79517">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-8.3.0_0e86a86026ab47384758e342fc7f01999e5dd946.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="0af4f577b4a21eb9be2a7f52e33b077b67e6d9f8">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-plus-8.3.0_a734c741ee66c7de08cf734beb277a9d9d3dbc81.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="eb576427887e497cd958a475475f9206e38dc314">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-nearby-8.3.0_75c669d48084d347960515004428253153a20279.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="27775d59b16610ac76f1b83693fedd9520396332">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-ads-8.3.0_4e3d87f2085fd8caa931d8142317d503eff83275.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.3.0_5d137c93035878cc8d92f5141eefc1f7f89b0216.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="6d9ed9a288364688e7fcf6704776284dac1eb42e">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-location-8.3.0_1a03ef8df6332dfee9356203b8fde5b22a110008.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="0c3e81d3eb86b86d194b5cdb6a4de78203f6f7fd">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.3.0_21ee2f4a55545880d16203763d240a66b679101e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\8.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="af6ee25641df3142059c0828517aa7ee6eba08d6">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-analytics-8.3.0_f88a000a55035f3b8e03115a35b907a381f753d9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.2.0\jars\classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="dcf8c83c3dead00a6c4fe313e95f7aaca20dc641">
+        <dex dex="C:\Users\Usuario\Desktop\tabbuche-online-android\app\build\intermediates\pre-dexed\debug\com.android.support-mediarouter-v7-22.2.0_17424561aaba3fe936f13d40d1f35c6852760c9a.jar" />
+    </item>
+
+</items>
