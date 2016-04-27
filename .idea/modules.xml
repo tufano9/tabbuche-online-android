@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TufanoApp (1er Sistema).iml" filepath="$PROJECT_DIR$/TufanoApp (1er Sistema).iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tabbuche-online-android.iml" filepath="$PROJECT_DIR$/tabbuche-online-android.iml" />
     </modules>
   </component>
 </project>
