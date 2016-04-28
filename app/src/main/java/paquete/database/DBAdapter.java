@@ -322,6 +322,13 @@ public class DBAdapter
         return destacado;
     }
 
+    public Cursor cargarCursorProductosPedidos(String id_producto)
+    {
+        String[] columnas = new String[]{CN_COD_FABRICANTE_PRODUCTOS_PEDIDOS};
+        String[] args     = {id_producto};
+        return db.query(TABLA_PRODUCTOS_PEDIDOS, columnas, CN_ID_PRODUCTO_PEDIDOS + "=?", args, null, null, null);
+    }
+
     public void eliminar_producto_pedido(String id)
     {
         int res = db.delete(TABLA_PRODUCTOS_PEDIDOS, CN_ID_PRODUCTO_PEDIDOS + "=?", new String[]{id});
@@ -657,6 +664,8 @@ public class DBAdapter
         /*String[] columnas = new String[]{ CN_HOMES, CN_MUESTRARIO, CN_PEDIDOS, CN_CLIENTES,
                                           CN_PERFIL, CN_OPCIONES, CN_ESTADO_CUENTA };*/
 
+        Log.i(TAG, "buscarFuncionesUsuario.. id: " + id + ", opcion: " + opcion);
+
         String[] columnas = new String[]{opcion}; // homes, muestrario
 
         String[] args = {id};
@@ -800,7 +809,8 @@ public class DBAdapter
         return res;
     }
 
-    public String cargarCursorProductos_Modelos_Lineas(String id_linea, String id_modelo, String cedula)
+    public String cargarCursorProductos_Modelos_Lineas(String id_linea, String id_modelo,
+                                                       String cedula, String destacado_filtrado)
     {
         String[] columnas2                = new String[]{CN_PRODUCTOS_DESHABILITADOS};
         String[] args                     = {cedula};
@@ -815,11 +825,26 @@ public class DBAdapter
 
         cursor.close();
 
+        Log.d("cargarCursorProductos", "id_linea: " + id_linea + " id_modelo: " + id_modelo
+                + " cedula: " + cedula + " destacado_filtrado: " + destacado_filtrado);
         Log.d("cargarCursorProductos", "Hay " + cursor.getCount() + " Productos deshabilitados!");
 
         String[] columnas = new String[]{CN_ID_PRODUCTO, CN_ID_PRODUCTO_MODELO, CN_ID_PRODUCTO_LINEA, CN_CODIGO_FABRICANTE_PRODUCTO, CN_PRECIO_PRODUCTO, CN_NOMBRE_PRODUCTO, CN_ID_PRODUCTO_COLOR};
-        String[] args2    = {id_linea, id_modelo};
-        Cursor   cursor2  = db.query(TABLA_PRODUCTOS, columnas, "id_linea=? AND id_modelo=?", args2, null, null, CN_CODIGO_FABRICANTE_PRODUCTO);
+        //String[] args2    = {id_linea, id_modelo, destacado_filtrado};
+        ArrayList<String> argumentos = new ArrayList<>();
+        argumentos.add(id_linea);
+        argumentos.add(id_modelo);
+        String where = "id_linea=? AND id_modelo=?";
+
+        if (!destacado_filtrado.equals("2"))
+        {
+            where += " AND destacado=?";
+            argumentos.add(destacado_filtrado);
+        }
+
+        String[] args2 = argumentos.toArray(new String[argumentos.size()]);
+
+        Cursor cursor2 = db.query(TABLA_PRODUCTOS, columnas, where, args2, null, null, CN_CODIGO_FABRICANTE_PRODUCTO);
 
         String res = "";
 
@@ -889,6 +914,127 @@ public class DBAdapter
         cursor2.close();
 
         return res;
+    }
+
+    public ArrayList<ArrayList<String>> obtenerProductos_Filtrado(String cedula, String destacado_filtrado)
+    {
+        String[] columnas2                = new String[]{CN_PRODUCTOS_DESHABILITADOS};
+        String[] args                     = {cedula};
+        Cursor   cursor                   = db.query(TABLA_USUARIO, columnas2, "cedula=?", args, null, null, null);
+        String[] productos_deshabilitados = new String[0];
+
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
+        {
+            Log.d("CursorModelos_Line", "Deshabilite!");
+            productos_deshabilitados = (cursor.getString(0)).split(",");
+        }
+
+        cursor.close();
+
+        Log.d("cargarCursorProductos", "cedula: " + cedula + " destacado_filtrado: " + destacado_filtrado);
+        Log.d("cargarCursorProductos", "Hay " + cursor.getCount() + " Productos deshabilitados!");
+
+        String[] columnas = new String[]{CN_ID_PRODUCTO, CN_ID_PRODUCTO_MODELO, CN_ID_PRODUCTO_LINEA};
+        //String[] args2    = {id_linea, id_modelo, destacado_filtrado};
+        ArrayList<String> argumentos = new ArrayList<>();
+        String            where;
+        Cursor            cursor2;
+
+        if (!destacado_filtrado.equals("2"))
+        {
+            where = " destacado=?";
+            argumentos.add(destacado_filtrado);
+            String[] args2 = argumentos.toArray(new String[argumentos.size()]);
+            cursor2 = db.query(TABLA_PRODUCTOS, columnas, where, args2, null, null, null);
+        }
+        else
+        {
+            cursor2 = db.query(TABLA_PRODUCTOS, columnas, null, null, null, null, null);
+        }
+
+        String                       res       = "";
+        ArrayList<ArrayList<String>> productos = new ArrayList<>();
+
+        if (productos_deshabilitados.length == 0)
+        {
+            for (cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
+            {
+                if (!res.equals(""))
+                    res = res + "|";
+
+                Cursor cursore = buscarColor(cursor2.getString(6));
+                String color   = "null";
+
+                for (cursore.moveToFirst(); !cursore.isAfterLast(); cursore.moveToNext())
+                {
+                    color = cursore.getString(1);
+                }
+
+                cursor.close();
+
+                ArrayList<String> p = new ArrayList<>();
+                p.add(cursor2.getString(0));
+                p.add(cursor2.getString(1));
+                p.add(cursor2.getString(2));
+                productos.add(p);
+
+                res = res + cursor2.getString(0) + "&" + color + "&" + cursor2.getString(4) + "&" + cursor2.getString(5) + "&" + cursor2.getString(3);
+            }
+        }
+        else
+        {
+            for (cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
+            {
+                String cad     = "";
+                int    bandera = 0;
+
+                //for (int w = 0; w < productos_deshabilitados.length; w++)
+                for (String productos_deshabilitado : productos_deshabilitados)
+                {
+                    if (!cursor2.getString(0).equals(productos_deshabilitado))
+                    {
+                        // El producto no esta deshabilitado, lo copio normalmente..
+                        Cursor cursore = buscarColor(cursor2.getString(6));
+                        String color   = "null";
+
+                        for (cursore.moveToFirst(); !cursore.isAfterLast(); cursore.moveToNext())
+                        {
+                            color = cursore.getString(1);
+                        }
+
+                        cursor.close();
+                        cad = "&" + color + "&";
+                        bandera = 1;
+                    }
+                    else
+                    {
+                        // El producto fue deshabilitado, no lo copio..
+                        bandera = 0;
+                        break;
+                    }
+                }
+
+                if (bandera == 1)
+                {
+                    if (!res.equals(""))
+                        res = res + "|";
+
+
+                    ArrayList<String> p = new ArrayList<>();
+                    p.add(cursor2.getString(0));
+                    p.add(cursor2.getString(1));
+                    p.add(cursor2.getString(2));
+                    productos.add(p);
+
+                    res = res + cursor2.getString(0) + cad + cursor2.getString(4) + "&" + cursor2.getString(5) + "&" + cursor2.getString(3);
+                }
+
+            }
+        }
+
+        cursor2.close();
+
+        return productos;
     }
 
     public String cargarCursorProductos_Modelos_Lineas_DialogAgregar(String id_linea, String id_modelo, String cedula, String[] ids_ocultar)

@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="FragmentGaleria" />
+        <option name="name" value="FragmentGaleria" />
+        <option name="packageNamePattern" value="" />
+        <option name="pid" value="" />
+      </filter>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="FragmentMuestrario" />
+        <option name="name" value="FragmentMuestrario" />
+        <option name="packageNamePattern" value="" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidLayouts">
     <shared>
       <config>
@@ -32,51 +52,34 @@
           <theme>@style/NoActionBar</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml">
+        <config>
+          <state>Landscape</state>
+          <theme>@style/CustomTheme</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="LOGCAT_FORMAT_STRING" value="%4$c/%5$s: %6$s" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19c797b6-4277-4863-b399-0a139419cb54" name="Default" comment="Reordenar el proyecto, limpieza de codigo y agregado el checkbox para destacar el producto en el fragment galeria.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/global/library/Httppostaux.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/Droidlogin/library/Httppostaux.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/comparing_versions/ArtifactVersion.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/global/comparing_versions/ArtifactVersion.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/comparing_versions/ComparableVersion.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/global/comparing_versions/ComparableVersion.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/comparing_versions/DefaultArtifactVersion.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/global/comparing_versions/DefaultArtifactVersion.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/download_from_url/descargarArchivo.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/global/download_from_url/descargarArchivo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/download_from_url/downloadBitmap.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/global/download_from_url/downloadBitmap.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/encryption/AesCbcWithIntegrity.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/global/encryption/AesCbcWithIntegrity.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentCliente.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/cliente/FragmentCliente.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentCliente_Agregar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/cliente/FragmentCliente_Agregar.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentCliente_Editar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/cliente/FragmentCliente_Editar.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentCliente_Seleccionar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/cliente/FragmentCliente_Seleccionar.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentGaleria.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentMuestrario.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentOpciones.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/opciones/FragmentOpciones.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentPedido_Consultar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/pedido/FragmentPedido_Consultar.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentPedido_Editar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/pedido/FragmentPedido_Editar.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentPedido_Menu.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/pedido/FragmentPedido_Menu.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentPedido_Muestrario.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/pedido/FragmentPedido_Muestrario.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentPedido_Pre_Editar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/pedido/FragmentPedido_Pre_Editar.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentPedido_Realizar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/pedido/FragmentPedido_Realizar.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/FragmentPerfil.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/perfil/FragmentPerfil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Fragment_Cliente_Elegir.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/cliente/Fragment_Cliente_Elegir.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Lista_adaptador.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/adapters/Lista_adaptador.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/NavigationAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/adapters/NavigationAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/ValueAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/adapters/ValueAdapter.java" />
+    <list default="true" id="19c797b6-4277-4863-b399-0a139419cb54" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.3.0/jars/classes.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.3.0/jars/classes.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
@@ -106,77 +109,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/paquete/tufanoapp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/paquete/tufanoapp/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-large-v4/fragment_galeria.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-large-v4/fragment_galeria.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-normal-v4/fragment_galeria.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-normal-v4/fragment_galeria.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment__cliente__elegir.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment__cliente__elegir.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_galeria.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_galeria.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_muestrario.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_muestrario.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/actualizaciones_app/actualizar_App.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/actualizaciones_app/actualizar_App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/actualizaciones_app/actualizar_DatosApp.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/actualizaciones_app/actualizar_DatosApp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/DBHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/DBHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/Httppostaux.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/Httppostaux.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/creates/CreateSentences.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/creates/CreateSentences.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/inserts/DefaultInserts.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/inserts/DefaultInserts.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesClientes.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesClientes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesFunciones.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesFunciones.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesGenerales.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesGenerales.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesLineas.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesLineas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesModelos.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesModelos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesPedidos.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesPedidos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesProductos.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ActualizacionesProductos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Bultos.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Bultos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Clientes.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Clientes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Colores.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Colores.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Funciones.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Funciones.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Lineas.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Lineas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Materiales.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Materiales.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Modelos.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Modelos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Pedidos.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Pedidos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/PedidosDetalles.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/PedidosDetalles.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/PedidosLocales.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/PedidosLocales.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/PedidosLocalesDetalles.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/PedidosLocalesDetalles.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/PrimerLogin.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/PrimerLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ProductoSeleccionado.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ProductoSeleccionado.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Productos.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Productos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ProductosPedidos.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ProductosPedidos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ProductosPedidosEditar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ProductosPedidosEditar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Usuarios.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Usuarios.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/DialogoAgregar_Productos_Editar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/DialogoAgregar_Productos_Editar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/DialogoEliminar_Productos.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/DialogoEliminar_Productos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/DialogoEliminar_Productos_Editar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/DialogoEliminar_Productos_Editar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/DialogoReestablecer_Pass.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/DialogoReestablecer_Pass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/checkBoxClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/checkBoxClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/checkBoxClass_Editar.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/dialogos/checkBoxClass_Editar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/global/Constantes.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/global/Constantes.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/global/Funciones.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/global/Funciones.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/global/Funciones_Pedidos.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/global/Funciones_Pedidos.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/CloseNotification.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/CloseNotification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/MyAlarmBroadcastReceiver.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/MyAlarmBroadcastReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/MyBroadcastReceiver.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/MyBroadcastReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/MyRebootReceiver.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/MyRebootReceiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/actualizarApp_SegundoPlano.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/actualizarApp_SegundoPlano.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/alarmNotification.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/alarmNotification.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/verificarActualizacionesApp.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/notifications/verificarActualizacionesApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/push_notifications/QuickstartPreferences.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/push_notifications/QuickstartPreferences.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/push_notifications/RegistrationIntentService.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/push_notifications/RegistrationIntentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/recicledbin/ImageLoadTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/recicledbin/ImageLoadTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/recycle_bitmap/RecyclingBitmapDrawable.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/recycle_bitmap/RecyclingBitmapDrawable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/recycle_bitmap/RecyclingImageView.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/recycle_bitmap/RecyclingImageView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Gallery_Selected_Item.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Gallery_Selected_Item.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/ImageManager.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/ImageManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Item_objct.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Item_objct.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/PanAndZoomListener.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/PanAndZoomListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/imageAlphaClass.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/imageAlphaClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/lista_entrada_galeria.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/lista_entrada_galeria.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/sortingHeader.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/sortingHeader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-large/fragment_galeria.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/fragment_galeria.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout-normal/fragment_galeria.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout-normal/fragment_galeria.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment__cliente__elegir.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment__cliente__elegir.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_galeria.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_galeria.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
@@ -206,16 +148,143 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fragment_galeria.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-large/fragment_galeria.xml">
+      <file leaf-file-name="FragmentMuestrario.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2821577">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="531" column="31" selection-start-line="531" selection-start-column="31" selection-end-line="531" selection-end-column="31" />
+              <folding>
+                <element signature="method#FragmentMuestrario#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#onCreateView#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#selectDefaultRB#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#initRadioButton#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="docComment;method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="docComment;method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#onDestroy#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="docComment;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#getView#0;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="docComment;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#getView#0;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#obtenerModelosValidos_Linea#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#HAdapter3#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#getView#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#onPreExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#doInBackground#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#onPostExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#loadData#0;class#FragmentMuestrario#0" expanded="false" />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="android-designer">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="DBAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9497908">
+              <caret line="953" column="8" selection-start-line="953" selection-start-column="8" selection-end-line="953" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cerrar#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#generarContentValues_insertarUsuario#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_cliente#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_clientes#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#generarContentValues_insertarCliente#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#editar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#consultar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#generarContentValues_insertarProducto_Pedido#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_usuario#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_lineas#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#existe_dato#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_modelos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_productos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_actualizacionesGenerales#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_actualizacionesLineas#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_actualizacionesModelos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_actualizacionesProductos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_actualizacionesPedido#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_actualizacionesCliente#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_actualizacionesFunciones#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#buscarUsuario#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorUsuario#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductos_Modelos_Lineas_DialogAgregar#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorActualizacionesGenerales#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorActualizacionesLineas#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorActualizacionesLineas#1;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorActualizacionesModelos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorActualizacionesModelos#1;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorActualizacionesProductos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorActualizacionesProductos#1;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorClientes_Vendedor#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorClientesByID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_bulto#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_materiales#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarProductoSeleccionado#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_producto_seleccionado#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#generarContentValues_insertarProducto_Seleccionado#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#buscarProducto#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#buscarProductoByName#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_colores#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#buscar_ID_Bulto_Material_Producto#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#buscarBulto#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#buscarColor#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#buscarSalt_Usuario#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#eliminar_producto_seleccionado#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#eliminar_data#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#debo_borrar_tabla#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#argumentos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#eliminar_pedido_local#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#buscarClienteByID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_cliente#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#generarContentValues_actualizarCliente#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_pedidos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidosByID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos_LocalesByID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidosByID_Cliente#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos_Locales_ByID_Cliente#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_pedido#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_pedido#1;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_pedido_local#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_pedido_local_detalles#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_pedido_detalles#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_pedido_detalles#1;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidos_Detalles#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidos_Locales#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidosDetalles_porTalla#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidos_Locales#1;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidos_Locales_Detalle#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidos_Locales_Detalles_porTalla#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos_Locales#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos_Editar#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos_Editar2#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos_Editar#1;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_producto_pedido_cantidad_editar#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_producto_pedido_local_editar#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_producto_pedido_editar#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_funciones#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#borrar_tabla_producto_pedido_editar#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidos_editar#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#eliminar_producto_pedidoByID_editar#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_estado_pedido#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos_Locales_ID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos_ID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#eliminar_pedidos_locales_ID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos_Locales#1;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorPedidos_Locales_Detalles_ID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorActualizacionesPedidos_ID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorActualizacionesFuncionesMoviles_ID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorActualizacionesClientes_ID#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_usuario#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_producto_pedido_editar_id#0;class#DBAdapter#0" expanded="false" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -227,6 +296,10 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="C:\Users\Usuario\Desktop\tabbuche-online-android\keystore_tufano.jks" />
+    <option name="KEY_ALIAS" value="tufano" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -2131,16 +2204,20 @@
         <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Lista_adaptador.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Item_objct.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/sortingHeader.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Productos.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/paquete/database/DBHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/paquete/database/creates/CreateSentences.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/pedido/FragmentPedido_Realizar.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-normal/fragment_galeria.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_galeria.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-large/fragment_galeria.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" />
       </list>
     </option>
   </component>
@@ -2175,7 +2252,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2184,146 +2263,24 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tabbuche-online-android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tabbuche-online-android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tabbuche-online-android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fragment_pedido.xml" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tabbuche-online-android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="paquete" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tufanoapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tabbuche-online-android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="paquete" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tabbuche-online-android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="paquete" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="global" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tabbuche-online-android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/keystore_tufano.jks" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="false" />
     <property name="device.picker.selection" value="015d123ad63c000b" />
+    <property name="DEBUGGABLE_DEVICE" value="pegatron-chagall-015d123ad63c000b" />
+    <property name="DEBUGGABLE_PROCESS" value="paquete.tufanoapp" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="ExportApk.ApkPath" value="C:\Users\Usuario\Desktop\tabbuche-online-android\app" />
+    <property name="ExportApk.Flavors" value="" />
+    <property name="ExportApk.BuildType" value="release" />
   </component>
   <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -2605,7 +2562,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461781192694</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Reordenar el proyecto, limpieza de codigo y agregado el checkbox para destacar el producto en el fragment galeria.">
+      <created>1461791017736</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1461791017736</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2621,35 +2584,43 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.4935275" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858837" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5041518" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.50647247" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62040335" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858837" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24919094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919094" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976275" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39976275" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -2661,72 +2632,258 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="344" column="34" selection-start-line="344" selection-start-column="34" selection-end-line="344" selection-end-column="34" />
+          <folding>
+            <element signature="method#fillList#0;class#HorizontalListView#0" expanded="false" />
+          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw720dp-land/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw720dp-land/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="244" column="0" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="method#FragmentMuestrario#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onCreateView#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#selectDefaultRB#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#initRadioButton#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="docComment;method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="docComment;method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#onDestroy#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="docComment;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getView#0;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="docComment;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="docComment;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getView#0;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#obtenerModelosValidos_Linea#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#HAdapter3#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getView#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#loadData#0;class#FragmentMuestrario#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="834" column="9" selection-start-line="834" selection-start-column="9" selection-end-line="834" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cerrar#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#generarContentValues_insertarUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_cliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_clientes#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#generarContentValues_insertarCliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#editar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#consultar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#generarContentValues_insertarProducto_Pedido#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_usuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_lineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#existe_dato#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_modelos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_productos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_actualizacionesGenerales#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_actualizacionesLineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_actualizacionesModelos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_actualizacionesProductos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_actualizacionesPedido#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_actualizacionesCliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_actualizacionesFunciones#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductos_Modelos_Lineas_DialogAgregar#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorActualizacionesGenerales#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorActualizacionesLineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorActualizacionesLineas#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorActualizacionesModelos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorActualizacionesModelos#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorActualizacionesProductos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorActualizacionesProductos#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorClientes_Vendedor#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorClientesByID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_bulto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_materiales#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarProductoSeleccionado#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_producto_seleccionado#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#generarContentValues_insertarProducto_Seleccionado#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarProducto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarProductoByName#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_colores#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscar_ID_Bulto_Material_Producto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarBulto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarColor#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarSalt_Usuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_producto_seleccionado#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_data#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#debo_borrar_tabla#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#argumentos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_pedido_local#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarClienteByID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_cliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#generarContentValues_actualizarCliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_pedidos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidosByID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos_LocalesByID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidosByID_Cliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos_Locales_ByID_Cliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_pedido#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_pedido#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_pedido_local#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_pedido_local_detalles#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_pedido_detalles#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_pedido_detalles#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_Detalles#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_Locales#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidosDetalles_porTalla#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_Locales#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_Locales_Detalle#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_Locales_Detalles_porTalla#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos_Locales#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos_Editar#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos_Editar2#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos_Editar#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_producto_pedido_cantidad_editar#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_producto_pedido_local_editar#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_producto_pedido_editar#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_funciones#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#borrar_tabla_producto_pedido_editar#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_editar#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_producto_pedidoByID_editar#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_estado_pedido#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos_Locales_ID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos_ID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_pedidos_locales_ID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos_Locales#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorPedidos_Locales_Detalles_ID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorActualizacionesPedidos_ID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorActualizacionesFuncionesMoviles_ID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorActualizacionesClientes_ID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_usuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_producto_pedido_editar_id#0;class#DBAdapter#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+          <folding>
+            <element signature="docComment;method#initBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#registerWithGCM#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#registerWithGCM#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#initNotifications#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initNotifications#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#initButtons#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initButtons#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4990#5036#0" expanded="false" />
+            <element signature="docComment;method#initTextView#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initTextView#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#noInitialFocus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#noInitialFocus#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#loginstatus_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#loginstatus_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#8025#8081#0" expanded="false" />
+            <element signature="docComment;method#login#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#login#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#entrar_Home#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#entrar_Home#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#11771#11823#0" expanded="false" />
+            <element signature="method#dialogoPass#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#checkPlayServices#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#checkPlayServices#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#asynclogin#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#19056#19095#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="344" column="34" selection-start-line="344" selection-start-column="34" selection-end-line="344" selection-end-column="34" />
+          <folding>
+            <element signature="method#fillList#0;class#HorizontalListView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw720dp-land/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2734,9 +2891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56319016">
           <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2744,9 +2898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31288344">
           <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2754,7 +2905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08343558">
           <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2762,7 +2912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10429448">
           <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2770,7 +2919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16687116">
           <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2778,15 +2926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25030676">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08343558">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2794,7 +2933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04171779">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2802,7 +2940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04171779">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2810,15 +2947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14601228">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/imageAlphaClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14601228">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2826,7 +2954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16687116">
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2834,9 +2961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2196319">
           <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2844,7 +2968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31288344">
           <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2852,84 +2975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18773006">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.20981595">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="e#1129#1161#0" expanded="false" />
-            <element signature="e#1129#1161#0" expanded="false" />
-            <element signature="method#onCreate#0;class#Home#0" expanded="false" />
-            <element signature="docComment;method#initNavDrawer#0;class#Home#0" expanded="false" />
-            <element signature="method#initNavDrawer#0;class#Home#0" expanded="false" />
-            <element signature="e#2960#2990#0" expanded="false" />
-            <element signature="class#3700:4850" expanded="false" />
-            <element signature="method#onDrawerClosed#0;class#3700:4850" expanded="false" />
-            <element signature="e#4257#4291#0" expanded="false" />
-            <element signature="method#onDrawerOpened#0;class#3700:4850" expanded="false" />
-            <element signature="e#4616#4651#0" expanded="false" />
-            <element signature="e#5167#5234#0" expanded="false" />
-            <element signature="docComment;method#initTextView#0;class#Home#0" expanded="false" />
-            <element signature="method#initTextView#0;class#Home#0" expanded="false" />
-            <element signature="docComment;method#getExtrasVar#0;class#Home#0" expanded="false" />
-            <element signature="method#getExtrasVar#0;class#Home#0" expanded="false" />
-            <element signature="docComment;method#crearMenuOpciones#0;class#Home#0" expanded="false" />
-            <element signature="method#crearMenuOpciones#0;class#Home#0" expanded="false" />
-            <element signature="docComment;method#menuValido#0;class#Home#0" expanded="false" />
-            <element signature="method#menuValido#0;class#Home#0" expanded="false" />
-            <element signature="method#setTitle#0;class#Home#0" expanded="false" />
-            <element signature="method#MostrarFragment#0;class#Home#0" expanded="false" />
-            <element signature="e#9430#9472#0" expanded="false" />
-            <element signature="docComment;method#buscarPosicionItemMenu#0;class#Home#0" expanded="false" />
-            <element signature="method#buscarPosicionItemMenu#0;class#Home#0" expanded="false" />
-            <element signature="method#onPostCreate#0;class#Home#0" expanded="false" />
-            <element signature="method#onConfigurationChanged#0;class#Home#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#Home#0" expanded="false" />
-            <element signature="e#11545#11602#0" expanded="false" />
-            <element signature="method#onBackPressed#0;class#Home#0" expanded="false" />
-            <element signature="e#12200#12244#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4588957">
-          <caret line="116" column="56" selection-start-line="116" selection-start-column="56" selection-end-line="116" selection-end-column="56" />
-          <folding>
-            <element signature="docComment;method#DBHelper#0;class#DBHelper#0" expanded="false" />
-            <element signature="method#DBHelper#0;class#DBHelper#0" expanded="false" />
-            <element signature="method#getInstance#0;class#DBHelper#0" expanded="false" />
-            <element signature="e#3907#3965#0" expanded="false" />
-            <element signature="e#5431#5461#0" expanded="false" />
-            <element signature="e#5740#5796#0" expanded="false" />
-            <element signature="e#6098#6201#0" expanded="false" />
-            <element signature="method#onUpgrade#0;class#DBHelper#0" expanded="false" />
-            <element signature="docComment;method#createDataBase#0;class#DBHelper#0" expanded="false" />
-            <element signature="method#createDataBase#0;class#DBHelper#0" expanded="false" />
-            <element signature="e#8175#8265#0" expanded="false" />
-            <element signature="docComment;method#checkDataBase#0;class#DBHelper#0" expanded="false" />
-            <element signature="method#checkDataBase#0;class#DBHelper#0" expanded="false" />
-            <element signature="docComment;method#copyDataBase#0;class#DBHelper#0" expanded="false" />
-            <element signature="method#copyDataBase#0;class#DBHelper#0" expanded="false" />
-            <element signature="e#9855#9900#0" expanded="false" />
-            <element signature="method#open#0;class#DBHelper#0" expanded="false" />
-            <element signature="method#close#0;class#DBHelper#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/creates/CreateSentences.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6662577">
-          <caret line="200" column="650" selection-start-line="200" selection-start-column="650" selection-end-line="200" selection-end-column="650" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2938,6 +2983,7 @@
         <state vertical-scroll-proportion="0.85398775">
           <caret line="2102" column="4" selection-start-line="2102" selection-start-column="4" selection-end-line="2102" selection-end-column="4" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cerrar#0;class#DBAdapter#0" expanded="false" />
@@ -2945,9 +2991,8 @@
             <element signature="method#insertar_cliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_clientes#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_insertarCliente#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#insertar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#eliminar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#eliminar_producto_pedidoByID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#editar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#consultar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_insertarProducto_Pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_usuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_lineas#0;class#DBAdapter#0" expanded="false" />
@@ -2961,11 +3006,8 @@
             <element signature="method#actualizar_actualizacionesPedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_actualizacionesCliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_actualizacionesFunciones#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#buscarFuncionesUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarUsuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorUsuario#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorLineas#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorModelos_Lineas#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorProductos_Modelos_Lineas_DialogAgregar#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesGenerales#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesLineas#0;class#DBAdapter#0" expanded="false" />
@@ -2974,9 +3016,6 @@
             <element signature="method#cargarCursorActualizacionesModelos#1;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesProductos#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesProductos#1;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorProductosPedidos#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorProductosPedidos_porTalla#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorProductosPedidos_porTalla#1;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorClientes_Vendedor#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorClientesByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_bulto#0;class#DBAdapter#0" expanded="false" />
@@ -2993,17 +3032,12 @@
             <element signature="method#buscarSalt_Usuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#eliminar_producto_seleccionado#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#eliminar_data#0;class#DBAdapter#0" expanded="false" />
-            <element signature="e#59287#59330#0" expanded="false" />
-            <element signature="e#59643#59687#0" expanded="false" />
-            <element signature="e#60348#60393#0" expanded="false" />
             <element signature="method#debo_borrar_tabla#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#argumentos#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#eliminar_pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#eliminar_pedido_local#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#buscarClienteByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_cliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_actualizarCliente#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#actualizar_producto_pedido_cantidad#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_pedidos#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorPedidosByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorPedidos_LocalesByID#0;class#DBAdapter#0" expanded="false" />
@@ -3045,22 +3079,6 @@
             <element signature="method#actualizar_usuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_producto_pedido_editar_id#0;class#DBAdapter#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/database/sqlite/SQLiteDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33251533">
-          <caret line="1520" column="15" selection-start-line="1520" selection-start-column="15" selection-end-line="1520" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Productos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27116564">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3068,15 +3086,289 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31288344">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/pedido/FragmentPedido_Realizar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cliente_editar.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-normal/fragment_cliente_editar.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cliente.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_pedido.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_galeria.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.022368422">
+          <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-normal/fragment_galeria.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.022368422">
+          <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-large/fragment_galeria.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2821577">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/creates/CreateSentences.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5006135">
+          <caret line="198" column="31" selection-start-line="198" selection-start-column="31" selection-end-line="198" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="25" selection-start-line="88" selection-start-column="25" selection-end-line="88" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw720dp-land/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34605598">
+          <caret line="78" column="55" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/global/Funciones.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="457" column="0" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31288344">
+          <caret line="195" column="42" selection-start-line="195" selection-start-column="42" selection-end-line="195" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/database/sqlite/SQLiteDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1197" column="18" selection-start-line="1197" selection-start-column="18" selection-end-line="1197" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/tables/ProductosPedidos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27116564">
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26993865">
+          <caret line="312" column="89" selection-start-line="312" selection-start-column="89" selection-end-line="312" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/imageAlphaClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33251533">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Lineas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22944786">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="10913" column="21" selection-start-line="10913" selection-start-column="21" selection-end-line="10913" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+          <folding>
+            <element signature="docComment;method#initBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#registerWithGCM#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#registerWithGCM#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#initNotifications#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initNotifications#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#initButtons#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initButtons#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#4990#5036#0" expanded="false" />
+            <element signature="docComment;method#initTextView#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initTextView#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#noInitialFocus#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#noInitialFocus#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#loginstatus_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#loginstatus_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#8025#8081#0" expanded="false" />
+            <element signature="docComment;method#login#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#login#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#entrar_Home#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#entrar_Home#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#11771#11823#0" expanded="false" />
+            <element signature="method#dialogoPass#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;method#checkPlayServices#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#checkPlayServices#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#asynclogin#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+            <element signature="docComment;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+            <element signature="class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#19056#19095#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="344" column="34" selection-start-line="344" selection-start-column="34" selection-end-line="344" selection-end-column="34" />
+          <folding>
+            <element signature="method#fillList#0;class#HorizontalListView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Productos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27116564">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="531" column="31" selection-start-line="531" selection-start-column="31" selection-end-line="531" selection-end-column="31" />
+          <folding>
+            <element signature="method#FragmentMuestrario#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onCreateView#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#selectDefaultRB#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#initRadioButton#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="docComment;method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="docComment;method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="docComment;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getView#0;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="docComment;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getView#0;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#obtenerModelosValidos_Linea#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#HAdapter3#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getView#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#loadData#0;class#FragmentMuestrario#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31165645">
-          <caret line="308" column="0" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9497908">
+          <caret line="953" column="8" selection-start-line="953" selection-start-column="8" selection-end-line="953" selection-end-column="8" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="docComment;method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cerrar#0;class#DBAdapter#0" expanded="false" />
@@ -3084,9 +3376,8 @@
             <element signature="method#insertar_cliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_clientes#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_insertarCliente#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#insertar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#eliminar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#eliminar_producto_pedidoByID#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#editar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#consultar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_insertarProducto_Pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_usuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_lineas#0;class#DBAdapter#0" expanded="false" />
@@ -3100,10 +3391,8 @@
             <element signature="method#actualizar_actualizacionesPedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_actualizacionesCliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_actualizacionesFunciones#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#buscarFuncionesUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarUsuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorUsuario#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorLineas#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorModelos_Lineas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorProductos_Modelos_Lineas_DialogAgregar#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesGenerales#0;class#DBAdapter#0" expanded="false" />
@@ -3113,9 +3402,6 @@
             <element signature="method#cargarCursorActualizacionesModelos#1;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesProductos#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesProductos#1;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorProductosPedidos#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorProductosPedidos_porTalla#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#cargarCursorProductosPedidos_porTalla#1;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorClientes_Vendedor#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorClientesByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_bulto#0;class#DBAdapter#0" expanded="false" />
@@ -3132,17 +3418,12 @@
             <element signature="method#buscarSalt_Usuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#eliminar_producto_seleccionado#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#eliminar_data#0;class#DBAdapter#0" expanded="false" />
-            <element signature="e#59287#59330#0" expanded="false" />
-            <element signature="e#59643#59687#0" expanded="false" />
-            <element signature="e#60348#60393#0" expanded="false" />
             <element signature="method#debo_borrar_tabla#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#argumentos#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#eliminar_pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#eliminar_pedido_local#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#buscarClienteByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_cliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_actualizarCliente#0;class#DBAdapter#0" expanded="false" />
-            <element signature="method#actualizar_producto_pedido_cantidad#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_pedidos#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorPedidosByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorPedidos_LocalesByID#0;class#DBAdapter#0" expanded="false" />
@@ -3185,129 +3466,6 @@
             <element signature="method#insertar_producto_pedido_editar_id#0;class#DBAdapter#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="49" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-          <folding>
-            <element signature="docComment;method#initImageView#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#initImageView#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="docComment;method#createObjectsGallery#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#createObjectsGallery#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="docComment;method#mainImageListener#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#mainImageListener#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="docComment;method#createGalleryItems#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#createGalleryItems#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="docComment;method#buscarImagenes#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#buscarImagenes#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="docComment;method#defaultCheckBoxState#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#defaultCheckBoxState#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="docComment;method#cargarInformacion#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#cargarInformacion#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="docComment;method#initCheckBox#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#initCheckBox#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="docComment;method#initTextView#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#initTextView#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="docComment;method#initListView#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#initListView#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="class#13363:15833" expanded="false" />
-            <element signature="method#onEntrada#0;class#13363:15833" expanded="false" />
-            <element signature="e#15251#15306#0" expanded="false" />
-            <element signature="e#17903#17976#0" expanded="false" />
-            <element signature="docComment;method#getExtrasVar#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#getExtrasVar#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="docComment;method#initButtons#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#initButtons#0;class#FragmentGaleria#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#FragmentGaleria#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/pedido/FragmentPedido_Realizar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="153" column="7" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cliente_editar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-normal/fragment_cliente_editar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cliente.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_pedido.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_galeria.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022368422">
-          <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-normal/fragment_galeria.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022368422">
-          <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-large/fragment_galeria.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2821577">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
   </component>

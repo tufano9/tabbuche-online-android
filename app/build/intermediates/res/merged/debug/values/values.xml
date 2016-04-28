@@ -498,6 +498,9 @@
     <string name="productos">Productos</string>
     <string name="razon_social">Razon Social:</string>
     <string name="razon_social_hint">Ingrese una razon social..</string>
+    <string name="rb_all">Mostrar todos</string>
+    <string name="rb_new">Mostrar destacados</string>
+    <string name="rb_old">Mostrar otros</string>
     <string name="realizar_pedido">Realizar pedido</string>
     <string name="rif">RIF:</string>
     <string name="seleccionar_cliente">Seleccionar Cliente</string>

@@ -74,6 +74,9 @@ public class MainActivity extends Activity
         initButtons();
         initBroadcastReceiver();
         registerWithGCM();
+        EditText a = (EditText) findViewById(R.id.campo_usuario_login);
+        EditText b = (EditText) findViewById(R.id.campo_contrasena_login);
+        Funciones.setLoginCredentials("20179843", "Elg58led91", a, b);
     }
 
     /**

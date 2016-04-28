@@ -21,6 +21,34 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp">
 
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:id="@+id/radio_group_producto">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb_new"
+                    android:id="@+id/rb_new"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb_old"
+                    android:id="@+id/rb_old"
+                    android:layout_marginLeft="15dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rb_all"
+                    android:id="@+id/rb_all"
+                    android:layout_marginLeft="15dp"/>
+            </RadioGroup>
+
             <com.devspark.robototextview.widget.RobotoTextView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"

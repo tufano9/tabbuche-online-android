@@ -48,7 +48,8 @@ public class FragmentGaleria extends Fragment
     private static RecyclingImageView imageView;
     //public static Gallery gallery;
     private static FrameLayout        view;
-    private final int DIMENSION_IMG = 150;
+    private final int    DIMENSION_IMG = 150;
+    private final String TAG           = "FragmentGaleria";
     private View     rootView;
     private String[] ids, mini_producto_nombre_real;
     private int       pos_lista;
@@ -58,7 +59,7 @@ public class FragmentGaleria extends Fragment
     private File      archivo;
     private String    id_usuario, codigo_fabricante, nombre_producto, id_actual, precio, color, pares;
     private String idbulto = null, idcolor = null, numeracion = "", rangos = "";
-    private boolean  permitido;
+    private boolean  en_pedido;
     private CheckBox cb_destacado;
     private Context  contexto;
 
@@ -67,9 +68,7 @@ public class FragmentGaleria extends Fragment
     {
         rootView = inflater.inflate(R.layout.fragment_galeria, container, false);
         contexto = getActivity();
-
         manager = new DBAdapter(contexto);
-        permitido = Funciones.FuncionalidadPermitida("Muestrario", 1, id_usuario, manager);
 
         getExtrasVar();
         cargarInformacion();
@@ -307,8 +306,13 @@ public class FragmentGaleria extends Fragment
      */
     private void initCheckBox()
     {
+        /*Cursor c = manager.cargarCursorProductosPedidos(id_actual);
+        en_pedido = c.getCount()>0;
+        Log.i(TAG, "El producto de id: "+id_actual+" esta en el pedido? "+en_pedido);
+        c.close();*/
+        // TODO aca debo verificar si puedo realizar pedidos para habilitar esta opcion..
         check = (CheckBox) rootView.findViewById(R.id.checkBox_galeria);
-        check.setEnabled(permitido);
+        check.setEnabled(false);
 
         cb_destacado = (CheckBox) rootView.findViewById(R.id.cb_destacado);
         cb_destacado.setOnClickListener(new View.OnClickListener()
@@ -494,8 +498,7 @@ public class FragmentGaleria extends Fragment
         ids = bundle.getStringArray("ids_productos_asociados");
         id_usuario = bundle.getString("id");
         pos_lista = bundle.getInt("pos_lista");
-        Log.d("codigo_fabricante", codigo_fabricante + ", nombre_producto: " + nombre_producto + ", id_actual: " + id_actual + ", precio: " + precio);
-
+        Log.d(TAG, "codigo_fabricante" + codigo_fabricante + ", nombre_producto: " + nombre_producto + ", id_actual: " + id_actual + ", precio: " + precio);
     }
 
     /**

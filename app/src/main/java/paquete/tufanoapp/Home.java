@@ -187,10 +187,18 @@ public class Home extends Activity
         for (int i = 0; i < titulos.length; i++)
         {
             // Verificara cada opcion, para saber si se tiene permitido entrar en ella o no..
-            if (menuValido(titulos[i]))
+            /*if (menuValido(titulos[i]))
             {
                 Log.i("crearMenuOpciones", "Agregado el menu " + titulos[i]);
                 navItms.add(new Item_objct(titulos[i], navIcons.getResourceId(i, -1)));
+            }*/
+
+            // SOLO HABILITA EL MUESTRARIO
+            if (titulos[i].equals("Muestrario"))
+            {
+                Log.i("crearMenuOpciones", "Agregado el menu " + titulos[i]);
+                navItms.add(new Item_objct(titulos[i], navIcons.getResourceId(i, -1)));
+                break;
             }
         }
 
