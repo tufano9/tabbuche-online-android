@@ -246,8 +246,8 @@ public class HorizontalListView extends AdapterView<ListAdapter>
 
     private void addAndMeasureChild(final View child, int viewPos)
     {
-        if (child != null)
-        {
+        //if (child != null)
+        //{
             LayoutParams params = child.getLayoutParams();
             if (params == null)
             {
@@ -257,7 +257,7 @@ public class HorizontalListView extends AdapterView<ListAdapter>
             addViewInLayout(child, viewPos, params, true);
             child.measure(MeasureSpec.makeMeasureSpec(getWidth(), MeasureSpec.AT_MOST),
                     MeasureSpec.makeMeasureSpec(getHeight(), MeasureSpec.AT_MOST));
-        }
+        //}
     }
 
     @Override
@@ -341,7 +341,6 @@ public class HorizontalListView extends AdapterView<ListAdapter>
     {
         while (rightEdge + dx < getWidth() && mRightViewIndex < mAdapter.getCount())
         {
-
             View child = mAdapter.getView(mRightViewIndex, mRemovedViewQueue.poll(), this);
             addAndMeasureChild(child, -1);
             rightEdge += child.getMeasuredWidth();

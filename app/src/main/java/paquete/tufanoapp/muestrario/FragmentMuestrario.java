@@ -36,8 +36,8 @@ import paquete.tufanoapp.imageAlphaClass;
 public class FragmentMuestrario extends Fragment
 {
     private static final String TAG = "FragmentMuestrario";
-    public static String destacado_filtrado; // 1 new - 0 old - 2 all
-    private String[] ids_lineas, nombres_lineas;
+    public static String   destacado_filtrado; // 1 new - 0 old - 2 all
+    private       String[] ids_lineas, nombres_lineas;
     private View   rootView;
     private String ci = null, id;
     private Context         contexto;
@@ -190,110 +190,6 @@ public class FragmentMuestrario extends Fragment
         super.onDestroy();
     }
 
-    private ArrayList<String> obtenerLineasValidas(String[] lineas)
-    {
-        ArrayList<String> lineas_permitidas = new ArrayList<>();
-        // Verificando si la linea posee modelos disponibles..
-        for (String linea : lineas)
-        {
-            String[] datos_linea  = linea.split("&");
-            String   id_linea     = datos_linea[0];
-            String   nombre_linea = datos_linea[1];
-
-            String res2 = (manager.cargarCursorModelos_Lineas(id_linea, ci));
-
-            if (res2.equals(""))
-                Log.d(TAG, "La linea " + nombre_linea + " no tiene modelos..");
-            else
-            {
-                lineas_permitidas.add(id_linea);
-                Log.i(TAG, "Permitiendo la linea: " + nombre_linea + " de id: " + id_linea);
-
-
-                /*
-                String[]          datos_modelo       = res2.split("\\|");
-                ArrayList<String> modelos_permitidos = obtenerModelosValidos_Linea(datos_modelo, id_linea);
-
-                for (int i = 0; i < modelos_permitidos.size(); i++)
-                    Log.d(TAG, "Comparando el id_linea: " + id_linea + " (TABLA LINEAS), con el id_linea: " + modelos_permitidos.get(i)+ "(TABLA MODELOS)");
-
-                if (modelos_permitidos.contains(id_linea))
-                {
-                    Log.d(TAG, "La linea " + nombre_linea + "  ( id:" + id_linea + ") tiene modelos validos..");
-                    lineas_permitidas.add(id_linea);
-                }
-                else
-                {
-                    Log.d(TAG, "La linea " + nombre_linea + " no tiene modelos (con filtros)..");
-                }*/
-            }
-        }
-        return lineas_permitidas;
-    }
-
-    private ArrayList<String> obtenerModelosValidos_Linea(String[] modelos, String id_linea_buscador)
-    {
-        ArrayList<String> permitidos = new ArrayList<>();
-        // Verificando si el modelo posee productos disponibles..
-        for (String modelo : modelos)
-        {
-            String[] c = modelo.split("&");
-            String res2 = manager.cargarCursorProductos_Modelos_Lineas(id_linea_buscador,
-                    c[0], ci, destacado_filtrado);
-
-            if (res2.equals(""))
-                Log.d(TAG, "El modelo no tiene productos.. (obtenerModelosValidos_Linea)");
-            else
-            {
-                String[] datos_modelo = res2.split("\\|");
-
-                for (int i = 0; i < datos_modelo.length; i++)
-                {
-                    String[] d = datos_modelo[i].split("&");
-                    permitidos.add(d[1]);
-                    Log.d(TAG, "Permitiendo a " + d[1]);
-                }
-            }
-        }
-        return permitidos;
-    }
-
-    private ArrayList<String> obtenerModelosValidos(String[] modelos, String id_linea)
-    {
-        ArrayList<String> permitidos = new ArrayList<>();
-        // Verificando si el modelo posee productos disponibles..
-        for (String modelo : modelos)
-        {
-            String[]                     c               = modelo.split("&");
-            String                       id_modelo       = c[0];
-            ArrayList<ArrayList<String>> datos_productos = manager.obtenerProductos_Filtrado(ci, destacado_filtrado);
-
-            for (int i = 0; i < datos_productos.size(); i++)
-            {
-                Log.d(TAG, "ID_PRODUCTO: " + datos_productos.get(i).get(0) + " ID_MODELO: "
-                        + datos_productos.get(i).get(1) + " ID_LINEA: " + datos_productos.get(i).get(2));
-
-                if (datos_productos.get(i).get(1).equals(id_modelo))
-                {
-                    //Log.d(TAG, "El modelo si tiene productos..");
-                    permitidos.add(id_modelo);
-                }
-                else
-                {
-                    Log.d(TAG, "El modelo no tiene productos..");
-                }
-
-            }
-
-            /*if (datos_productos.equals("")) Log.d(TAG, "El modelo no tiene productos..");
-            else
-            {
-                permitidos.add(id_modelo);
-            }*/
-        }
-        return permitidos;
-    }
-
     private void loadData()
     {
         Log.i(TAG, "Inicializando tabla.. Ordenando por: Destacado: " + destacado_filtrado);
@@ -367,32 +263,48 @@ public class FragmentMuestrario extends Fragment
         public HAdapter()
         {
             super();
-            Log.i(TAG, "Constructor del HAdapter");
+            Log.i(TAG, "Constructor del HAdapter..");
             String res = (manager.cargarCursorLineas(ci));
 
             if (!res.equals(""))
             {
                 String[]          lineas     = res.split("\\|");
-                ArrayList<String> permitidos = obtenerLineasValidas(lineas);
+                ArrayList<String> permitidos = manager.obtenerLineasValidas(ci, destacado_filtrado);
+                ArrayList<String>            perm       = normalizarLineas(permitidos, lineas);
 
                 if (permitidos.size() > 0)
                 {
                     HorizontalListView listview = (HorizontalListView) rootView.findViewById(R.id.listview);
                     listview.setVisibility(View.VISIBLE);
-                }
 
-                ids_lineas = new String[permitidos.size()];
-                nombres_lineas = new String[permitidos.size()];
+                    ids_lineas = new String[perm.size()];
+                    nombres_lineas = new String[perm.size()];
 
-                for (int i = 0; i < lineas.length; i++)
-                {
-                    String[] c = lineas[i].split("&");
+                    //for (int i = 0; i < lineas.length; i++)
+                    //{
+                        //String[] c = lineas[i].split("&");
+                        //Log.d(TAG, "HAdapter: Recorriendo array lineas: " + c[0] + ", nombre: " + c[1]);
 
-                    if (permitidos.contains(c[0]))
-                    {
-                        ids_lineas[i] = c[0];
-                        nombres_lineas[i] = c[1];
-                    }
+                        for (int j = 0; j < perm.size(); j++)
+                        {
+                            for (int i = 0; i < lineas.length; i++)
+                            {
+                                String[] c = lineas[i].split("&");
+                                Log.d(TAG, "HAdapter: Recorriendo array lineas: " + c[0] + ", nombre: " + c[1]);
+
+                                if (perm.get(j).equals(c[0]))
+                                {
+                                    Log.d(TAG, "HAdapter: Agregando data.. id:" + c[0] + ", nombre: " + c[1]);
+                                    ids_lineas[j] = c[0];
+                                    nombres_lineas[j] = c[1];
+                                }
+                                else
+                                {
+                                    Log.d(TAG, "HAdapter: No agregue data..");
+                                }
+                            }
+                        }
+                    //}
                 }
             }
             else
@@ -443,7 +355,7 @@ public class FragmentMuestrario extends Fragment
 
             if (file.exists())
             {
-                //Log.d(TAG, "Encontrada");
+                //Log.d(TAG, "Imagen de la linea " + nombres_lineas[position] + " encontrada..");
                 imagen.setImageBitmap(Funciones.decodeSampledBitmapFromResource(file, 130, 130));
                 imagenAlpha.agregar_linea(imagen);
                 if (!id_linea_seleccionado.equals(ids_lineas[position]))
@@ -456,16 +368,11 @@ public class FragmentMuestrario extends Fragment
         }
     }
 
-    //obtenerProductos_Filtrado()
-    //obtenerModelos_Validos()
-    //obtenerLineas_Validas()
-
     /**
      * Inicializa la 2da lista horizontal de los modelos
      */
     private class HAdapter2 extends BaseAdapter
     {
-
         private final String id_linea_buscador;
         final View.OnClickListener mOnButtonClicked = new View.OnClickListener()
         {
@@ -488,7 +395,6 @@ public class FragmentMuestrario extends Fragment
         };
         String[] valores_modelo_id     = new String[0];
         String[] valores_modelo_nombre = new String[0];
-        String[] valores_modelo_img    = new String[0];
 
         public HAdapter2(String s)
         {
@@ -497,33 +403,41 @@ public class FragmentMuestrario extends Fragment
 
             if (s != null)
             {
-                Log.i(TAG, "Constructor del HAdapter2");
+                Log.i(TAG, "Constructor del HAdapter2.. Parametro: " + s);
                 String res = (manager.cargarCursorModelos_Lineas(id_linea_buscador, ci));
+                Log.i(TAG, "res: " + res);
 
                 if (!res.equals(""))
                 {
-                    String[]          modelos    = res.split("\\|");
-                    ArrayList<String> permitidos = obtenerModelosValidos(modelos, id_linea_buscador);
+                    String[]                     modelos    = res.split("\\|");
+                    ArrayList<ArrayList<String>> permitidos = manager.obtenerModelosValidos(ci, destacado_filtrado);
+                    ArrayList<String>            perm       = normalizarModelos(permitidos, modelos);
 
-                    if (permitidos.size() > 0)
+                    if (perm.size() > 0)
                     {
                         HorizontalListView listview = (HorizontalListView) rootView.findViewById(R.id.listview2);
                         listview.setVisibility(View.VISIBLE);
-                    }
 
-                    valores_modelo_id = new String[permitidos.size()];
-                    valores_modelo_nombre = new String[permitidos.size()];
-                    valores_modelo_img = new String[permitidos.size()];
+                        valores_modelo_id = new String[perm.size()];
+                        valores_modelo_nombre = new String[perm.size()];
 
-                    for (int i = 0; i < modelos.length; i++)
-                    {
-                        String[] datos_modelos = modelos[i].split("&");
-                        if (permitidos.contains(datos_modelos[0]))
-                        {
-                            valores_modelo_id[i] = datos_modelos[0];
-                            valores_modelo_nombre[i] = datos_modelos[1];
-                            valores_modelo_img[i] = datos_modelos[2];
-                        }
+                        //for (int i = 0; i < modelos.length; i++)
+                        //{
+                            //String[] datos_modelos = modelos[i].split("&");
+                            for (int j = 0; j < perm.size(); j++)
+                            {
+                                for (int i = 0; i < modelos.length; i++)
+                                {
+                                    String[] datos_modelos = modelos[i].split("&");
+                                    if (perm.get(j).equals(datos_modelos[0]))
+                                    {
+                                        Log.d(TAG, "HAdapter2: Agregando data.. id:" + datos_modelos[0] + ", nombre: " + datos_modelos[1]);
+                                        valores_modelo_id[j] = datos_modelos[0];
+                                        valores_modelo_nombre[j] = datos_modelos[1];
+                                    }
+                                }
+                            }
+                        //}
                     }
                 }
                 else
@@ -536,6 +450,7 @@ public class FragmentMuestrario extends Fragment
 
         public int getCount()
         {
+            Log.i(TAG, "LENGTH: " + valores_modelo_id.length);
             return valores_modelo_id.length;
         }
 
@@ -580,17 +495,69 @@ public class FragmentMuestrario extends Fragment
 
             if (file.exists())
             {
-                //Log.d(TAG, "Encontrada");
+                Log.d(TAG, "Imagen del modelo " + valores_modelo_nombre[position] + " encontrada..");
                 imagen.setImageBitmap(Funciones.decodeSampledBitmapFromResource(file, 130, 130));
                 imagenAlpha.agregar_modelo(imagen);
                 //if (!id_modelo_seleccionado.equals(valores_modelo_id[position]))
                 imagen.setAlpha(Constantes.IMAGE_ALPHA);
             }
+            else
+                Log.d(TAG, "Imagen del modelo " + valores_modelo_nombre[position] + " NO encontrada..");
 
             imagen.setTag(valores_modelo_id[position] + "&" + valores_modelo_nombre[position]); // aca le pondre el id_modelo (variable global)
 
             return convertView;
         }
+    }
+
+    private ArrayList<String> normalizarLineas(ArrayList<String> permitidos, String[] lineas)
+    {
+        ArrayList<String> perm       = new ArrayList<>();
+        ArrayList<String> contenedor = new ArrayList<>();
+        for (String linea : lineas)
+        {
+            String[] datos_modelos = linea.split("&");
+            for (int j = 0; j < permitidos.size(); j++)
+            {
+                if (permitidos.get(j).contains(datos_modelos[0]) && !contenedor.contains(datos_modelos[0]))
+                {
+                    //Log.i(TAG, "Permitiendo desde normalizar.. Linea: " + datos_modelos[1]);
+                    perm.add(datos_modelos[0]);
+                    contenedor.add(datos_modelos[0]);
+                    break;
+                }
+                else
+                {
+                    //Log.i(TAG, "NO Permitiendo desde normalizar.. Linea: " + datos_modelos[1]);
+                }
+            }
+        }
+        return perm;
+    }
+
+    private ArrayList<String> normalizarModelos(ArrayList<ArrayList<String>> permitidos, String[] modelos)
+    {
+        ArrayList<String> perm       = new ArrayList<>();
+        ArrayList<String> contenedor = new ArrayList<>();
+        for (String modelo : modelos)
+        {
+            String[] datos_modelos = modelo.split("&");
+            for (int j = 0; j < permitidos.size(); j++)
+            {
+                if (permitidos.get(j).get(0).contains(datos_modelos[0]) && !contenedor.contains(datos_modelos[0]))
+                {
+                    Log.i(TAG, "Permitiendo desde normalizar.. Modelo: " + datos_modelos[1]);
+                    perm.add(datos_modelos[0]);
+                    contenedor.add(datos_modelos[0]);
+                    break;
+                }
+                else
+                {
+                    Log.i(TAG, "NO Permitiendo desde normalizar.. Modelo: " + datos_modelos[1]);
+                }
+            }
+        }
+        return perm;
     }
 
     /**
@@ -740,7 +707,7 @@ public class FragmentMuestrario extends Fragment
 
             if (file.exists())
             {
-                //Log.d("Buscando imagen", "Encontrada");
+                //Log.d(TAG, "Imagen del producto " + nombre_producto[position] + " encontrada..");
                 imagen.setImageBitmap(Funciones.decodeSampledBitmapFromResource(file, Constantes.IMG_MUESTRARIO_DIMEN, Constantes.IMG_MUESTRARIO_DIMEN));
                 imagenAlpha.agregar_producto(imagen);
                 imagen.setAlpha(Constantes.IMAGE_ALPHA);

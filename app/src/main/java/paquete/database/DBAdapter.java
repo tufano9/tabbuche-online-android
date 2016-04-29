@@ -14,6 +14,7 @@ import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 import paquete.global.Constantes;
 
@@ -916,7 +917,230 @@ public class DBAdapter
         return res;
     }
 
-    public ArrayList<ArrayList<String>> obtenerProductos_Filtrado(String cedula, String destacado_filtrado)
+    public ArrayList<String> obtenerLineas(String cedula)
+    {
+        ArrayList<String> lineas_deshabilitadas = obtenerLineasDeshabilitadas(cedula);
+        String[]          columnas              = new String[]{CN_ID_LINEA};
+        Cursor            cursor                = db.query(TABLA_LINEAS, columnas, null, null, null, null, null);
+
+        ArrayList<String> lineas_final = new ArrayList<>();
+
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
+        {
+            String id_linea = cursor.getString(0);
+            if (!lineas_deshabilitadas.contains(id_linea))
+                lineas_final.add(id_linea);
+        }
+        cursor.close();
+        return lineas_final;
+    }
+
+    public ArrayList<String> obtenerModelos(String cedula)
+    {
+        ArrayList<String> modelos_deshabilitadas = obtenerModelosDeshabilitados(cedula);
+        String[]          columnas               = new String[]{CN_ID_MODELO};
+        Cursor            cursor                 = db.query(TABLA_MODELOS, columnas, null, null, null, null, null);
+
+        ArrayList<String> modelos_final = new ArrayList<>();
+
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
+        {
+            String id_modelo = cursor.getString(0);
+            if (!modelos_deshabilitadas.contains(id_modelo))
+                modelos_final.add(id_modelo);
+        }
+        cursor.close();
+        return modelos_final;
+    }
+
+    public ArrayList<String> obtenerLineasValidas(String cedula, String destacado)
+    {
+        ArrayList<ArrayList<String>> modelosfiltrados = obtenerModelosValidos(cedula, destacado);
+        ArrayList<String> lineas           = obtenerLineas(cedula);
+        ArrayList<String> ids_lineas       = new ArrayList<>();
+        ArrayList<String> contenedor = new ArrayList<>();
+
+        for (int i = 0; i < modelosfiltrados.size(); i++)
+        {
+            String id_linea_tm = modelosfiltrados.get(i).get(1);
+            // Compara el id_modelo TABLA MODELO con id_modelo TABLA PRODUCTOS FILTRADA
+
+            for (int j = 0; j < lineas.size(); j++)
+            {
+                String id_linea_tl = lineas.get(j);
+
+                if (id_linea_tl.equals(id_linea_tm) && !contenedor.contains(id_linea_tm))
+                {
+                    Log.i(TAG, "Agregado la linea de id " + id_linea_tl);
+                    ids_lineas.add(id_linea_tl);
+                    contenedor.add(id_linea_tl);
+                    break;
+                }
+            }
+        }
+        return ids_lineas;
+    }
+
+    public ArrayList<ArrayList<String>> obtenerModelosValidos(String cedula, String destacado)
+    {
+        ArrayList<ArrayList<String>> productosfiltrados = obtenerProductosxFiltrado(cedula, destacado);
+        ArrayList<String> modelos            = obtenerModelos(cedula);
+        ArrayList<ArrayList<String>> ids_modelos        = new ArrayList<>();
+        ArrayList<String> contenedor = new ArrayList<>();
+
+        for (int i = 0; i < productosfiltrados.size(); i++)
+        {
+            String id_modelo_tp = productosfiltrados.get(i).get(1);
+            String id_linea_tp = productosfiltrados.get(i).get(2);
+            // Compara el id_modelo TABLA MODELO con id_modelo TABLA PRODUCTOS FILTRADA
+            for (int j = 0; j < modelos.size(); j++)
+            {
+                String id_modelo_tm = modelos.get(j);
+
+                if (id_modelo_tm.equals(id_modelo_tp) && !contenedor.contains(id_modelo_tp))
+                {
+                    Log.i(TAG, "Agregado el modelo de id " + id_modelo_tm);
+
+                    ArrayList<String> p = new ArrayList<>();
+                    p.add(id_modelo_tp);
+                    p.add(id_linea_tp);
+                    ids_modelos.add(p);
+                    contenedor.add(id_modelo_tm);
+                    break;
+                }
+            }
+        }
+        return ids_modelos;
+    }
+
+    public ArrayList<ArrayList<String>> obtenerProductosxFiltrado(String cedula, String destacado)
+    {
+        ArrayList<String> productos_deshabilitados = obtenerProductosDeshabilitados(cedula);
+
+        // COLUMNAS
+        String[] columnas = new String[]{CN_ID_PRODUCTO, CN_ID_PRODUCTO_MODELO, CN_ID_PRODUCTO_LINEA};
+
+        // WHERE
+        String where = null;
+
+        // ARGS
+        String[] args = null;
+        if(!destacado.equals("2"))
+        {
+            args = new String[]{destacado};
+            where = CN_DESTACADO_PRODUCTO+" =?";
+        }
+
+        // RESULTADO
+        ArrayList<ArrayList<String>> productosFiltrados = new ArrayList<>();
+
+        Cursor cursor = db.query(TABLA_PRODUCTOS, columnas, where, args, null, null, null);
+        for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
+        {
+            String id_producto = cursor.getString(0);
+            String id_modelo   = cursor.getString(1);
+            String id_linea    = cursor.getString(2);
+
+            if (!productos_deshabilitados.contains(id_producto))
+            {
+                ArrayList<String> p = new ArrayList<>();
+                p.add(id_producto);
+                p.add(id_modelo);
+                p.add(id_linea);
+                productosFiltrados.add(p);
+            }
+            else
+            {
+                Log.i(TAG, "El producto de id " + id_producto + " esta deshabilitado..");
+            }
+        }
+        cursor.close();
+        Log.i(TAG, "Encontre " + productosFiltrados.size() + " productos que cumplen con el filtrado, destacado = " + destacado);
+        return productosFiltrados;
+    }
+
+    public ArrayList<String> obtenerLineasDeshabilitadas(String ci)
+    {
+        String[]          columnas              = new String[]{CN_LINEAS_DESHABILITADAS};
+        String[]          args                  = {ci};
+        Cursor            cursor                = db.query(TABLA_USUARIO, columnas, "cedula=?", args, null, null, null);
+        ArrayList<String> lineas_deshabilitadas = new ArrayList<>();
+
+        if(cursor.moveToFirst())
+        {
+            if(!cursor.getString(0).equals(""))
+            {
+                String[] p = (cursor.getString(0)).split(",");
+                Log.i(TAG, "Existen " + p.length + " lineas deshabilitadas..");
+                Collections.addAll(lineas_deshabilitadas, p);
+            }
+        }
+
+        for (String linea: lineas_deshabilitadas)
+        {
+            Log.i(TAG, "Deshabilitada Linea: "+linea);
+        }
+
+        cursor.close();
+        return lineas_deshabilitadas;
+    }
+
+    public ArrayList<String> obtenerModelosDeshabilitados(String ci)
+    {
+        String[]          columnas               = new String[]{CN_MODELOS_DESHABILITADOS};
+        String[]          args                   = {ci};
+        Cursor            cursor                 = db.query(TABLA_USUARIO, columnas, "cedula=?", args, null, null, null);
+        ArrayList<String> modelos_deshabilitados = new ArrayList<>();
+
+        if(cursor.moveToFirst())
+        {
+            if(!cursor.getString(0).equals(""))
+            {
+                String[] p = (cursor.getString(0)).split(",");
+                Log.i(TAG, "Existen " + p.length + " modelos deshabilitados..");
+                Collections.addAll(modelos_deshabilitados, p);
+            }
+        }
+
+        for (String modelo: modelos_deshabilitados)
+        {
+            Log.i(TAG, "Deshabilitado Modelo: "+modelo);
+        }
+
+        cursor.close();
+        return modelos_deshabilitados;
+    }
+
+    public ArrayList<String> obtenerProductosDeshabilitados(String ci)
+    {
+        String[]          columnas                 = new String[]{CN_PRODUCTOS_DESHABILITADOS};
+        String[]          args                     = {ci};
+        Cursor            cursor                   = db.query(TABLA_USUARIO, columnas, "cedula=?", args, null, null, null);
+        ArrayList<String> productos_deshabilitados = new ArrayList<>();
+        //String[]          p                        = new String[0];
+
+        if(cursor.moveToFirst())
+        {
+            if(!cursor.getString(0).equals(""))
+            {
+                String[] p = (cursor.getString(0)).split(",");
+                Log.i(TAG, "Existen " + p.length + " productos deshabilitados..");
+                Collections.addAll(productos_deshabilitados, p);
+            }
+        }
+
+        for (String product: productos_deshabilitados)
+        {
+            Log.i(TAG, "Deshabilitado Producto: "+product);
+        }
+
+        //Collections.addAll(productos_deshabilitados, p);
+
+        cursor.close();
+        return productos_deshabilitados;
+    }
+
+    public ArrayList<ArrayList<String>> obtenerProductos_Filtrado(String id_modelo, String cedula, String destacado_filtrado)
     {
         String[] columnas2                = new String[]{CN_PRODUCTOS_DESHABILITADOS};
         String[] args                     = {cedula};
@@ -934,23 +1158,22 @@ public class DBAdapter
         Log.d("cargarCursorProductos", "cedula: " + cedula + " destacado_filtrado: " + destacado_filtrado);
         Log.d("cargarCursorProductos", "Hay " + cursor.getCount() + " Productos deshabilitados!");
 
-        String[] columnas = new String[]{CN_ID_PRODUCTO, CN_ID_PRODUCTO_MODELO, CN_ID_PRODUCTO_LINEA};
+        String[] columnas = new String[]{CN_ID_PRODUCTO, CN_ID_PRODUCTO_MODELO, CN_ID_PRODUCTO_LINEA, CN_CODIGO_FABRICANTE_PRODUCTO, CN_PRECIO_PRODUCTO, CN_NOMBRE_PRODUCTO, CN_ID_PRODUCTO_COLOR};
         //String[] args2    = {id_linea, id_modelo, destacado_filtrado};
         ArrayList<String> argumentos = new ArrayList<>();
-        String            where;
-        Cursor            cursor2;
+        argumentos.add(id_modelo);
+
+        String where = "id_modelo=?";
+        Cursor cursor2;
 
         if (!destacado_filtrado.equals("2"))
         {
-            where = " destacado=?";
+            where += " destacado=?";
             argumentos.add(destacado_filtrado);
-            String[] args2 = argumentos.toArray(new String[argumentos.size()]);
-            cursor2 = db.query(TABLA_PRODUCTOS, columnas, where, args2, null, null, null);
         }
-        else
-        {
-            cursor2 = db.query(TABLA_PRODUCTOS, columnas, null, null, null, null, null);
-        }
+
+        String[] args2 = argumentos.toArray(new String[argumentos.size()]);
+        cursor2 = db.query(TABLA_PRODUCTOS, columnas, where, args2, null, null, null);
 
         String                       res       = "";
         ArrayList<ArrayList<String>> productos = new ArrayList<>();

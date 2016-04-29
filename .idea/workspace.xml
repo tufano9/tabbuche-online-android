@@ -18,6 +18,14 @@
         <option name="packageNamePattern" value="" />
         <option name="pid" value="" />
       </filter>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="DBAdapter" />
+        <option name="name" value="DBAdapter" />
+        <option name="packageNamePattern" value="" />
+        <option name="pid" value="" />
+      </filter>
     </filters>
   </component>
   <component name="AndroidLayouts">
@@ -61,66 +69,66 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Agregado" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="FragmentMuestrario" />
     <option name="LOGCAT_FORMAT_STRING" value="%4$c/%5$s: %6$s" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19c797b6-4277-4863-b399-0a139419cb54" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.3.0/jars/classes.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.3.0/jars/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/ads/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/ads/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appinvite/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appinvite/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appstate/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appstate/R.java" />
+    <list default="true" id="19c797b6-4277-4863-b399-0a139419cb54" name="Default" comment="Mejoras">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/auth/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/auth/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/cast/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/cast/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/drive/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/drive/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/fitness/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/fitness/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/games/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/games/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/gcm/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/gcm/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/identity/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/identity/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/location/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/location/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/maps/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/maps/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/measurement/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/measurement/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/nearby/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/nearby/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appstate/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appstate/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/cast/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/cast/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/safetynet/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/safetynet/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/paquete/tufanoapp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/paquete/tufanoapp/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/vision/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/vision/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/fitness/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/fitness/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/gcm/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/gcm/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/drive/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/drive/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/location/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/location/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-large-v4/fragment_galeria.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-large-v4/fragment_galeria.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/panorama/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/panorama/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/plus/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/plus/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/safetynet/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/safetynet/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/vision/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/vision/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wallet/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wallet/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/paquete/tufanoapp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/paquete/tufanoapp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-large-v4/fragment_galeria.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-large-v4/fragment_galeria.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_muestrario.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_muestrario.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_muestrario.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_muestrario.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/maps/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/maps/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wallet/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wallet/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/identity/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/identity/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appinvite/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appinvite/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/ads/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/ads/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.3.0/jars/classes.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.3.0/jars/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/games/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/games/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/nearby/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/nearby/R.java" />
     </list>
     <ignored path="tabbuche-online-android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -152,7 +160,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="531" column="31" selection-start-line="531" selection-start-column="31" selection-end-line="531" selection-end-column="31" />
+              <caret line="271" column="63" selection-start-line="271" selection-start-column="63" selection-end-line="271" selection-end-column="63" />
               <folding>
                 <element signature="method#FragmentMuestrario#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#onCreateView#0;class#FragmentMuestrario#0" expanded="false" />
@@ -163,19 +171,26 @@
                 <element signature="docComment;method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#loadData#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="e#6552#6589#0" expanded="false" />
                 <element signature="docComment;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#getView#0;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="docComment;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#getView#0;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
-                <element signature="method#obtenerModelosValidos_Linea#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#normalizarLineas#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="method#normalizarModelos#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="docComment;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="e#23467#23540#0" expanded="false" />
                 <element signature="method#HAdapter3#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#getView#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+                <element signature="e#26214#26228#0" expanded="false" />
+                <element signature="docComment;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#onPreExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#doInBackground#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#onPostExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-                <element signature="method#loadData#0;class#FragmentMuestrario#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -184,10 +199,9 @@
       <file leaf-file-name="DBAdapter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9497908">
-              <caret line="953" column="8" selection-start-line="953" selection-start-column="8" selection-end-line="953" selection-end-column="8" />
+            <state vertical-scroll-proportion="1.4516729">
+              <caret line="973" column="40" selection-start-line="973" selection-start-column="32" selection-end-line="973" selection-end-column="40" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="docComment;method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cerrar#0;class#DBAdapter#0" expanded="false" />
@@ -195,8 +209,12 @@
                 <element signature="method#insertar_cliente#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#insertar_clientes#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#generarContentValues_insertarCliente#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#insertar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#editar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#consultar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#eliminar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#eliminar_producto_pedidoByID#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#generarContentValues_insertarProducto_Pedido#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#insertar_usuario#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#insertar_lineas#0;class#DBAdapter#0" expanded="false" />
@@ -211,8 +229,17 @@
                 <element signature="method#actualizar_actualizacionesCliente#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#actualizar_actualizacionesFunciones#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#buscarUsuario#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#buscarFuncionesUsuario#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorUsuario#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorLineas#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorModelos_Lineas#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#obtenerLineas#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#obtenerModelos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#obtenerLineasDeshabilitadas#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#obtenerModelosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#obtenerProductosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#obtenerProductos_Filtrado#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorProductos_Modelos_Lineas_DialogAgregar#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorActualizacionesGenerales#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorActualizacionesLineas#0;class#DBAdapter#0" expanded="false" />
@@ -221,6 +248,9 @@
                 <element signature="method#cargarCursorActualizacionesModelos#1;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorActualizacionesProductos#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorActualizacionesProductos#1;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidos#1;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidos_porTalla#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#cargarCursorProductosPedidos_porTalla#1;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorClientes_Vendedor#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorClientesByID#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#insertar_bulto#0;class#DBAdapter#0" expanded="false" />
@@ -239,10 +269,12 @@
                 <element signature="method#eliminar_data#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#debo_borrar_tabla#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#argumentos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#eliminar_pedido#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#eliminar_pedido_local#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#buscarClienteByID#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#actualizar_cliente#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#generarContentValues_actualizarCliente#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#actualizar_producto_pedido_cantidad#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#insertar_pedidos#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorPedidosByID#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#cargarCursorPedidos_LocalesByID#0;class#DBAdapter#0" expanded="false" />
@@ -283,6 +315,55 @@
                 <element signature="method#cargarCursorActualizacionesClientes_ID#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#actualizar_usuario#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#insertar_producto_pedido_editar_id#0;class#DBAdapter#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+              <folding>
+                <element signature="docComment;method#initBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#initBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#registerWithGCM#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#registerWithGCM#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#initNotifications#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#initNotifications#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#initButtons#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#initButtons#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#initTextView#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#initTextView#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#noInitialFocus#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#noInitialFocus#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#loginstatus_local#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#loginstatus_local#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#login#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#login#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#entrar_Home#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#entrar_Home#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#dialogoPass#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;method#checkPlayServices#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#checkPlayServices#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+                <element signature="class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onPreExecute#0;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#doInBackground#0;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onPostExecute#0;class#asynclogin_local#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+                <element signature="class#asynclogin#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onPreExecute#0;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#doInBackground#0;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onPostExecute#0;class#asynclogin#0;class#MainActivity#0" expanded="false" />
+                <element signature="docComment;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+                <element signature="class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onPreExecute#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#doInBackground#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
+                <element signature="method#onPostExecute#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -2216,8 +2297,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" />
       </list>
     </option>
   </component>
@@ -2252,9 +2334,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2263,9 +2342,62 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tabbuche-online-android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tabbuche-online-android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paquete" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tufanoapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tabbuche-online-android" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paquete" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2582,18 +2714,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.4935275" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27520758" sideWeight="0.4935275" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.50647247" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62040335" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.50647247" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5077106" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858837" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32858837" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
@@ -2603,13 +2735,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39976275" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976275" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -2628,62 +2760,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init Commit G" />
     <MESSAGE value="Reordenar el proyecto, limpieza de codigo y agregado el checkbox para destacar el producto en el fragment galeria." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reordenar el proyecto, limpieza de codigo y agregado el checkbox para destacar el producto en el fragment galeria." />
+    <MESSAGE value="Mejoras" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mejoras" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="344" column="34" selection-start-line="344" selection-start-column="34" selection-end-line="344" selection-end-column="34" />
-          <folding>
-            <element signature="method#fillList#0;class#HorizontalListView#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#FragmentMuestrario#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#onCreateView#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#selectDefaultRB#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#initRadioButton#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="docComment;method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="docComment;method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="docComment;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#getView#0;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="docComment;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#getView#0;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#obtenerModelosValidos_Linea#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#HAdapter3#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#getView#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#onPreExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#doInBackground#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#loadData#0;class#FragmentMuestrario#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="834" column="9" selection-start-line="834" selection-start-column="9" selection-end-line="834" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cerrar#0;class#DBAdapter#0" expanded="false" />
@@ -2691,8 +2782,12 @@
             <element signature="method#insertar_cliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_clientes#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_insertarCliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#editar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#consultar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_producto_pedidoByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_insertarProducto_Pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_usuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_lineas#0;class#DBAdapter#0" expanded="false" />
@@ -2707,7 +2802,17 @@
             <element signature="method#actualizar_actualizacionesCliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_actualizacionesFunciones#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#buscarUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarFuncionesUsuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorLineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorModelos_Lineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerLineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerModelos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerLineasDeshabilitadas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerModelosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerProductosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerProductos_Filtrado#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorProductos_Modelos_Lineas_DialogAgregar#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesGenerales#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesLineas#0;class#DBAdapter#0" expanded="false" />
@@ -2716,6 +2821,9 @@
             <element signature="method#cargarCursorActualizacionesModelos#1;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesProductos#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesProductos#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_porTalla#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_porTalla#1;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorClientes_Vendedor#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorClientesByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_bulto#0;class#DBAdapter#0" expanded="false" />
@@ -2734,10 +2842,12 @@
             <element signature="method#eliminar_data#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#debo_borrar_tabla#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#argumentos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#eliminar_pedido_local#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#buscarClienteByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_cliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_actualizarCliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_producto_pedido_cantidad#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_pedidos#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorPedidosByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorPedidos_LocalesByID#0;class#DBAdapter#0" expanded="false" />
@@ -2795,19 +2905,16 @@
             <element signature="method#initNotifications#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#initButtons#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initButtons#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#4990#5036#0" expanded="false" />
             <element signature="docComment;method#initTextView#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initTextView#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#noInitialFocus#0;class#MainActivity#0" expanded="false" />
             <element signature="method#noInitialFocus#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#loginstatus_local#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loginstatus_local#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8025#8081#0" expanded="false" />
             <element signature="docComment;method#login#0;class#MainActivity#0" expanded="false" />
             <element signature="method#login#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#entrar_Home#0;class#MainActivity#0" expanded="false" />
             <element signature="method#entrar_Home#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11771#11823#0" expanded="false" />
             <element signature="method#dialogoPass#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
@@ -2826,7 +2933,6 @@
             <element signature="docComment;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
             <element signature="class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onPreExecute#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#19056#19095#0" expanded="false" />
             <element signature="method#doInBackground#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onPostExecute#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
           </folding>
@@ -2837,9 +2943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="344" column="34" selection-start-line="344" selection-start-column="34" selection-end-line="344" selection-end-column="34" />
-          <folding>
-            <element signature="method#fillList#0;class#HorizontalListView#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2858,33 +2961,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw720dp-land/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw720dp-land/activity_main.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
+      <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/cliente/FragmentCliente_Seleccionar.java">
@@ -2983,7 +3086,6 @@
         <state vertical-scroll-proportion="0.85398775">
           <caret line="2102" column="4" selection-start-line="2102" selection-start-column="4" selection-end-line="2102" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cerrar#0;class#DBAdapter#0" expanded="false" />
@@ -2991,8 +3093,12 @@
             <element signature="method#insertar_cliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_clientes#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_insertarCliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#editar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#consultar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_producto_pedidoByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_insertarProducto_Pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_usuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_lineas#0;class#DBAdapter#0" expanded="false" />
@@ -3007,7 +3113,17 @@
             <element signature="method#actualizar_actualizacionesCliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_actualizacionesFunciones#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#buscarUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarFuncionesUsuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorLineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorModelos_Lineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerLineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerModelos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerLineasDeshabilitadas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerModelosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerProductosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerProductos_Filtrado#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorProductos_Modelos_Lineas_DialogAgregar#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesGenerales#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesLineas#0;class#DBAdapter#0" expanded="false" />
@@ -3016,6 +3132,9 @@
             <element signature="method#cargarCursorActualizacionesModelos#1;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesProductos#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesProductos#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_porTalla#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_porTalla#1;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorClientes_Vendedor#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorClientesByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_bulto#0;class#DBAdapter#0" expanded="false" />
@@ -3034,10 +3153,12 @@
             <element signature="method#eliminar_data#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#debo_borrar_tabla#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#argumentos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#eliminar_pedido_local#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#buscarClienteByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_cliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_actualizarCliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_producto_pedido_cantidad#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_pedidos#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorPedidosByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorPedidos_LocalesByID#0;class#DBAdapter#0" expanded="false" />
@@ -3097,73 +3218,73 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cliente_editar.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-normal/fragment_cliente_editar.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cliente.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_pedido.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_galeria.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_galeria.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.022368422">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-normal/fragment_galeria.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.022368422">
           <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-large/fragment_galeria.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-large/fragment_galeria.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2821577">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/creates/CreateSentences.java">
@@ -3181,13 +3302,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-sw720dp-land/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34605598">
           <caret line="78" column="55" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="55" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/global/Funciones.java">
@@ -3226,33 +3347,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/imageAlphaClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33251533">
           <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Lineas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22944786">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -3263,10 +3370,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="344" column="34" selection-start-line="344" selection-start-column="34" selection-end-line="344" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Lineas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27116564">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Usuarios.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4797546">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/database/Cursor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33251533">
+          <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Productos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4797546">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.086185046">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="8" />
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
           <folding>
             <element signature="docComment;method#initBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initBroadcastReceiver#0;class#MainActivity#0" expanded="false" />
@@ -3276,19 +3427,16 @@
             <element signature="method#initNotifications#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#initButtons#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initButtons#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#4990#5036#0" expanded="false" />
             <element signature="docComment;method#initTextView#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initTextView#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#noInitialFocus#0;class#MainActivity#0" expanded="false" />
             <element signature="method#noInitialFocus#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#loginstatus_local#0;class#MainActivity#0" expanded="false" />
             <element signature="method#loginstatus_local#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#8025#8081#0" expanded="false" />
             <element signature="docComment;method#login#0;class#MainActivity#0" expanded="false" />
             <element signature="method#login#0;class#MainActivity#0" expanded="false" />
             <element signature="docComment;method#entrar_Home#0;class#MainActivity#0" expanded="false" />
             <element signature="method#entrar_Home#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#11771#11823#0" expanded="false" />
             <element signature="method#dialogoPass#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onPause#0;class#MainActivity#0" expanded="false" />
@@ -3307,35 +3455,16 @@
             <element signature="docComment;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
             <element signature="class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onPreExecute#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#19056#19095#0" expanded="false" />
             <element signature="method#doInBackground#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
             <element signature="method#onPostExecute#0;class#verificar_actualizaciones#0;class#MainActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="344" column="34" selection-start-line="344" selection-start-column="34" selection-end-line="344" selection-end-column="34" />
-          <folding>
-            <element signature="method#fillList#0;class#HorizontalListView#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/tables/Productos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27116564">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="531" column="31" selection-start-line="531" selection-start-column="31" selection-end-line="531" selection-end-column="31" />
+          <caret line="271" column="63" selection-start-line="271" selection-start-column="63" selection-end-line="271" selection-end-column="63" />
           <folding>
             <element signature="method#FragmentMuestrario#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#onCreateView#0;class#FragmentMuestrario#0" expanded="false" />
@@ -3346,29 +3475,35 @@
             <element signature="docComment;method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#onDestroy#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#loadData#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="e#6552#6589#0" expanded="false" />
             <element signature="docComment;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#getView#0;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="docComment;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#getView#0;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#obtenerModelosValidos_Linea#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#normalizarLineas#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#normalizarModelos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="docComment;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="e#23467#23540#0" expanded="false" />
             <element signature="method#HAdapter3#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#getView#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="e#26214#26228#0" expanded="false" />
+            <element signature="docComment;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#onPreExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#doInBackground#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
             <element signature="method#onPostExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#loadData#0;class#FragmentMuestrario#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9497908">
-          <caret line="953" column="8" selection-start-line="953" selection-start-column="8" selection-end-line="953" selection-end-column="8" />
+        <state vertical-scroll-proportion="1.4516729">
+          <caret line="973" column="40" selection-start-line="973" selection-start-column="32" selection-end-line="973" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cerrar#0;class#DBAdapter#0" expanded="false" />
@@ -3376,8 +3511,12 @@
             <element signature="method#insertar_cliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_clientes#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_insertarCliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#insertar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#editar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#consultar_destacado_producto#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_producto_pedido#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_producto_pedidoByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_insertarProducto_Pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_usuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_lineas#0;class#DBAdapter#0" expanded="false" />
@@ -3392,8 +3531,17 @@
             <element signature="method#actualizar_actualizacionesCliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_actualizacionesFunciones#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#buscarUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#buscarFuncionesUsuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorUsuario#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorLineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorModelos_Lineas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerLineas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerModelos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerLineasDeshabilitadas#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerModelosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerProductosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerProductos_Filtrado#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorProductos_Modelos_Lineas_DialogAgregar#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesGenerales#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesLineas#0;class#DBAdapter#0" expanded="false" />
@@ -3402,6 +3550,9 @@
             <element signature="method#cargarCursorActualizacionesModelos#1;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesProductos#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorActualizacionesProductos#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos#1;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_porTalla#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#cargarCursorProductosPedidos_porTalla#1;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorClientes_Vendedor#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorClientesByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_bulto#0;class#DBAdapter#0" expanded="false" />
@@ -3420,10 +3571,12 @@
             <element signature="method#eliminar_data#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#debo_borrar_tabla#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#argumentos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#eliminar_pedido#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#eliminar_pedido_local#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#buscarClienteByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_cliente#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#generarContentValues_actualizarCliente#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#actualizar_producto_pedido_cantidad#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_pedidos#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorPedidosByID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#cargarCursorPedidos_LocalesByID#0;class#DBAdapter#0" expanded="false" />

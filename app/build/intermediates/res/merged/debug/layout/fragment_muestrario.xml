@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#fff"
+    android:orientation="vertical"
     >
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView3" >
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp">
+            android:orientation="vertical">
 
             <RadioGroup
+                android:id="@+id/radio_group_producto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
                 android:gravity="center"
-                android:id="@+id/radio_group_producto">
+                android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/rb_new"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/rb_new"
-                    android:id="@+id/rb_new"/>
+                    android:text="@string/rb_new"/>
 
                 <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/rb_old"
                     android:id="@+id/rb_old"
-                    android:layout_marginLeft="15dp"/>
-
-                <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/rb_all"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/rb_old"/>
+
+                <RadioButton
                     android:id="@+id/rb_all"
-                    android:layout_marginLeft="15dp"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/rb_all"/>
             </RadioGroup>
 
             <com.devspark.robototextview.widget.RobotoTextView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:id="@+id/textView2"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/lineas"
-                app:fontFamily="roboto"
-                app:textWeight="medium"
-                android:textSize="20sp"
                 android:layout_marginTop="20dp"
-                android:textStyle="bold"/>
+                android:text="@string/lineas"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:fontFamily="roboto"
+                app:textWeight="medium"/>
 
             <!--<TextView
                 android:layout_width="wrap_content"
@@ -86,17 +86,17 @@
             <com.devspark.robototextview.widget.RobotoTextView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:id="@+id/textView3"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/modelos"
-                app:fontFamily="roboto"
-                app:textWeight="medium"
-                android:textSize="20sp"
                 android:layout_marginTop="20dp"
-                android:textStyle="bold"/>
+                android:text="@string/modelos"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:fontFamily="roboto"
+                app:textWeight="medium"/>
 
             <!--<TextView
                 android:layout_width="wrap_content"
@@ -120,17 +120,17 @@
             <com.devspark.robototextview.widget.RobotoTextView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:id="@+id/textView4"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/productos"
-                app:fontFamily="roboto"
-                app:textWeight="medium"
-                android:textSize="20sp"
                 android:layout_marginTop="20dp"
-                android:textStyle="bold"/>
+                android:text="@string/productos"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:fontFamily="roboto"
+                app:textWeight="medium"/>
 
            <!-- <TextView
                 android:layout_width="wrap_content"
