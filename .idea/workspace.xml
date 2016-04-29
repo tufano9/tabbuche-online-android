@@ -69,66 +69,29 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Agregado" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Permitiendo desde normalizar.. Linea:" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="FragmentMuestrario" />
     <option name="LOGCAT_FORMAT_STRING" value="%4$c/%5$s: %6$s" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19c797b6-4277-4863-b399-0a139419cb54" name="Default" comment="Mejoras">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/auth/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/auth/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/measurement/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/measurement/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appstate/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appstate/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/cast/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/cast/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/base/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/safetynet/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/safetynet/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/paquete/tufanoapp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/paquete/tufanoapp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/horizontal_list_view/HorizontalListView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appindexing/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/vision/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/vision/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/fitness/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/fitness/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/gcm/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/gcm/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/drive/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/drive/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wearable/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/location/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/location/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/analytics/R.java" />
+    <list default="true" id="19c797b6-4277-4863-b399-0a139419cb54" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/keystore.jks" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/keystore_tufano.jks" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-large-v4/fragment_galeria.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout-large-v4/fragment_galeria.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/mediarouter/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/panorama/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/panorama/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/plus/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/plus/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_muestrario.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/fragment_muestrario.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/maps/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/maps/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_muestrario.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wallet/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/wallet/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/identity/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/identity/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appinvite/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/appinvite/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/ads/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/ads/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app-release.apk" afterPath="$PROJECT_DIR$/app/app-release.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/galeria/FragmentGaleria.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/Home.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.3.0/jars/classes.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/8.3.0/jars/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/games/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/games/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/nearby/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/google/android/gms/nearby/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/paquete/tufanoapp/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/paquete/tufanoapp/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" afterPath="$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java" />
     </list>
     <ignored path="tabbuche-online-android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -156,11 +119,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FragmentMuestrario.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FragmentMuestrario.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="271" column="63" selection-start-line="271" selection-start-column="63" selection-end-line="271" selection-end-column="63" />
+            <state vertical-scroll-proportion="1.0956073">
+              <caret line="521" column="44" selection-start-line="521" selection-start-column="38" selection-end-line="521" selection-end-column="44" />
               <folding>
                 <element signature="method#FragmentMuestrario#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#onCreateView#0;class#FragmentMuestrario#0" expanded="false" />
@@ -178,14 +141,13 @@
                 <element signature="docComment;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#getView#0;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
-                <element signature="method#normalizarLineas#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#normalizarModelos#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="docComment;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
-                <element signature="e#23467#23540#0" expanded="false" />
+                <element signature="e#23461#23534#0" expanded="false" />
                 <element signature="method#HAdapter3#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#getView#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
-                <element signature="e#26214#26228#0" expanded="false" />
+                <element signature="e#26208#26222#0" expanded="false" />
                 <element signature="docComment;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
                 <element signature="method#onPreExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
@@ -196,11 +158,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBAdapter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DBAdapter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4516729">
-              <caret line="973" column="40" selection-start-line="973" selection-start-column="32" selection-end-line="973" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="955" column="49" selection-start-line="955" selection-start-column="49" selection-end-line="955" selection-end-column="49" />
               <folding>
                 <element signature="docComment;method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
@@ -236,6 +198,7 @@
                 <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#obtenerLineas#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#obtenerModelos#0;class#DBAdapter#0" expanded="false" />
+                <element signature="method#obtenerLineasValidas#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#obtenerLineasDeshabilitadas#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#obtenerModelosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
                 <element signature="method#obtenerProductosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
@@ -2700,7 +2663,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461791017736</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Mejoras">
+      <created>1461947150632</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1461947150632</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2722,10 +2691,10 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.50647247" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5077106" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5077106" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977462" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32858837" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858837" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
@@ -2809,6 +2778,7 @@
             <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerLineas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerModelos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerLineasValidas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerLineasDeshabilitadas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerModelosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerProductosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
@@ -3120,6 +3090,7 @@
             <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerLineas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerModelos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerLineasValidas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerLineasDeshabilitadas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerModelosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerProductosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
@@ -3461,48 +3432,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="271" column="63" selection-start-line="271" selection-start-column="63" selection-end-line="271" selection-end-column="63" />
-          <folding>
-            <element signature="method#FragmentMuestrario#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#onCreateView#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#selectDefaultRB#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#initRadioButton#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="docComment;method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="docComment;method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#loadData#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="e#6552#6589#0" expanded="false" />
-            <element signature="docComment;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#getView#0;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="docComment;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#getView#0;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#normalizarLineas#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#normalizarModelos#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="docComment;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="e#23467#23540#0" expanded="false" />
-            <element signature="method#HAdapter3#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#getView#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="e#26214#26228#0" expanded="false" />
-            <element signature="docComment;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#onPreExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#doInBackground#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-            <element signature="method#onPostExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/database/DBAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4516729">
-          <caret line="973" column="40" selection-start-line="973" selection-start-column="32" selection-end-line="973" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="955" column="49" selection-start-line="955" selection-start-column="49" selection-end-line="955" selection-end-column="49" />
           <folding>
             <element signature="docComment;method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#DBAdapter#0;class#DBAdapter#0" expanded="false" />
@@ -3538,6 +3471,7 @@
             <element signature="method#cargarCursorProductos_Modelos_Lineas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerLineas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerModelos#0;class#DBAdapter#0" expanded="false" />
+            <element signature="method#obtenerLineasValidas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerLineasDeshabilitadas#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerModelosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#obtenerProductosDeshabilitados#0;class#DBAdapter#0" expanded="false" />
@@ -3617,6 +3551,43 @@
             <element signature="method#cargarCursorActualizacionesClientes_ID#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#actualizar_usuario#0;class#DBAdapter#0" expanded="false" />
             <element signature="method#insertar_producto_pedido_editar_id#0;class#DBAdapter#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/paquete/tufanoapp/muestrario/FragmentMuestrario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0956073">
+          <caret line="521" column="44" selection-start-line="521" selection-start-column="38" selection-end-line="521" selection-end-column="44" />
+          <folding>
+            <element signature="method#FragmentMuestrario#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onCreateView#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#selectDefaultRB#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#initRadioButton#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="docComment;method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#seleccionarProductoPorDefecto#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="docComment;method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getExtrasVar#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#loadData#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="e#6552#6589#0" expanded="false" />
+            <element signature="docComment;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getView#0;class#HAdapter#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="docComment;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getView#0;class#HAdapter2#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#normalizarModelos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="docComment;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="e#23461#23534#0" expanded="false" />
+            <element signature="method#HAdapter3#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#getView#0;class#HAdapter3#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="e#26208#26222#0" expanded="false" />
+            <element signature="docComment;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onPreExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#doInBackground#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
+            <element signature="method#onPostExecute#0;class#reCargarDatos#0;class#FragmentMuestrario#0" expanded="false" />
           </folding>
         </state>
       </provider>

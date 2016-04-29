@@ -519,16 +519,16 @@ public class FragmentMuestrario extends Fragment
             String[] datos_modelos = linea.split("&");
             for (int j = 0; j < permitidos.size(); j++)
             {
-                if (permitidos.get(j).contains(datos_modelos[0]) && !contenedor.contains(datos_modelos[0]))
+                if (permitidos.get(j).equals(datos_modelos[0]) && !contenedor.contains(datos_modelos[0]))
                 {
-                    //Log.i(TAG, "Permitiendo desde normalizar.. Linea: " + datos_modelos[1]);
+                    Log.i(TAG, "Permitiendo desde normalizar.. Linea: " + datos_modelos[1]);
                     perm.add(datos_modelos[0]);
                     contenedor.add(datos_modelos[0]);
                     break;
                 }
                 else
                 {
-                    //Log.i(TAG, "NO Permitiendo desde normalizar.. Linea: " + datos_modelos[1]);
+                    Log.i(TAG, "NO Permitiendo desde normalizar.. Linea: " + datos_modelos[1]);
                 }
             }
         }

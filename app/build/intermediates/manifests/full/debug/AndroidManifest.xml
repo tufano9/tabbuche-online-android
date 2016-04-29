@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="paquete.tufanoapp"
     android:versionCode="1"
-    android:versionName="2.3.30" >
+    android:versionName="2.3.31" >
 
     <uses-sdk
         android:minSdkVersion="16"
