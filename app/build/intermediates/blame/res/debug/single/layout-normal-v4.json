@@ -1,42 +1,82 @@
 [
     {
-        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_consultar.xml",
-        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_consultar.xml"
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_editar.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_editar.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_pre_editar.xml",
-        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_pre_editar.xml"
-    },
-    {
-        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_editar.xml",
-        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_editar.xml"
-    },
-    {
-        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_footer.xml",
-        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_footer.xml"
-    },
-    {
-        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_cliente_seleccionar.xml",
-        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_cliente_seleccionar.xml"
-    },
-    {
-        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido.xml",
-        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido.xml"
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_cliente_registrar.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_cliente_registrar.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_cliente_registrar.xml",
         "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_cliente_registrar.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_cliente_editar.xml",
-        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_cliente_editar.xml"
+        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_editar.xml",
+        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_editar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_cliente_seleccionar.xml",
+        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_cliente_seleccionar.xml"
+    },
+    {
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_cliente_editar.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_cliente_editar.xml"
+    },
+    {
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido.xml"
+    },
+    {
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_consultar.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_consultar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_consultar.xml",
+        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_consultar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_realizar.xml",
+        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_realizar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_footer.xml",
+        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_footer.xml"
+    },
+    {
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_footer.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_footer.xml"
+    },
+    {
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_galeria.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_galeria.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_galeria.xml",
         "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_galeria.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_realizar.xml",
-        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_realizar.xml"
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_realizar.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_realizar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_cliente_editar.xml",
+        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_cliente_editar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_pre_editar.xml",
+        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_pre_editar.xml"
+    },
+    {
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_cliente_seleccionar.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_cliente_seleccionar.xml"
+    },
+    {
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido_pre_editar.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido_pre_editar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-normal-v4\\fragment_pedido.xml",
+        "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-normal\\fragment_pedido.xml"
     }
 ]

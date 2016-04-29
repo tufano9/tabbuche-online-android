@@ -74,9 +74,24 @@ public class MainActivity extends Activity
         initButtons();
         initBroadcastReceiver();
         registerWithGCM();
-        EditText a = (EditText) findViewById(R.id.campo_usuario_login);
-        EditText b = (EditText) findViewById(R.id.campo_contrasena_login);
-        Funciones.setLoginCredentials("20179843", "Elg58led91", a, b);
+        //EditText a = (EditText) findViewById(R.id.campo_usuario_login);
+        //EditText b = (EditText) findViewById(R.id.campo_contrasena_login);
+        //Funciones.setLoginCredentials("20179843", "Elg58led91", a, b);
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
+                new IntentFilter(QuickstartPreferences.REGISTRATION_COMPLETE));
+    }
+
+    @Override
+    protected void onPause()
+    {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
+        super.onPause();
     }
 
     /**
@@ -138,7 +153,7 @@ public class MainActivity extends Activity
      */
     private void initButtons()
     {
-        RobotoButton btn_login   = (RobotoButton) findViewById(R.id.btn_login);
+        RobotoButton btn_login = (RobotoButton) findViewById(R.id.btn_login);
         RobotoButton btn_limpiar = (RobotoButton) findViewById(R.id.btn_limpiar);
         campo_usuario_login = (EditText) findViewById(R.id.campo_usuario_login);
         campo_contrasena_login = (EditText) findViewById(R.id.campo_contrasena_login);
@@ -225,7 +240,7 @@ public class MainActivity extends Activity
 
 
         Cursor cursor = manager.buscarUsuario(ci);
-        String pass   = "";
+        String pass = "";
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
         {
@@ -286,8 +301,8 @@ public class MainActivity extends Activity
         listaParametros.add(new BasicNameValuePair("password", clave));
         listaParametros.add(new BasicNameValuePair("getAppVersion", Funciones.getAppVersion(contexto)));
 
-        String    URL_connect = Constantes.IP_Server + "login_android.php";
-        JSONArray jdata       = post.getserverdata(listaParametros, URL_connect);
+        String URL_connect = Constantes.IP_Server + "login_android.php";
+        JSONArray jdata = post.getserverdata(listaParametros, URL_connect);
 
         if (jdata != null && jdata.length() > 0)
         {
@@ -296,8 +311,8 @@ public class MainActivity extends Activity
             {
                 json_data = jdata.getJSONObject(0);
 
-                int    logstatus = json_data.getInt("logstatus");
-                String rol       = json_data.getString("rol");
+                int logstatus = json_data.getInt("logstatus");
+                String rol = json_data.getString("rol");
 
                 codigo_usuario = json_data.getString("codigo_usuario");
                 nombre = json_data.getString("nombre");
@@ -347,11 +362,11 @@ public class MainActivity extends Activity
         manager.insertar_usuario(codigo_usuario, usuario, nombre, apellido, telefono, email, lineas_desh, modelos_desh, productos_desh, pass, Constantes.KEY, fecha, estado);
         Cursor cursor = manager.buscarUsuario(usuario);
 
-        String id_vendedor       = "";
-        String nombre_vendedor   = "";
+        String id_vendedor = "";
+        String nombre_vendedor = "";
         String apellido_vendedor = "";
         String telefono_vendedor = "";
-        String email_vendedor    = "";
+        String email_vendedor = "";
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
         {
@@ -377,21 +392,6 @@ public class MainActivity extends Activity
     {
         DialogFragment newFragment = new DialogoReestablecer_Pass();
         newFragment.show(getFragmentManager(), "ReestablecerPass");
-    }
-
-    @Override
-    protected void onResume()
-    {
-        super.onResume();
-        LocalBroadcastManager.getInstance(this).registerReceiver(mRegistrationBroadcastReceiver,
-                new IntentFilter(QuickstartPreferences.REGISTRATION_COMPLETE));
-    }
-
-    @Override
-    protected void onPause()
-    {
-        LocalBroadcastManager.getInstance(this).unregisterReceiver(mRegistrationBroadcastReceiver);
-        super.onPause();
     }
 
     /**
@@ -428,17 +428,6 @@ public class MainActivity extends Activity
         String password;
 
         @Override
-        protected void onPreExecute()
-        {
-            pDialog = new ProgressDialog(MainActivity.this);
-            pDialog.setTitle("Por favor espere...");
-            pDialog.setMessage("Verificando datos de forma local...");
-            pDialog.setIndeterminate(true);
-            pDialog.setCancelable(false);
-            pDialog.show();
-        }
-
-        @Override
         protected String doInBackground(String... params)
         {
             usuario = params[0];
@@ -465,6 +454,19 @@ public class MainActivity extends Activity
                 return "err2";
             }
         }
+
+        @Override
+        protected void onPreExecute()
+        {
+            pDialog = new ProgressDialog(MainActivity.this);
+            pDialog.setTitle("Por favor espere...");
+            pDialog.setMessage("Verificando datos de forma local...");
+            pDialog.setIndeterminate(true);
+            pDialog.setCancelable(false);
+            pDialog.show();
+        }
+
+
 
         /*
         Una vez terminado doInBackground segun lo que halla ocurrido

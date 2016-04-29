@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw720dp-land-v13\\activity_main.xml",
+        "source": "C:\\Users\\la candelaria 2\\AndroidstudioProjects\\tabbuche-online-android\\app\\src\\main\\res\\layout-sw720dp-land\\activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw720dp-land-v13\\activity_main.xml",
         "source": "C:\\Users\\Usuario\\Desktop\\tabbuche-online-android\\app\\src\\main\\res\\layout-sw720dp-land\\activity_main.xml"
     }
