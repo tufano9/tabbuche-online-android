@@ -9,8 +9,9 @@ package paquete.database.tables;
  */
 public class Colores
 {
-    public static final String TABLA_COLORES    = "colores";
+    public static final String TABLA_COLORES = "colores";
     public static final String CN_ID_COLOR_BASE = "_id_color_base";
-    public static final String CN_ID_COLOR      = "id_color";
-    public static final String CN_NOMBRE_COLOR  = "nombre_color";
+    public static final String CN_ID_COLOR = "id_color";
+    public static final String CN_NOMBRE_COLOR = "nombre_color";
+    public static final String ID_COLOR_BASE = "id_color_base";
 }

@@ -17,7 +17,9 @@ import android.os.AsyncTask;
 import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.Adapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import org.apache.http.NameValuePair;
@@ -51,6 +53,8 @@ import paquete.tufanoapp.R;
 @SuppressWarnings("SameParameterValue")
 public class Funciones
 {
+    private static final String TAG = "Funciones";
+
     /**
      * Verifica si el email introducido es valido.
      *
@@ -600,6 +604,30 @@ public class Funciones
         final String[] units       = new String[]{"B", "kB", "MB", "GB", "TB"};
         int            digitGroups = (int) (Math.log10(size) / Math.log10(1024));
         return new DecimalFormat("#,##0.#").format(size / Math.pow(1024, digitGroups)) + " " + units[digitGroups];
+    }
+
+    /**
+     * Busca la posicion de la cadena ingresada dentro del spinner dado.
+     *
+     * @param cadena  Cadena a buscar.
+     * @param spinner Spinner donde se buscara la cadena
+     * @return Posicion de la cadena dentro del spinner. Retorna -1 si no lo encontro.
+     */
+    public static int buscarPosicionElemento(String cadena, Spinner spinner)
+    {
+        Log.i(TAG, "Buscando al elemento '" + cadena + "'");
+        Adapter adap = spinner.getAdapter();
+
+        for (int i = 0; i < adap.getCount(); i++)
+        {
+            //Log.i(TAG, "Comparando con '"+adap.getItem(i).toString()+"'");
+            if (adap.getItem(i).toString().equals(cadena))
+            {
+                Log.i(TAG, "Elemento " + cadena + " encontrado!!");
+                return i;
+            }
+        }
+        return -1;
     }
 
     /**

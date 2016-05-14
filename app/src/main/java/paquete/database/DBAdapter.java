@@ -15,8 +15,10 @@ import org.json.JSONException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import paquete.global.Constantes;
+
 
 import static paquete.database.tables.ActualizacionesClientes.CN_FECHA_ACTUALIZACION_CLIENTES;
 import static paquete.database.tables.ActualizacionesClientes.CN_ID_CLIENTES_ACTUALIZACION;
@@ -26,6 +28,7 @@ import static paquete.database.tables.ActualizacionesFunciones.CN_ID_FUNCIONES_A
 import static paquete.database.tables.ActualizacionesFunciones.TABLA_ACTUALIZACIONES_FUNCIONES;
 import static paquete.database.tables.ActualizacionesGenerales.CN_FECHA_ACTUALIZACION_GENERALES_BULTOS;
 import static paquete.database.tables.ActualizacionesGenerales.CN_FECHA_ACTUALIZACION_GENERALES_COLORES;
+import static paquete.database.tables.ActualizacionesGenerales.CN_FECHA_ACTUALIZACION_GENERALES_COLORES_BASE;
 import static paquete.database.tables.ActualizacionesGenerales.CN_FECHA_ACTUALIZACION_GENERALES_LINEAS;
 import static paquete.database.tables.ActualizacionesGenerales.CN_FECHA_ACTUALIZACION_GENERALES_MATERIALES;
 import static paquete.database.tables.ActualizacionesGenerales.CN_FECHA_ACTUALIZACION_GENERALES_MODELOS;
@@ -69,6 +72,9 @@ import static paquete.database.tables.Colores.CN_ID_COLOR;
 import static paquete.database.tables.Colores.CN_ID_COLOR_BASE;
 import static paquete.database.tables.Colores.CN_NOMBRE_COLOR;
 import static paquete.database.tables.Colores.TABLA_COLORES;
+import static paquete.database.tables.ColoresBase.ID_COLOR_BASE;
+import static paquete.database.tables.ColoresBase.NOMBRE_COLOR_BASE;
+import static paquete.database.tables.ColoresBase.TABLA_COLORES_BASE;
 import static paquete.database.tables.Funciones.CN_CLIENTES;
 import static paquete.database.tables.Funciones.CN_ESTADO_CUENTA;
 import static paquete.database.tables.Funciones.CN_HOMES;
@@ -148,6 +154,7 @@ import static paquete.database.tables.Productos.CN_ID_PRODUCTO_MODELO;
 import static paquete.database.tables.Productos.CN_NOMBRE_PRODUCTO;
 import static paquete.database.tables.Productos.CN_PRECIO_PRODUCTO;
 import static paquete.database.tables.Productos.CN_TALLA_PRODUCTO;
+import static paquete.database.tables.Productos.ID_COLOR_BASE_PRODUCTO;
 import static paquete.database.tables.Productos.TABLA_PRODUCTOS;
 import static paquete.database.tables.ProductosPedidos.CN_BULTOS_PRODUCTOS_PEDIDOS;
 import static paquete.database.tables.ProductosPedidos.CN_COD_FABRICANTE_PRODUCTOS_PEDIDOS;
@@ -186,8 +193,8 @@ import static paquete.database.tables.Usuarios.TABLA_USUARIO;
 @SuppressWarnings("SameParameterValue")
 public class DBAdapter
 {
-    private static final String         TAG = "DBAdapter";
-    public static        SQLiteDatabase db  = null;
+    private static final String TAG = "DBAdapter";
+    public static SQLiteDatabase db = null;
     private final DBHelper BD;
 
     /**
@@ -280,7 +287,7 @@ public class DBAdapter
     public void insertar_producto_pedido(String valoresProductoNombre, String precio, String pares, String numeracion, String id_producto, String nombre_real)
     {
         ContentValues valores = generarContentValues_insertarProducto_Pedido(valoresProductoNombre, precio, pares, numeracion, id_producto, nombre_real);
-        Long          res     = db.insert(TABLA_PRODUCTOS_PEDIDOS, null, valores);
+        Long res = db.insert(TABLA_PRODUCTOS_PEDIDOS, null, valores);
         // Si devuelve -1 ha habido un problema..
         if (res == -1)
         {
@@ -310,10 +317,10 @@ public class DBAdapter
 
     public String consultar_destacado_producto(String id_producto)
     {
-        String[] columnas  = new String[]{CN_DESTACADO_PRODUCTO};
-        String[] args      = {id_producto};
-        Cursor   c         = db.query(TABLA_PRODUCTOS, columnas, CN_ID_PRODUCTO + "=?", args, null, null, null);
-        String   destacado = null;
+        String[] columnas = new String[]{CN_DESTACADO_PRODUCTO};
+        String[] args = {id_producto};
+        Cursor c = db.query(TABLA_PRODUCTOS, columnas, CN_ID_PRODUCTO + "=?", args, null, null, null);
+        String destacado = null;
 
         for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext())
         {
@@ -326,7 +333,7 @@ public class DBAdapter
     public Cursor cargarCursorProductosPedidos(String id_producto)
     {
         String[] columnas = new String[]{CN_COD_FABRICANTE_PRODUCTOS_PEDIDOS};
-        String[] args     = {id_producto};
+        String[] args = {id_producto};
         return db.query(TABLA_PRODUCTOS_PEDIDOS, columnas, CN_ID_PRODUCTO_PEDIDOS + "=?", args, null, null, null);
     }
 
@@ -360,7 +367,7 @@ public class DBAdapter
 
     public void insertar_usuario(String codigo_usuario, String cedula, String nombre, String apellido, String telefono, String email, String lineas_desh, String modelos_desh, String productos_desh, String pass, String salt, String fecha, String estado)
     {
-        Cursor            c            = cargarCursorUsuario();
+        Cursor c = cargarCursorUsuario();
         ArrayList<String> columnArray1 = new ArrayList<>(); // codigo_usuario
 
         for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext())
@@ -381,11 +388,11 @@ public class DBAdapter
 
     public void insertar_lineas(JSONArray ids_lineas, JSONArray nombres_lineas, JSONArray split, JSONArray tallas) throws JSONException
     {
-        String sql  = "INSERT INTO " + TABLA_LINEAS + "(" + CN_ID_LINEA + ", " + CN_NOMBRE_LINEA + ", " + CN_TALLA_LINEA + ") VALUES (?, ?, ?)";
+        String sql = "INSERT INTO " + TABLA_LINEAS + "(" + CN_ID_LINEA + ", " + CN_NOMBRE_LINEA + ", " + CN_TALLA_LINEA + ") VALUES (?, ?, ?)";
         String sql2 = "INSERT INTO " + TABLA_ACTUALIZACIONES_LINEAS + "(" + CN_ID_LINEA_ACTUALIZACION_LINEAS + ", " + CN_FECHA_ACTUALIZACION_LINEAS + ") VALUES (?, ?)";
         db.beginTransaction();
         Log.d("INSERTANDO LINEAS", "BEGIN");
-        SQLiteStatement stmt  = db.compileStatement(sql);
+        SQLiteStatement stmt = db.compileStatement(sql);
         SQLiteStatement stmt2 = db.compileStatement(sql2);
 
         for (int i = 0; i < ids_lineas.length(); i++)
@@ -397,7 +404,7 @@ public class DBAdapter
             stmt.clearBindings();
 
             Cursor verificador = cargarCursorActualizacionesLineas(ids_lineas.getString(i));
-            int    response    = verificador.getCount();
+            int response = verificador.getCount();
             verificador.close();
 
             // Si hay registros con un id_producto = ids_productos[i], entonces ya existe y no debo agregarlo a la transaccion..
@@ -434,11 +441,11 @@ public class DBAdapter
 
     public void insertar_modelos(JSONArray ids_modelos, JSONArray ids_linea_modelo, JSONArray nombres_modelos, JSONArray split) throws JSONException
     {
-        String sql  = "INSERT INTO " + TABLA_MODELOS + " (" + CN_ID_MODELO + ", " + CN_ID_LINEA_MODELO + ", " + CN_NOMBRE_MODELO + ") VALUES (?, ?, ?)";
+        String sql = "INSERT INTO " + TABLA_MODELOS + " (" + CN_ID_MODELO + ", " + CN_ID_LINEA_MODELO + ", " + CN_NOMBRE_MODELO + ") VALUES (?, ?, ?)";
         String sql2 = "INSERT INTO " + TABLA_ACTUALIZACIONES_MODELOS + " (" + CN_ID_MODELO_ACTUALIZACION_MODELOS + ", " + CN_FECHA_ACTUALIZACION_MODELOS + ") VALUES (?, ?)";
         db.beginTransaction();
         Log.d("INSERTANDO MODELOS", "BEGIN");
-        SQLiteStatement stmt  = db.compileStatement(sql);
+        SQLiteStatement stmt = db.compileStatement(sql);
         SQLiteStatement stmt2 = db.compileStatement(sql2);
 
         for (int i = 0; i < ids_modelos.length(); i++)
@@ -450,7 +457,7 @@ public class DBAdapter
             stmt.clearBindings();
 
             Cursor verificador = cargarCursorActualizacionesModelos(ids_modelos.getString(i));
-            int    response    = verificador.getCount();
+            int response = verificador.getCount();
             verificador.close();
 
             // Si hay registros con un id_producto = ids_productos[i], entonces ya existe y no debo agregarlo a la transaccion..
@@ -469,16 +476,16 @@ public class DBAdapter
         Log.d("INSERTANDO MODELOS", "END");
     }
 
-    public void insertar_productos(JSONArray ids_productos, JSONArray ids_linea_producto, JSONArray ids_modelo_producto, JSONArray nombres_productos, JSONArray split, JSONArray precios_productos, JSONArray ids_bultos, JSONArray ids_materiales, JSONArray nombre_real, JSONArray id_color) throws JSONException
+    public void insertar_productos(JSONArray ids_productos, JSONArray ids_linea_producto, JSONArray ids_modelo_producto, JSONArray nombres_productos, JSONArray split, JSONArray precios_productos, JSONArray ids_bultos, JSONArray ids_materiales, JSONArray nombre_real, JSONArray id_color, JSONArray id_color_base) throws JSONException
     {
-        String sql  = "INSERT INTO " + TABLA_PRODUCTOS + " (" + CN_ID_PRODUCTO + ", " + CN_ID_PRODUCTO_MODELO + ", " + CN_ID_PRODUCTO_LINEA + ", " + CN_ID_PRODUCTO_BULTO + ", " + CN_ID_PRODUCTO_MATERIAL + ", " + CN_CODIGO_FABRICANTE_PRODUCTO + ", " + CN_PRECIO_PRODUCTO + ", " + CN_NOMBRE_PRODUCTO + ", " + CN_TALLA_PRODUCTO + ", " + CN_ID_PRODUCTO_COLOR + ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO " + TABLA_PRODUCTOS + " (" + CN_ID_PRODUCTO + ", " + CN_ID_PRODUCTO_MODELO + ", " + CN_ID_PRODUCTO_LINEA + ", " + CN_ID_PRODUCTO_BULTO + ", " + CN_ID_PRODUCTO_MATERIAL + ", " + CN_CODIGO_FABRICANTE_PRODUCTO + ", " + CN_PRECIO_PRODUCTO + ", " + CN_NOMBRE_PRODUCTO + ", " + CN_TALLA_PRODUCTO + ", " + CN_ID_PRODUCTO_COLOR + ") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         String sql3 = "INSERT INTO " + TABLA_ACTUALIZACIONES_PRODUCTOS + " (" + CN_ID_ACTUALIZACION_PRODUCTO + ", " + CN_FECHA_ACTUALIZACION_PRODUCTO + ", " + CN_ACTUALIZACION_IMAGEN_NUMERO + ") VALUES (?, ?, ?)";
         db.beginTransaction();
 
         Log.d("INSERTANDO PRODUCTOS", "BEGIN");
-        SQLiteStatement stmt       = db.compileStatement(sql);
-        SQLiteStatement stmt3      = db.compileStatement(sql3);
-        int             acumulador = 0;
+        SQLiteStatement stmt = db.compileStatement(sql);
+        SQLiteStatement stmt3 = db.compileStatement(sql3);
+        int acumulador = 0;
 
         for (int i = 0; i < ids_productos.length(); i++)
         {
@@ -498,7 +505,7 @@ public class DBAdapter
             for (int k = 0; k < Constantes.NUM_IMG; k++)
             {
                 Cursor verificador = cargarCursorActualizacionesProductos(ids_productos.getString(i), k + 1);
-                int    response    = verificador.getCount();
+                int response = verificador.getCount();
                 verificador.close();
 
                 // Si hay registros con un id_producto = ids_productos.getString(i), entonces ya existe y no debo agregarlo a la transaccion..
@@ -520,7 +527,7 @@ public class DBAdapter
         Log.d("INSERTANDO PRODUCTOS", "END");
     }
 
-    public void actualizar_actualizacionesGenerales(String lin, String mod, String pro, String materiales, String colores, String bultos)
+    public void actualizar_actualizacionesGenerales(String lin, String mod, String pro, String materiales, String colores, String bultos, String colores_base_actualizacion)
     {
         ContentValues valores = new ContentValues();
         valores.put(CN_FECHA_ACTUALIZACION_GENERALES_LINEAS, lin);
@@ -529,9 +536,8 @@ public class DBAdapter
         valores.put(CN_FECHA_ACTUALIZACION_GENERALES_MATERIALES, materiales);
         valores.put(CN_FECHA_ACTUALIZACION_GENERALES_COLORES, colores);
         valores.put(CN_FECHA_ACTUALIZACION_GENERALES_BULTOS, bultos);
-
+        valores.put(CN_FECHA_ACTUALIZACION_GENERALES_COLORES_BASE, colores_base_actualizacion);
         db.update(TABLA_ACTUALIZACIONES_GENERALES, valores, null, null);
-        //db.execSQL("UPDATE "+ TABLA_ACTUALIZACIONES_GENERALES +" SET "+CN_FECHA_ACTUALIZACION_GENERALES_LINEAS+"='"+lin+"', "+CN_FECHA_ACTUALIZACION_GENERALES_MODELOS+"='"+mod+"', "+CN_FECHA_ACTUALIZACION_GENERALES_PRODUCTOS+"='"+pro+"' , "+CN_FECHA_ACTUALIZACION_GENERALES_MATERIALES+"='"+materiales+"' , "+CN_FECHA_ACTUALIZACION_GENERALES_COLORES+"='"+colores+"' , "+CN_FECHA_ACTUALIZACION_GENERALES_BULTOS+"='"+bultos+"'");
     }
 
     public void actualizar_actualizacionesLineas(String id, String fecha)
@@ -578,7 +584,7 @@ public class DBAdapter
     public void actualizar_actualizacionesPedido(String id_vendedor, String fecha)
     {
         String[] args = {id_vendedor};
-        Cursor   c    = db.query(TABLA_ACTUALIZACIONES_PEDIDOS, null, CN_ID_PEDIDOS_ACTUALIZACION + "=?", args, null, null, null);
+        Cursor c = db.query(TABLA_ACTUALIZACIONES_PEDIDOS, null, CN_ID_PEDIDOS_ACTUALIZACION + "=?", args, null, null, null);
 
         if (c.getCount() == 0)
         {
@@ -604,7 +610,7 @@ public class DBAdapter
     public void actualizar_actualizacionesCliente(String id_vendedor, String fecha)
     {
         String[] args = {id_vendedor};
-        Cursor   c    = db.query(TABLA_ACTUALIZACIONES_CLIENTES, null, CN_ID_CLIENTES_ACTUALIZACION + "=?", args, null, null, null);
+        Cursor c = db.query(TABLA_ACTUALIZACIONES_CLIENTES, null, CN_ID_CLIENTES_ACTUALIZACION + "=?", args, null, null, null);
 
         if (c.getCount() == 0)
         {
@@ -630,7 +636,7 @@ public class DBAdapter
     public void actualizar_actualizacionesFunciones(String id_vendedor, String fecha)
     {
         String[] args = {id_vendedor};
-        Cursor   c    = db.query(TABLA_ACTUALIZACIONES_FUNCIONES, null, CN_ID_FUNCIONES_ACTUALIZACION + "=?", args, null, null, null);
+        Cursor c = db.query(TABLA_ACTUALIZACIONES_FUNCIONES, null, CN_ID_FUNCIONES_ACTUALIZACION + "=?", args, null, null, null);
 
         if (c.getCount() == 0)
         {
@@ -656,7 +662,7 @@ public class DBAdapter
     public Cursor buscarUsuario(String cedula)
     {
         String[] columnas = new String[]{CN_ID_USUARIO, CN_CODIGO_USUARIO, CN_NOMBRE, CN_APELLIDO, CN_CEDULA, CN_TELEFONO, CN_EMAIL, CN_PASSWORD, CN_LINEAS_DESHABILITADAS, CN_MODELOS_DESHABILITADOS, CN_PRODUCTOS_DESHABILITADOS, CN_PASSWORD, CN_USUARIO_SALT, CN_USUARIO_FECHA_ACTUALIZACION, CN_ESTADO};
-        String[] args     = {cedula};
+        String[] args = {cedula};
         return db.query(TABLA_USUARIO, columnas, CN_CEDULA + "=?", args, null, null, null);
     }
 
@@ -682,9 +688,9 @@ public class DBAdapter
 
     public String cargarCursorLineas(String cedula)
     {
-        String[] columnas2             = new String[]{CN_LINEAS_DESHABILITADAS};
-        String[] args                  = {cedula};
-        Cursor   cursor                = db.query(TABLA_USUARIO, columnas2, CN_CEDULA + "=?", args, null, null, null);
+        String[] columnas2 = new String[]{CN_LINEAS_DESHABILITADAS};
+        String[] args = {cedula};
+        Cursor cursor = db.query(TABLA_USUARIO, columnas2, CN_CEDULA + "=?", args, null, null, null);
         String[] lineas_deshabilitadas = new String[cursor.getCount()];
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
@@ -698,8 +704,8 @@ public class DBAdapter
         cursor.close();
 
         String[] columnas = new String[]{CN_ID_LINEA, CN_NOMBRE_LINEA};
-        Cursor   cursor2  = db.query(TABLA_LINEAS, columnas, null, null, null, null, CN_TALLA_LINEA + " DESC, " + CN_NOMBRE_LINEA + " ASC");
-        String   res      = "";
+        Cursor cursor2 = db.query(TABLA_LINEAS, columnas, null, null, null, null, CN_TALLA_LINEA + " DESC, " + CN_NOMBRE_LINEA + " ASC");
+        String res = "";
 
         if (lineas_deshabilitadas.length == 0)
         {
@@ -714,8 +720,8 @@ public class DBAdapter
         {
             for (cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
             {
-                String cad     = "";
-                int    bandera = 0;
+                String cad = "";
+                int bandera = 0;
                 for (String lineas_deshabilitada : lineas_deshabilitadas)
                 {
                     if (!cursor2.getString(0).equals(lineas_deshabilitada))
@@ -746,9 +752,9 @@ public class DBAdapter
 
     public String cargarCursorModelos_Lineas(String id, String cedula)
     {
-        String[] columnas2              = new String[]{CN_MODELOS_DESHABILITADOS};
-        String[] args                   = {cedula};
-        Cursor   cursor                 = db.query(TABLA_USUARIO, columnas2, "cedula=?", args, null, null, null);
+        String[] columnas2 = new String[]{CN_MODELOS_DESHABILITADOS};
+        String[] args = {cedula};
+        Cursor cursor = db.query(TABLA_USUARIO, columnas2, "cedula=?", args, null, null, null);
         String[] modelos_deshabilitados = new String[0];
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
@@ -761,8 +767,8 @@ public class DBAdapter
         Log.d("CargarCursorLineas", "Hay " + cursor.getCount() + " modelos deshabilitado!");
 
         String[] columnas = new String[]{CN_ID_MODELO, CN_ID_LINEA_MODELO, CN_NOMBRE_MODELO};
-        String[] args2    = {id};
-        Cursor   cursor2  = db.query(TABLA_MODELOS, columnas, "id_linea=?", args2, null, null, CN_NOMBRE_MODELO);
+        String[] args2 = {id};
+        Cursor cursor2 = db.query(TABLA_MODELOS, columnas, "id_linea=?", args2, null, null, CN_NOMBRE_MODELO);
 
         String res = "";
 
@@ -780,8 +786,8 @@ public class DBAdapter
         {
             for (cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
             {
-                String cad     = "";
-                int    bandera = 0;
+                String cad = "";
+                int bandera = 0;
                 for (String modelos_deshabilitado : modelos_deshabilitados)
                 {
                     if (!cursor2.getString(0).equals(modelos_deshabilitado))
@@ -811,11 +817,12 @@ public class DBAdapter
     }
 
     public String cargarCursorProductos_Modelos_Lineas(String id_linea, String id_modelo,
-                                                       String cedula, String destacado_filtrado)
+                                                       String cedula, String destacado_filtrado,
+                                                       String color_base)
     {
-        String[] columnas2                = new String[]{CN_PRODUCTOS_DESHABILITADOS};
-        String[] args                     = {cedula};
-        Cursor   cursor                   = db.query(TABLA_USUARIO, columnas2, "cedula=?", args, null, null, null);
+        String[] columnas2 = new String[]{CN_PRODUCTOS_DESHABILITADOS};
+        String[] args = {cedula};
+        Cursor cursor = db.query(TABLA_USUARIO, columnas2, "cedula=?", args, null, null, null);
         String[] productos_deshabilitados = new String[0];
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
@@ -830,8 +837,18 @@ public class DBAdapter
                 + " cedula: " + cedula + " destacado_filtrado: " + destacado_filtrado);
         Log.d("cargarCursorProductos", "Hay " + cursor.getCount() + " Productos deshabilitados!");
 
-        String[] columnas = new String[]{CN_ID_PRODUCTO, CN_ID_PRODUCTO_MODELO, CN_ID_PRODUCTO_LINEA, CN_CODIGO_FABRICANTE_PRODUCTO, CN_PRECIO_PRODUCTO, CN_NOMBRE_PRODUCTO, CN_ID_PRODUCTO_COLOR};
-        //String[] args2    = {id_linea, id_modelo, destacado_filtrado};
+        String[] columnas = new String[]
+                {
+                        CN_ID_PRODUCTO,
+                        CN_ID_PRODUCTO_MODELO,
+                        CN_ID_PRODUCTO_LINEA,
+                        CN_CODIGO_FABRICANTE_PRODUCTO,
+                        CN_PRECIO_PRODUCTO,
+                        CN_NOMBRE_PRODUCTO,
+                        CN_ID_PRODUCTO_COLOR,
+                        ID_COLOR_BASE_PRODUCTO
+                };
+
         ArrayList<String> argumentos = new ArrayList<>();
         argumentos.add(id_linea);
         argumentos.add(id_modelo);
@@ -841,6 +858,11 @@ public class DBAdapter
         {
             where += " AND destacado=?";
             argumentos.add(destacado_filtrado);
+        }
+        if (!color_base.equals("Seleccione un color.."))
+        {
+            where += " AND " + ID_COLOR_BASE_PRODUCTO + "=?";
+            argumentos.add(color_base);
         }
 
         String[] args2 = argumentos.toArray(new String[argumentos.size()]);
@@ -857,7 +879,7 @@ public class DBAdapter
                     res = res + "|";
 
                 Cursor cursore = buscarColor(cursor2.getString(6));
-                String color   = "null";
+                String color = "null";
 
                 for (cursore.moveToFirst(); !cursore.isAfterLast(); cursore.moveToNext())
                 {
@@ -873,8 +895,8 @@ public class DBAdapter
         {
             for (cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
             {
-                String cad     = "";
-                int    bandera = 0;
+                String cad = "";
+                int bandera = 0;
 
                 //for (int w = 0; w < productos_deshabilitados.length; w++)
                 for (String productos_deshabilitado : productos_deshabilitados)
@@ -883,7 +905,7 @@ public class DBAdapter
                     {
                         // El producto no esta deshabilitado, lo copio normalmente..
                         Cursor cursore = buscarColor(cursor2.getString(6));
-                        String color   = "null";
+                        String color = "null";
 
                         for (cursore.moveToFirst(); !cursore.isAfterLast(); cursore.moveToNext())
                         {
@@ -917,12 +939,30 @@ public class DBAdapter
         return res;
     }
 
-    public ArrayList<String> obtenerLineas(String cedula)
+    public ArrayList<String> obtenerLineas(String cedula, String nombre_talla_linea, String talla_linea)
     {
         ArrayList<String> lineas_deshabilitadas = obtenerLineasDeshabilitadas(cedula);
-        String[]          columnas              = new String[]{CN_ID_LINEA};
-        Cursor            cursor                = db.query(TABLA_LINEAS, columnas, null, null, null, null, null);
+        String[] columnas = new String[]{CN_ID_LINEA};
+        String where = null;
+        ArrayList<String> argumentos = new ArrayList<>();
 
+        if (nombre_talla_linea != null)
+        {
+            where = CN_NOMBRE_LINEA + " LIKE ?";
+            argumentos.add("%" + nombre_talla_linea + "%");
+        }
+
+        if (talla_linea != null)
+        {
+            if (where == null)
+                where = CN_TALLA_LINEA + "=?";
+            else
+                where += " AND " + CN_TALLA_LINEA + "=?";
+            argumentos.add(talla_linea);
+        }
+
+        String[] args = argumentos.toArray(new String[argumentos.size()]);
+        Cursor cursor = db.query(TABLA_LINEAS, columnas, where, args, null, null, null);
         ArrayList<String> lineas_final = new ArrayList<>();
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
@@ -931,6 +971,7 @@ public class DBAdapter
             if (!lineas_deshabilitadas.contains(id_linea))
                 lineas_final.add(id_linea);
         }
+        Log.i(TAG, "Se obtuvieron " + cursor.getCount() + " lineas.");
         cursor.close();
         return lineas_final;
     }
@@ -938,8 +979,8 @@ public class DBAdapter
     public ArrayList<String> obtenerModelos(String cedula)
     {
         ArrayList<String> modelos_deshabilitadas = obtenerModelosDeshabilitados(cedula);
-        String[]          columnas               = new String[]{CN_ID_MODELO};
-        Cursor            cursor                 = db.query(TABLA_MODELOS, columnas, null, null, null, null, null);
+        String[] columnas = new String[]{CN_ID_MODELO};
+        Cursor cursor = db.query(TABLA_MODELOS, columnas, null, null, null, null, null);
 
         ArrayList<String> modelos_final = new ArrayList<>();
 
@@ -953,11 +994,11 @@ public class DBAdapter
         return modelos_final;
     }
 
-    public ArrayList<String> obtenerLineasValidas(String cedula, String destacado)
+    public ArrayList<String> obtenerLineasValidas(String cedula, String destacado, String nombre_talla_linea, String talla_linea)
     {
         ArrayList<ArrayList<String>> modelosfiltrados = obtenerModelosValidos(cedula, destacado);
-        ArrayList<String> lineas           = obtenerLineas(cedula);
-        ArrayList<String> ids_lineas       = new ArrayList<>();
+        ArrayList<String> lineas = obtenerLineas(cedula, nombre_talla_linea, talla_linea);
+        ArrayList<String> ids_lineas = new ArrayList<>();
         ArrayList<String> contenedor = new ArrayList<>();
 
         for (int i = 0; i < modelosfiltrados.size(); i++)
@@ -984,8 +1025,8 @@ public class DBAdapter
     public ArrayList<ArrayList<String>> obtenerModelosValidos(String cedula, String destacado)
     {
         ArrayList<ArrayList<String>> productosfiltrados = obtenerProductosxFiltrado(cedula, destacado);
-        ArrayList<String> modelos            = obtenerModelos(cedula);
-        ArrayList<ArrayList<String>> ids_modelos        = new ArrayList<>();
+        ArrayList<String> modelos = obtenerModelos(cedula);
+        ArrayList<ArrayList<String>> ids_modelos = new ArrayList<>();
         ArrayList<String> contenedor = new ArrayList<>();
 
         for (int i = 0; i < productosfiltrados.size(); i++)
@@ -1025,10 +1066,10 @@ public class DBAdapter
 
         // ARGS
         String[] args = null;
-        if(!destacado.equals("2"))
+        if (!destacado.equals("2"))
         {
             args = new String[]{destacado};
-            where = CN_DESTACADO_PRODUCTO+" =?";
+            where = CN_DESTACADO_PRODUCTO + " =?";
         }
 
         // RESULTADO
@@ -1038,8 +1079,8 @@ public class DBAdapter
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
         {
             String id_producto = cursor.getString(0);
-            String id_modelo   = cursor.getString(1);
-            String id_linea    = cursor.getString(2);
+            String id_modelo = cursor.getString(1);
+            String id_linea = cursor.getString(2);
 
             if (!productos_deshabilitados.contains(id_producto))
             {
@@ -1061,14 +1102,14 @@ public class DBAdapter
 
     public ArrayList<String> obtenerLineasDeshabilitadas(String ci)
     {
-        String[]          columnas              = new String[]{CN_LINEAS_DESHABILITADAS};
-        String[]          args                  = {ci};
-        Cursor            cursor                = db.query(TABLA_USUARIO, columnas, "cedula=?", args, null, null, null);
+        String[] columnas = new String[]{CN_LINEAS_DESHABILITADAS};
+        String[] args = {ci};
+        Cursor cursor = db.query(TABLA_USUARIO, columnas, "cedula=?", args, null, null, null);
         ArrayList<String> lineas_deshabilitadas = new ArrayList<>();
 
-        if(cursor.moveToFirst())
+        if (cursor.moveToFirst())
         {
-            if(!cursor.getString(0).equals(""))
+            if (!cursor.getString(0).equals(""))
             {
                 String[] p = (cursor.getString(0)).split(",");
                 Log.i(TAG, "Existen " + p.length + " lineas deshabilitadas..");
@@ -1076,9 +1117,9 @@ public class DBAdapter
             }
         }
 
-        for (String linea: lineas_deshabilitadas)
+        for (String linea : lineas_deshabilitadas)
         {
-            Log.i(TAG, "Deshabilitada Linea: "+linea);
+            Log.i(TAG, "Deshabilitada Linea: " + linea);
         }
 
         cursor.close();
@@ -1087,14 +1128,14 @@ public class DBAdapter
 
     public ArrayList<String> obtenerModelosDeshabilitados(String ci)
     {
-        String[]          columnas               = new String[]{CN_MODELOS_DESHABILITADOS};
-        String[]          args                   = {ci};
-        Cursor            cursor                 = db.query(TABLA_USUARIO, columnas, "cedula=?", args, null, null, null);
+        String[] columnas = new String[]{CN_MODELOS_DESHABILITADOS};
+        String[] args = {ci};
+        Cursor cursor = db.query(TABLA_USUARIO, columnas, "cedula=?", args, null, null, null);
         ArrayList<String> modelos_deshabilitados = new ArrayList<>();
 
-        if(cursor.moveToFirst())
+        if (cursor.moveToFirst())
         {
-            if(!cursor.getString(0).equals(""))
+            if (!cursor.getString(0).equals(""))
             {
                 String[] p = (cursor.getString(0)).split(",");
                 Log.i(TAG, "Existen " + p.length + " modelos deshabilitados..");
@@ -1102,9 +1143,9 @@ public class DBAdapter
             }
         }
 
-        for (String modelo: modelos_deshabilitados)
+        for (String modelo : modelos_deshabilitados)
         {
-            Log.i(TAG, "Deshabilitado Modelo: "+modelo);
+            Log.i(TAG, "Deshabilitado Modelo: " + modelo);
         }
 
         cursor.close();
@@ -1113,15 +1154,15 @@ public class DBAdapter
 
     public ArrayList<String> obtenerProductosDeshabilitados(String ci)
     {
-        String[]          columnas                 = new String[]{CN_PRODUCTOS_DESHABILITADOS};
-        String[]          args                     = {ci};
-        Cursor            cursor                   = db.query(TABLA_USUARIO, columnas, "cedula=?", args, null, null, null);
+        String[] columnas = new String[]{CN_PRODUCTOS_DESHABILITADOS};
+        String[] args = {ci};
+        Cursor cursor = db.query(TABLA_USUARIO, columnas, "cedula=?", args, null, null, null);
         ArrayList<String> productos_deshabilitados = new ArrayList<>();
         //String[]          p                        = new String[0];
 
-        if(cursor.moveToFirst())
+        if (cursor.moveToFirst())
         {
-            if(!cursor.getString(0).equals(""))
+            if (!cursor.getString(0).equals(""))
             {
                 String[] p = (cursor.getString(0)).split(",");
                 Log.i(TAG, "Existen " + p.length + " productos deshabilitados..");
@@ -1129,9 +1170,9 @@ public class DBAdapter
             }
         }
 
-        for (String product: productos_deshabilitados)
+        for (String product : productos_deshabilitados)
         {
-            Log.i(TAG, "Deshabilitado Producto: "+product);
+            Log.i(TAG, "Deshabilitado Producto: " + product);
         }
 
         //Collections.addAll(productos_deshabilitados, p);
@@ -1142,9 +1183,9 @@ public class DBAdapter
 
     public ArrayList<ArrayList<String>> obtenerProductos_Filtrado(String id_modelo, String cedula, String destacado_filtrado)
     {
-        String[] columnas2                = new String[]{CN_PRODUCTOS_DESHABILITADOS};
-        String[] args                     = {cedula};
-        Cursor   cursor                   = db.query(TABLA_USUARIO, columnas2, "cedula=?", args, null, null, null);
+        String[] columnas2 = new String[]{CN_PRODUCTOS_DESHABILITADOS};
+        String[] args = {cedula};
+        Cursor cursor = db.query(TABLA_USUARIO, columnas2, "cedula=?", args, null, null, null);
         String[] productos_deshabilitados = new String[0];
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
@@ -1175,7 +1216,7 @@ public class DBAdapter
         String[] args2 = argumentos.toArray(new String[argumentos.size()]);
         cursor2 = db.query(TABLA_PRODUCTOS, columnas, where, args2, null, null, null);
 
-        String                       res       = "";
+        String res = "";
         ArrayList<ArrayList<String>> productos = new ArrayList<>();
 
         if (productos_deshabilitados.length == 0)
@@ -1186,7 +1227,7 @@ public class DBAdapter
                     res = res + "|";
 
                 Cursor cursore = buscarColor(cursor2.getString(6));
-                String color   = "null";
+                String color = "null";
 
                 for (cursore.moveToFirst(); !cursore.isAfterLast(); cursore.moveToNext())
                 {
@@ -1208,8 +1249,8 @@ public class DBAdapter
         {
             for (cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
             {
-                String cad     = "";
-                int    bandera = 0;
+                String cad = "";
+                int bandera = 0;
 
                 //for (int w = 0; w < productos_deshabilitados.length; w++)
                 for (String productos_deshabilitado : productos_deshabilitados)
@@ -1218,7 +1259,7 @@ public class DBAdapter
                     {
                         // El producto no esta deshabilitado, lo copio normalmente..
                         Cursor cursore = buscarColor(cursor2.getString(6));
-                        String color   = "null";
+                        String color = "null";
 
                         for (cursore.moveToFirst(); !cursore.isAfterLast(); cursore.moveToNext())
                         {
@@ -1262,9 +1303,9 @@ public class DBAdapter
 
     public String cargarCursorProductos_Modelos_Lineas_DialogAgregar(String id_linea, String id_modelo, String cedula, String[] ids_ocultar)
     {
-        String[] columnas2                = new String[]{CN_PRODUCTOS_DESHABILITADOS};
-        String[] args                     = {cedula};
-        Cursor   cursor                   = db.query(TABLA_USUARIO, columnas2, "cedula=?", args, null, null, null);
+        String[] columnas2 = new String[]{CN_PRODUCTOS_DESHABILITADOS};
+        String[] args = {cedula};
+        Cursor cursor = db.query(TABLA_USUARIO, columnas2, "cedula=?", args, null, null, null);
         String[] productos_deshabilitados = new String[0];
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
@@ -1278,8 +1319,8 @@ public class DBAdapter
         Log.d("CargarCursorLineas", "Hay " + cursor.getCount() + " Productos deshabilitados!");
 
         String[] columnas = new String[]{CN_ID_PRODUCTO, CN_ID_PRODUCTO_MODELO, CN_ID_PRODUCTO_LINEA, CN_CODIGO_FABRICANTE_PRODUCTO, CN_PRECIO_PRODUCTO, CN_NOMBRE_PRODUCTO};
-        String[] args2    = {id_linea, id_modelo};
-        Cursor   cursor2  = db.query(TABLA_PRODUCTOS, columnas, "id_linea=? AND id_modelo=?", args2, null, null, CN_CODIGO_FABRICANTE_PRODUCTO);
+        String[] args2 = {id_linea, id_modelo};
+        Cursor cursor2 = db.query(TABLA_PRODUCTOS, columnas, "id_linea=? AND id_modelo=?", args2, null, null, CN_CODIGO_FABRICANTE_PRODUCTO);
 
         String res = "";
 
@@ -1299,8 +1340,8 @@ public class DBAdapter
         {
             for (cursor2.moveToFirst(); !cursor2.isAfterLast(); cursor2.moveToNext())
             {
-                String cad     = "";
-                int    bandera = 0;
+                String cad = "";
+                int bandera = 0;
 
                 //for (int w = 0; w < productos_deshabilitados.length; w++)
                 for (String productos_deshabilitado : productos_deshabilitados)
@@ -1339,14 +1380,23 @@ public class DBAdapter
 
     public Cursor cargarCursorActualizacionesGenerales()
     {
-        String[] columnas = new String[]{CN_FECHA_ACTUALIZACION_GENERALES_LINEAS, CN_FECHA_ACTUALIZACION_GENERALES_MODELOS, CN_FECHA_ACTUALIZACION_GENERALES_PRODUCTOS, CN_FECHA_ACTUALIZACION_GENERALES_MATERIALES, CN_FECHA_ACTUALIZACION_GENERALES_COLORES, CN_FECHA_ACTUALIZACION_GENERALES_BULTOS};
+        String[] columnas = new String[]
+                {
+                        CN_FECHA_ACTUALIZACION_GENERALES_LINEAS,
+                        CN_FECHA_ACTUALIZACION_GENERALES_MODELOS,
+                        CN_FECHA_ACTUALIZACION_GENERALES_PRODUCTOS,
+                        CN_FECHA_ACTUALIZACION_GENERALES_MATERIALES,
+                        CN_FECHA_ACTUALIZACION_GENERALES_COLORES,
+                        CN_FECHA_ACTUALIZACION_GENERALES_BULTOS,
+                        CN_FECHA_ACTUALIZACION_GENERALES_COLORES_BASE
+                };
         return db.query(TABLA_ACTUALIZACIONES_GENERALES, columnas, null, null, null, null, null);
     }
 
     private Cursor cargarCursorActualizacionesLineas(String id)
     {
         String[] columnas = new String[]{CN_ID_ACTUALIZACION_LINEAS, CN_ID_LINEA_ACTUALIZACION_LINEAS, CN_FECHA_ACTUALIZACION_LINEAS};
-        String[] args     = {id};
+        String[] args = {id};
         return db.query(TABLA_ACTUALIZACIONES_LINEAS, columnas, "id_linea=?", args, null, null, null);
     }
 
@@ -1359,7 +1409,7 @@ public class DBAdapter
     private Cursor cargarCursorActualizacionesModelos(String ids_modelo)
     {
         String[] columnas = new String[]{CN_ID_ACTUALIZACION_MODELOS, CN_ID_MODELO_ACTUALIZACION_MODELOS, CN_FECHA_ACTUALIZACION_MODELOS};
-        String[] args     = {ids_modelo};
+        String[] args = {ids_modelo};
         return db.query(TABLA_ACTUALIZACIONES_MODELOS, columnas, "id_modelo=?", args, null, null, null);
     }
 
@@ -1372,7 +1422,7 @@ public class DBAdapter
     private Cursor cargarCursorActualizacionesProductos(String ids_producto, int w)
     {
         String[] columnas = new String[]{CN_ID_ACTUALIZACION_PRODUCTO, CN_ACTUALIZACION_IMAGEN_NUMERO, CN_FECHA_ACTUALIZACION_PRODUCTO};
-        String[] args     = {ids_producto, String.valueOf(w)};
+        String[] args = {ids_producto, String.valueOf(w)};
         return db.query(TABLA_ACTUALIZACIONES_PRODUCTOS, columnas, "id_producto=? AND imagen_numero=?", args, null, null, null);
     }
 
@@ -1393,7 +1443,7 @@ public class DBAdapter
     public Cursor cargarCursorProductosPedidos_porTalla(String tipo)
     {
         String[] columnas = new String[]{CN_COD_FABRICANTE_PRODUCTOS_PEDIDOS, CN_TIPO_PRODUCTOS_PEDIDOS, CN_PRECIO_PRODUCTOS_PEDIDOS, CN_NUMERACION_PRODUCTOS_PEDIDOS, CN_PARES_PRODUCTOS_PEDIDOS, CN_ID_PRODUCTO_PEDIDOS, CN_BULTOS_PRODUCTOS_PEDIDOS, CN_NOMBRE_PRODUCTOS_PEDIDOS};
-        String[] args     = {tipo};
+        String[] args = {tipo};
         return db.query(TABLA_PRODUCTOS_PEDIDOS, columnas, CN_TIPO_PRODUCTOS_PEDIDOS + "=?", args, null, null, null);
     }
 
@@ -1406,13 +1456,13 @@ public class DBAdapter
     public Cursor cargarCursorClientes_Vendedor(String id)
     {
         String[] columnas = new String[]{CN_ID_RAZON_SOCIAL, CN_ID_CLIENTES};
-        String[] args     = {id};
+        String[] args = {id};
         return db.query(TABLA_CLIENTES, columnas, CN_ID_VENDEDOR + "=?", args, null, null, null);
     }
 
     public Cursor cargarCursorClientesByID(String id)
     {
-        String[] args     = {id};
+        String[] args = {id};
         String[] columnas = new String[]{CN_ID_RAZON_SOCIAL, CN_ID_CLIENTES};
         return db.query(TABLA_CLIENTES, columnas, CN_ID_VENDEDOR + "=?", args, null, null, null);
     }
@@ -1486,14 +1536,14 @@ public class DBAdapter
     public Cursor buscarProducto(String id)
     {
         String[] columnas = new String[]{CN_CODIGO_FABRICANTE_PRODUCTO, CN_NOMBRE_PRODUCTO, CN_ID_PRODUCTO};
-        String[] args     = {id};
+        String[] args = {id};
         return db.query(TABLA_PRODUCTOS, columnas, CN_ID_PRODUCTO + "=?", args, null, null, null);
     }
 
     public Cursor buscarProductoByName(String textoDebajo)
     {
         String[] columnas = new String[]{CN_PRECIO_PRODUCTO, CN_NOMBRE_PRODUCTO};
-        String[] args     = {textoDebajo};
+        String[] args = {textoDebajo};
         return db.query(TABLA_PRODUCTOS, columnas, CN_ID_PRODUCTO + "=?", args, null, null, null);
     }
 
@@ -1517,17 +1567,37 @@ public class DBAdapter
         Log.d("INSERTANDO COLORES", "END");
     }
 
+    public void insertar_colores_base(JSONArray ids, JSONArray colores) throws JSONException
+    {
+        String sql = "INSERT INTO " + TABLA_COLORES_BASE + " (" + ID_COLOR_BASE + ", " + NOMBRE_COLOR_BASE + ") VALUES (?, ?)";
+        db.beginTransaction();
+        Log.d("INSERTANDO COLORES_BASE", "BEGIN");
+        SQLiteStatement stmt = db.compileStatement(sql);
+
+        for (int i = 0; i < ids.length(); i++)
+        {
+            stmt.bindString(1, ids.getString(i));
+            stmt.bindString(2, colores.getString(i));
+            stmt.executeInsert();
+            stmt.clearBindings();
+        }
+
+        db.setTransactionSuccessful();
+        db.endTransaction();
+        Log.d("INSERTANDO COLORES_BASE", "END");
+    }
+
     public Cursor buscar_ID_Bulto_Material_Producto(String id_actual)
     {
         String[] columnas = new String[]{CN_ID_PRODUCTO_BULTO, CN_ID_PRODUCTO_MATERIAL, CN_ID_PRODUCTO_COLOR};
-        String[] args     = {id_actual};
+        String[] args = {id_actual};
         return db.query(TABLA_PRODUCTOS, columnas, CN_ID_PRODUCTO + "=?", args, null, null, null);
     }
 
     public Cursor buscarBulto(String idbulto)
     {
         String[] columnas = new String[]{CN_ID_BULTO, CN_NOMBRE_BULTO, CN_TIPO_BULTO, CN_RANGO_TALLAS_BULTO, CN_NUMERACION_BULTO, CN_NUMERO_PARES_BULTO};
-        String[] args     = {idbulto};
+        String[] args = {idbulto};
         return db.query(TABLA_BULTOS, columnas, CN_ID_BULTO + "=?", args, null, null, null);
     }
 
@@ -1535,7 +1605,7 @@ public class DBAdapter
     {
         Log.d("buscarColor", "" + idcolor);
         String[] columnas = new String[]{CN_ID_COLOR, CN_NOMBRE_COLOR};
-        String[] args     = {idcolor};
+        String[] args = {idcolor};
         return db.query(TABLA_COLORES, columnas, CN_ID_COLOR + "=?", args, null, null, null);
     }
 
@@ -1549,7 +1619,7 @@ public class DBAdapter
     public Cursor buscarSalt_Usuario(String ci)
     {
         String[] columnas = new String[]{CN_USUARIO_SALT};
-        String[] args     = {ci};
+        String[] args = {ci};
         return db.query(TABLA_USUARIO, columnas, "cedula=?", args, null, null, null);
     }
 
@@ -1667,10 +1737,10 @@ public class DBAdapter
 
     private boolean debo_borrar_tabla(int i)
     {
-        boolean  res       = false;
+        boolean res = false;
         String[] argumento = argumentos(i);
-        String[] columnas  = new String[]{argumento[0]};
-        Cursor   cursor    = db.query(argumento[1], columnas, null, null, null, null, null);
+        String[] columnas = new String[]{argumento[0]};
+        Cursor cursor = db.query(argumento[1], columnas, null, null, null, null, null);
 
         for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
         {
@@ -1753,8 +1823,8 @@ public class DBAdapter
     public void eliminar_pedido_local(String id_pedido)
     {
         String[] args = {id_pedido};
-        int      res1 = db.delete(TABLA_PEDIDOS_LOCALES, CN_ID_PEDIDOS_LOCALES_BD + "=?", args);
-        int      res2 = db.delete(TABLA_PEDIDOS_LOCALES_DETALLES, CN_ID_PEDIDOS_LOCALES_DETALLES_REAL + "=?", args);
+        int res1 = db.delete(TABLA_PEDIDOS_LOCALES, CN_ID_PEDIDOS_LOCALES_BD + "=?", args);
+        int res2 = db.delete(TABLA_PEDIDOS_LOCALES_DETALLES, CN_ID_PEDIDOS_LOCALES_DETALLES_REAL + "=?", args);
         if (res1 != 0 && res2 != 0)
             Log.d("ELIMINAR PEDIDO LOCAL", "OK");
     }
@@ -1762,7 +1832,7 @@ public class DBAdapter
     public Cursor buscarClienteByID(String id_cliente)
     {
         String[] columnas = new String[]{CN_ID_RAZON_SOCIAL, CN_ID_RIF, CN_ID_DIRECCION, CN_ID_TELEFONO, CN_ID_ESTADO, CN_ID_EMAIL};
-        String[] args     = {id_cliente};
+        String[] args = {id_cliente};
         return db.query(TABLA_CLIENTES, columnas, CN_ID_CLIENTES + "=?", args, null, null, null);
     }
 
@@ -1820,22 +1890,22 @@ public class DBAdapter
     public Cursor cargarCursorPedidosByID(String id_usuario)
     {
         String[] columnas = new String[]{CN_ID_PEDIDOS_REAL, CN_ID_VENDEDOR_PEDIDOS, CN_ID_CLIENTE_PEDIDOS, CN_FECHA_PEDIDOS, CN_MONTO_PEDIDOS, CN_ESTATUS_PEDIDO, CN_OBSERVACIONES, CN_CODIGO_PEDIDOS};
-        String[] args     = {id_usuario};
+        String[] args = {id_usuario};
         return db.query(TABLA_PEDIDOS, columnas, CN_ID_VENDEDOR_PEDIDOS + "=?", args, null, null, CN_FECHA_PEDIDOS + " DESC"); // Ordenara por fecha
     }
 
     public Cursor cargarCursorPedidos_LocalesByID(String id_usuario)
     {
         String[] columnas = new String[]{CN_FECHA_PEDIDOS_LOCALES, CN_ID_VENDEDOR_PEDIDOS_LOCALES, CN_ID_CLIENTE_PEDIDOS_LOCALES, CN_FECHA_PEDIDOS_LOCALES, CN_MONTO_PEDIDOS_LOCALES, CN_ESTATUS_PEDIDO_LOCALES, CN_OBSERVACIONES_LOCALES, CN_CODIGO_PEDIDOS_LOCALES};
-        String[] args     = {id_usuario};
+        String[] args = {id_usuario};
         return db.query(TABLA_PEDIDOS_LOCALES, columnas, CN_ID_VENDEDOR_PEDIDOS_LOCALES + "=?", args, null, null, CN_FECHA_PEDIDOS_LOCALES + " DESC"); // Ordenara por fecha
     }
 
     public Cursor cargarCursorPedidosByID_Cliente(String id_usuario, String id_cliente, String estatus, String modo, String columna)
     {
         //Log.d("pre", "id_usuario: " + id_usuario + ", id_cliente: " + id_cliente + ", estatus: " + estatus);
-        String[]          columnas   = new String[]{CN_ID_PEDIDOS_REAL, CN_ID_VENDEDOR_PEDIDOS, CN_ID_CLIENTE_PEDIDOS, CN_FECHA_PEDIDOS, CN_MONTO_PEDIDOS, CN_ESTATUS_PEDIDO, CN_OBSERVACIONES, CN_CODIGO_PEDIDOS, CN_ID_PEDIDOS_BD};
-        String            selection  = CN_ID_VENDEDOR_PEDIDOS + "=? ";
+        String[] columnas = new String[]{CN_ID_PEDIDOS_REAL, CN_ID_VENDEDOR_PEDIDOS, CN_ID_CLIENTE_PEDIDOS, CN_FECHA_PEDIDOS, CN_MONTO_PEDIDOS, CN_ESTATUS_PEDIDO, CN_OBSERVACIONES, CN_CODIGO_PEDIDOS, CN_ID_PEDIDOS_BD};
+        String selection = CN_ID_VENDEDOR_PEDIDOS + "=? ";
         ArrayList<String> argumentos = new ArrayList<>();
         argumentos.add(id_usuario);
         String orderby;
@@ -1863,8 +1933,8 @@ public class DBAdapter
 
     public Cursor cargarCursorPedidos_Locales_ByID_Cliente(String id_usuario, String id_cliente, String estatus, String modo, String columna)
     {
-        String[]          columnas   = new String[]{CN_FECHA_PEDIDOS_LOCALES, CN_ID_VENDEDOR_PEDIDOS_LOCALES, CN_ID_CLIENTE_PEDIDOS_LOCALES, CN_FECHA_PEDIDOS_LOCALES, CN_MONTO_PEDIDOS_LOCALES, CN_ESTATUS_PEDIDO_LOCALES, CN_OBSERVACIONES_LOCALES, CN_CODIGO_PEDIDOS_LOCALES, CN_ID_PEDIDOS_LOCALES_BD};
-        String            selection  = CN_ID_VENDEDOR_PEDIDOS_LOCALES + "=? ";
+        String[] columnas = new String[]{CN_FECHA_PEDIDOS_LOCALES, CN_ID_VENDEDOR_PEDIDOS_LOCALES, CN_ID_CLIENTE_PEDIDOS_LOCALES, CN_FECHA_PEDIDOS_LOCALES, CN_MONTO_PEDIDOS_LOCALES, CN_ESTATUS_PEDIDO_LOCALES, CN_OBSERVACIONES_LOCALES, CN_CODIGO_PEDIDOS_LOCALES, CN_ID_PEDIDOS_LOCALES_BD};
+        String selection = CN_ID_VENDEDOR_PEDIDOS_LOCALES + "=? ";
         ArrayList<String> argumentos = new ArrayList<>();
         argumentos.add(id_usuario);
         String orderby;
@@ -1929,7 +1999,7 @@ public class DBAdapter
 
     public long insertar_pedido_local(String id_vendedor, String id_cliente, String fecha_ingreso, double monto, String s, String observaciones, String codigo_pedido)
     {
-        long          res;
+        long res;
         ContentValues valores = new ContentValues();
         valores.put(CN_ID_VENDEDOR_PEDIDOS_LOCALES, id_vendedor);
         valores.put(CN_ID_CLIENTE_PEDIDOS_LOCALES, id_cliente);
@@ -1954,20 +2024,20 @@ public class DBAdapter
         Log.d("INSERTANDO", "PEDIDOS_LOCALES_DETALLES: BEGIN");
         SQLiteStatement stmt = db.compileStatement(sql);
 
-        String[] idproducto   = id_productos.split("#");
-        String[] pares        = cantidad_pares.split("#");
-        String[] bultos       = cantidad_bultos.split("#");
+        String[] idproducto = id_productos.split("#");
+        String[] pares = cantidad_pares.split("#");
+        String[] bultos = cantidad_bultos.split("#");
         String[] numeraciones = numeracion.split("#");
-        String[] precios      = precio_unitario.split("#");
-        String[] subtotales   = subtotal.split("#");
-        String   tallas       = "";
-        int      x            = 0;
+        String[] precios = precio_unitario.split("#");
+        String[] subtotales = subtotal.split("#");
+        String tallas = "";
+        int x = 0;
 
         for (String anIdproducto : idproducto)
         {
             String[] columnas = new String[]{CN_NOMBRE_PRODUCTO};
-            String[] args     = {anIdproducto};
-            Cursor   cursor   = db.query(TABLA_PRODUCTOS, columnas, CN_ID_PRODUCTO + "=?", args, null, null, null);
+            String[] args = {anIdproducto};
+            Cursor cursor = db.query(TABLA_PRODUCTOS, columnas, CN_ID_PRODUCTO + "=?", args, null, null, null);
 
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
             {
@@ -2009,20 +2079,20 @@ public class DBAdapter
         Log.d("INSERT PEDIDOS_DETALLES", "BEGIN");
         SQLiteStatement stmt = db.compileStatement(sql);
 
-        String[] idproducto   = id_productos.split("#");
-        String[] pares        = cantidad_pares.split("#");
-        String[] bultos       = cantidad_bultos.split("#");
+        String[] idproducto = id_productos.split("#");
+        String[] pares = cantidad_pares.split("#");
+        String[] bultos = cantidad_bultos.split("#");
         String[] numeraciones = numeracion.split("#");
-        String[] precios      = precio_unitario.split("#");
-        String[] subtotales   = subtotal.split("#");
-        String   tallas       = "";
-        int      x            = 0;
+        String[] precios = precio_unitario.split("#");
+        String[] subtotales = subtotal.split("#");
+        String tallas = "";
+        int x = 0;
 
         for (String anIdproducto : idproducto)
         {
             String[] columnas = new String[]{CN_NOMBRE_PRODUCTO};
-            String[] args     = {anIdproducto};
-            Cursor   cursor   = db.query(TABLA_PRODUCTOS, columnas, CN_ID_PRODUCTO + "=?", args, null, null, null);
+            String[] args = {anIdproducto};
+            Cursor cursor = db.query(TABLA_PRODUCTOS, columnas, CN_ID_PRODUCTO + "=?", args, null, null, null);
 
             for (cursor.moveToFirst(); !cursor.isAfterLast(); cursor.moveToNext())
             {
@@ -2088,21 +2158,21 @@ public class DBAdapter
     public Cursor cargarCursorProductosPedidos_Detalles(String id_pedido)
     {
         String[] columnas = new String[]{CN_ID_PEDIDOS_DETALLES_PRODUCTO, CN_ID_PEDIDOS_DETALLES_PARES, CN_ID_PEDIDOS_DETALLES_BULTOS, CN_ID_PEDIDOS_DETALLES_NUMERACION, CN_ID_PEDIDOS_DETALLES_PRECIO_UNITARIO, CN_ID_PEDIDOS_DETALLES_SUBTOTAL};
-        String[] args     = {id_pedido};
+        String[] args = {id_pedido};
         return db.query(TABLA_PEDIDOS_DETALLES, columnas, CN_ID_PEDIDOS_DETALLES_PEDIDO + "=?", args, null, null, null);
     }
 
     public Cursor cargarCursorProductosPedidos_Locales(String id_pedido)
     {
         String[] columnas = new String[]{CN_ID_PEDIDOS_LOCALES_DETALLES_PRODUCTO, CN_ID_PEDIDOS_LOCALES_DETALLES_PARES, CN_ID_PEDIDOS_LOCALES_DETALLES_BULTOS, CN_ID_PEDIDOS_LOCALES_DETALLES_NUMERACION, CN_ID_PEDIDOS_LOCALES_DETALLES_PRECIO_UNITARIO, CN_ID_PEDIDOS_LOCALES_DETALLES_SUBTOTAL};
-        String[] args     = {id_pedido};
+        String[] args = {id_pedido};
         return db.query(TABLA_PEDIDOS_LOCALES_DETALLES, columnas, CN_ID_PEDIDOS_LOCALES_DETALLES_REAL + "=?", args, null, null, null);
     }
 
     public Cursor cargarCursorProductosPedidosDetalles_porTalla(String p, String id_pedido)
     {
         String[] columnas = new String[]{CN_ID_PEDIDOS_DETALLES_PRODUCTO, CN_ID_PEDIDOS_DETALLES_PRECIO_UNITARIO, CN_ID_PEDIDOS_DETALLES_PRECIO_UNITARIO, CN_ID_PEDIDOS_DETALLES_NUMERACION, CN_ID_PEDIDOS_DETALLES_PARES, CN_ID_PEDIDOS_DETALLES_PRODUCTO, CN_ID_PEDIDOS_DETALLES_BULTOS};
-        String[] args     = {id_pedido, p};
+        String[] args = {id_pedido, p};
         return db.query(TABLA_PEDIDOS_DETALLES, columnas, CN_ID_PEDIDOS_DETALLES_PEDIDO + "=? AND " + CN_ID_PEDIDOS_DETALLES_TALLA + "=?", args, null, null, null);
     }
 
@@ -2121,35 +2191,35 @@ public class DBAdapter
     public Cursor cargarCursorProductosPedidos_Locales_Detalles_porTalla(String p, String id_pedido)
     {
         String[] columnas = new String[]{CN_ID_PEDIDOS_LOCALES_DETALLES_PRODUCTO, CN_ID_PEDIDOS_LOCALES_DETALLES_PRECIO_UNITARIO, CN_ID_PEDIDOS_LOCALES_DETALLES_PRECIO_UNITARIO, CN_ID_PEDIDOS_LOCALES_DETALLES_NUMERACION, CN_ID_PEDIDOS_LOCALES_DETALLES_PARES, CN_ID_PEDIDOS_LOCALES_DETALLES_PRODUCTO, CN_ID_PEDIDOS_LOCALES_DETALLES_BULTOS};
-        String[] args     = {id_pedido, p};
+        String[] args = {id_pedido, p};
         return db.query(TABLA_PEDIDOS_LOCALES_DETALLES, columnas, CN_ID_PEDIDOS_LOCALES_DETALLES_REAL + "=? AND " + CN_ID_PEDIDOS_LOCALES_DETALLES_TALLA + "=?", args, null, null, null);
     }
 
     public Cursor cargarCursorPedidos(String id_pedido)
     {
         String[] columnas = new String[]{CN_ESTATUS_PEDIDO, CN_ID_CLIENTE_PEDIDOS, CN_ID_VENDEDOR_PEDIDOS};
-        String[] args     = {id_pedido};
+        String[] args = {id_pedido};
         return db.query(TABLA_PEDIDOS, columnas, CN_ID_PEDIDOS_REAL + "=?", args, null, null, null);
     }
 
     public Cursor cargarCursorPedidos_Locales(String id_pedido)
     {
         String[] columnas = new String[]{CN_ESTATUS_PEDIDO_LOCALES, CN_ID_CLIENTE_PEDIDOS_LOCALES, CN_ID_VENDEDOR_PEDIDOS_LOCALES};
-        String[] args     = {id_pedido};
+        String[] args = {id_pedido};
         return db.query(TABLA_PEDIDOS_LOCALES, columnas, CN_ID_PEDIDOS_LOCALES_BD + "=?", args, null, null, null);
     }
 
     public Cursor cargarCursorPedidos_Editar(String talla)
     {
         String[] columnas = new String[]{CN_PRECIO_PRODUCTOS_PEDIDOS_EDITAR, CN_PARES_PRODUCTOS_PEDIDOS_EDITAR, CN_BULTOS_PRODUCTOS_PEDIDOS_EDITAR};
-        String[] args     = {talla};
+        String[] args = {talla};
         return db.query(TABLA_PRODUCTOS_PEDIDOS_EDITAR, columnas, CN_TIPO_PRODUCTOS_PEDIDOS_EDITAR + "=?", args, null, null, null);
     }
 
     public Cursor cargarCursorPedidos_Editar2(String talla)
     {
         String[] columnas = new String[]{CN_ID_PRODUCTO_PEDIDOS_EDITAR, CN_TIPO_PRODUCTOS_PEDIDOS_EDITAR, CN_PRECIO_PRODUCTOS_PEDIDOS_EDITAR, CN_NUMERACION_PRODUCTOS_PEDIDOS_EDITAR, CN_PARES_PRODUCTOS_PEDIDOS_EDITAR, CN_ID_PRODUCTO_PEDIDOS_EDITAR, CN_BULTOS_PRODUCTOS_PEDIDOS_EDITAR};
-        String[] args     = {talla};
+        String[] args = {talla};
         return db.query(TABLA_PRODUCTOS_PEDIDOS_EDITAR, columnas, CN_TIPO_PRODUCTOS_PEDIDOS_EDITAR + "=?", args, null, null, null);
     }
 
@@ -2170,17 +2240,17 @@ public class DBAdapter
     public void insertar_producto_pedido_local_editar(String id_pedido)
     {
         String[] columnas = new String[]{CN_ID_PEDIDOS_LOCALES_DETALLES_PRECIO_UNITARIO, CN_ID_PEDIDOS_LOCALES_DETALLES_PARES, CN_ID_PEDIDOS_LOCALES_DETALLES_NUMERACION, CN_ID_PEDIDOS_LOCALES_DETALLES_PRODUCTO, CN_ID_PEDIDOS_LOCALES_DETALLES_BULTOS};
-        String[] args     = {id_pedido};
-        Cursor   res      = db.query(TABLA_PEDIDOS_LOCALES_DETALLES, columnas, CN_ID_PEDIDOS_LOCALES_DETALLES_REAL + "=?", args, null, null, null);
+        String[] args = {id_pedido};
+        Cursor res = db.query(TABLA_PEDIDOS_LOCALES_DETALLES, columnas, CN_ID_PEDIDOS_LOCALES_DETALLES_REAL + "=?", args, null, null, null);
 
         String[] valoresProductoNombre = new String[res.getCount()];
-        String[] precio                = new String[res.getCount()];
-        String[] pares                 = new String[res.getCount()];
-        String[] numeracion            = new String[res.getCount()];
-        String[] id_producto           = new String[res.getCount()];
-        String[] nombre_real           = new String[res.getCount()];
-        String[] bultos                = new String[res.getCount()];
-        int      z                     = 0;
+        String[] precio = new String[res.getCount()];
+        String[] pares = new String[res.getCount()];
+        String[] numeracion = new String[res.getCount()];
+        String[] id_producto = new String[res.getCount()];
+        String[] nombre_real = new String[res.getCount()];
+        String[] bultos = new String[res.getCount()];
+        int z = 0;
 
         for (res.moveToFirst(); !res.isAfterLast(); res.moveToNext())
         {
@@ -2199,8 +2269,8 @@ public class DBAdapter
         for (String anId_producto : id_producto)
         {
             String[] columnas2 = new String[]{CN_CODIGO_FABRICANTE_PRODUCTO, CN_NOMBRE_PRODUCTO};
-            String[] args2     = {anId_producto};
-            Cursor   res2      = db.query(TABLA_PRODUCTOS, columnas2, CN_ID_PRODUCTO + "=?", args2, null, null, null);
+            String[] args2 = {anId_producto};
+            Cursor res2 = db.query(TABLA_PRODUCTOS, columnas2, CN_ID_PRODUCTO + "=?", args2, null, null, null);
 
             for (res2.moveToFirst(); !res2.isAfterLast(); res2.moveToNext())
             {
@@ -2239,17 +2309,17 @@ public class DBAdapter
     public void insertar_producto_pedido_editar(String id_pedido)
     {
         String[] columnas = new String[]{CN_ID_PEDIDOS_DETALLES_PRECIO_UNITARIO, CN_ID_PEDIDOS_DETALLES_PARES, CN_ID_PEDIDOS_DETALLES_NUMERACION, CN_ID_PEDIDOS_DETALLES_PRODUCTO, CN_ID_PEDIDOS_DETALLES_BULTOS};
-        String[] args     = {id_pedido};
-        Cursor   res      = db.query(TABLA_PEDIDOS_DETALLES, columnas, CN_ID_PEDIDOS_DETALLES_PEDIDO + "=?", args, null, null, null);
+        String[] args = {id_pedido};
+        Cursor res = db.query(TABLA_PEDIDOS_DETALLES, columnas, CN_ID_PEDIDOS_DETALLES_PEDIDO + "=?", args, null, null, null);
 
         String[] valoresProductoNombre = new String[res.getCount()];
-        String[] precio                = new String[res.getCount()];
-        String[] pares                 = new String[res.getCount()];
-        String[] numeracion            = new String[res.getCount()];
-        String[] id_producto           = new String[res.getCount()];
-        String[] nombre_real           = new String[res.getCount()];
-        String[] bultos                = new String[res.getCount()];
-        int      z                     = 0;
+        String[] precio = new String[res.getCount()];
+        String[] pares = new String[res.getCount()];
+        String[] numeracion = new String[res.getCount()];
+        String[] id_producto = new String[res.getCount()];
+        String[] nombre_real = new String[res.getCount()];
+        String[] bultos = new String[res.getCount()];
+        int z = 0;
 
         for (res.moveToFirst(); !res.isAfterLast(); res.moveToNext())
         {
@@ -2268,8 +2338,8 @@ public class DBAdapter
         for (String anId_producto : id_producto)
         {
             String[] columnas2 = new String[]{CN_CODIGO_FABRICANTE_PRODUCTO, CN_NOMBRE_PRODUCTO};
-            String[] args2     = {anId_producto};
-            Cursor   res2      = db.query(TABLA_PRODUCTOS, columnas2, CN_ID_PRODUCTO + "=?", args2, null, null, null);
+            String[] args2 = {anId_producto};
+            Cursor res2 = db.query(TABLA_PRODUCTOS, columnas2, CN_ID_PRODUCTO + "=?", args2, null, null, null);
 
             for (res2.moveToFirst(); !res2.isAfterLast(); res2.moveToNext())
             {
@@ -2368,22 +2438,22 @@ public class DBAdapter
     public Cursor cargarCursorPedidos_Locales_ID(String id_pedido)
     {
         String[] columnas = new String[]{CN_FECHA_PEDIDOS_LOCALES, CN_ID_VENDEDOR_PEDIDOS_LOCALES, CN_ID_CLIENTE_PEDIDOS_LOCALES, CN_FECHA_PEDIDOS_LOCALES, CN_MONTO_PEDIDOS_LOCALES, CN_ESTATUS_PEDIDO_LOCALES, CN_OBSERVACIONES_LOCALES, CN_CODIGO_PEDIDOS_LOCALES};
-        String[] args     = {id_pedido};
+        String[] args = {id_pedido};
         return db.query(TABLA_PEDIDOS_LOCALES, columnas, CN_ID_PEDIDOS_LOCALES_BD + "=?", args, null, null, null); // Ordenara por fecha
     }
 
     public Cursor cargarCursorPedidos_ID(String id_pedido)
     {
         String[] columnas = new String[]{CN_FECHA_PEDIDOS, CN_ID_VENDEDOR_PEDIDOS, CN_ID_CLIENTE_PEDIDOS, CN_FECHA_PEDIDOS, CN_MONTO_PEDIDOS, CN_ESTATUS_PEDIDO, CN_OBSERVACIONES, CN_CODIGO_PEDIDOS};
-        String[] args     = {id_pedido};
+        String[] args = {id_pedido};
         return db.query(TABLA_PEDIDOS, columnas, CN_ID_PEDIDOS_REAL + "=?", args, null, null, null); // Ordenara por fecha
     }
 
     public void eliminar_pedidos_locales_ID(String id)
     {
         String[] args = {id};
-        long     res1 = db.delete(TABLA_PEDIDOS_LOCALES, CN_ID_PEDIDOS_LOCALES_BD + "=?", args);
-        long     res2 = db.delete(TABLA_PEDIDOS_LOCALES_DETALLES, CN_ID_PEDIDOS_LOCALES_DETALLES_REAL + "=?", args);
+        long res1 = db.delete(TABLA_PEDIDOS_LOCALES, CN_ID_PEDIDOS_LOCALES_BD + "=?", args);
+        long res2 = db.delete(TABLA_PEDIDOS_LOCALES_DETALLES, CN_ID_PEDIDOS_LOCALES_DETALLES_REAL + "=?", args);
 
         if (res1 != 0 || res2 != 0)
             Log.d("ELIMINADAS", TABLA_PEDIDOS_LOCALES + " y " + TABLA_PEDIDOS_LOCALES_DETALLES);
@@ -2440,14 +2510,14 @@ public class DBAdapter
         String[] columns = new String[]{CN_CODIGO_FABRICANTE_PRODUCTO, CN_PRECIO_PRODUCTO, CN_TALLA_PRODUCTO, CN_NOMBRE_PRODUCTO, CN_ID_PRODUCTO_BULTO};
         //String[] args = id_producto.toArray(new String[id_producto.size()]);
         String[] codigo_fabricante = new String[id_producto.size()];
-        String[] precio            = new String[id_producto.size()];
-        String[] talla_producto    = new String[id_producto.size()];
-        String[] nombre_producto   = new String[id_producto.size()];
+        String[] precio = new String[id_producto.size()];
+        String[] talla_producto = new String[id_producto.size()];
+        String[] nombre_producto = new String[id_producto.size()];
         String[] id_bulto_producto = new String[id_producto.size()];
-        String[] numeracion        = new String[id_producto.size()];
-        String[] pares             = new String[id_producto.size()];
-        Cursor   respuesta         = null;
-        int      y                 = 0;
+        String[] numeracion = new String[id_producto.size()];
+        String[] pares = new String[id_producto.size()];
+        Cursor respuesta = null;
+        int y = 0;
 
         for (int i = 0; i < id_producto.size(); i++)
         {
@@ -2504,5 +2574,83 @@ public class DBAdapter
         db.setTransactionSuccessful();
         db.endTransaction();
         Log.d("INSERTANDO PEDIDOS EDIT", "END:" + codigo_fabricante.length + " insertados");
+    }
+
+    public List<List<String>> cargarListaTallas()
+    {
+        List<String> id_talla = new ArrayList<>();
+        List<String> talla = new ArrayList<>();
+        List<List<String>> contenedor = new ArrayList<>();
+        talla.add("Seleccione una talla..");
+
+        String[] columnas = new String[]{CN_ID_BULTO_BASE, CN_TIPO_BULTO};
+        //Cursor   cursor   = db.query(TABLA_BULTOS, columnas, null, null, null, null, null);
+        Cursor cursor = db.query(true, TABLA_BULTOS, columnas, null, null, CN_TIPO_BULTO, null, CN_TIPO_BULTO + " DESC", null);
+
+        if (cursor.moveToFirst())
+        {
+            do
+            {
+                id_talla.add(cursor.getString(0));
+                talla.add(cursor.getString(1));
+            }
+            while (cursor.moveToNext());
+        }
+        cursor.close();
+        contenedor.add(id_talla);
+        contenedor.add(talla);
+        return contenedor;
+    }
+
+    public Cursor buscarTipoTalla_ID(String id_talla)
+    {
+        String[] columnas = new String[]{CN_TIPO_BULTO};
+        String[] args = {id_talla};
+        return db.query(TABLA_BULTOS, columnas, CN_ID_BULTO_BASE + "=?", args, null, null, null);
+    }
+
+    public ArrayList<String> cargarListaNombreLineas()
+    {
+        ArrayList<String> nombre_linea = new ArrayList<>();
+        String[] columnas = new String[]{CN_NOMBRE_LINEA};
+
+        Cursor cursor = db.query(TABLA_LINEAS, columnas, null, null, null, null, null);
+
+        if (cursor.moveToFirst())
+        {
+            do
+            {
+                int pos = cursor.getString(0).lastIndexOf("-");
+                nombre_linea.add(cursor.getString(0).substring(0, pos));
+            }
+            while (cursor.moveToNext());
+        }
+        cursor.close();
+        return nombre_linea;
+    }
+
+    public List<List<String>> cargarListaColoresBase()
+    {
+        List<String> id_colorBase = new ArrayList<>();
+        List<String> color = new ArrayList<>();
+        List<List<String>> contenedor = new ArrayList<>();
+        color.add("Seleccione un color..");
+
+        String[] columnas = new String[]{ID_COLOR_BASE, NOMBRE_COLOR_BASE};
+        Cursor cursor = db.query(TABLA_COLORES_BASE, columnas, null, null, null, null, NOMBRE_COLOR_BASE + " ASC", null);
+
+        if (cursor.moveToFirst())
+        {
+            do
+            {
+                id_colorBase.add(cursor.getString(0));
+                color.add(cursor.getString(1));
+            }
+            while (cursor.moveToNext());
+        }
+        cursor.close();
+        contenedor.add(id_colorBase);
+        contenedor.add(color);
+        return contenedor;
     }
 }

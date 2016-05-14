@@ -68,7 +68,8 @@ public class actualizar_DatosApp
      * Constructor de la clase. Este actualizar sera para el FragmentOpciones (El que el usuario
      * busca dentro de la app.
      */
-    public actualizar_DatosApp(Context contexto, String codigo_usuario, int[] actualizar, String usuario)
+    public actualizar_DatosApp(Context contexto, String codigo_usuario, int[] actualizar,
+                               String usuario)
     {
         Log.d("actualizarApp", "FragmentOpciones");
         this.contexto = contexto;
@@ -82,7 +83,11 @@ public class actualizar_DatosApp
      * Constructor de la clase. Este actualizar sera para el MainActivity (OPC = 1), es decir,
      * cuando ando logeando y la app detecta que hay actualizaciones de la informacion disponibles
      */
-    public actualizar_DatosApp(Context contexto, String codigo_usuario, int[] actualizar, String contrasena, String usuario, String nombre, String apellido, String telefono, String email, String lineas_desh, String modelos_desh, String productos_desh, String fecha, String estado)
+    public actualizar_DatosApp(Context contexto, String codigo_usuario, int[] actualizar,
+                               String contrasena, String usuario, String nombre, String apellido,
+                               String telefono, String email, String lineas_desh,
+                               String modelos_desh, String productos_desh, String fecha,
+                               String estado)
     {
         Log.d("actualizarApp", "MainActivity");
         this.contexto = contexto;
@@ -200,6 +205,10 @@ public class actualizar_DatosApp
         else if (i == 10)
         {
             return obtener_funciones_moviles(i);
+        }
+        else if (i == 12)
+        {
+            return obtener_colores_base(i);
         }
         return false;
     }
@@ -440,13 +449,17 @@ public class actualizar_DatosApp
                     JSONArray id_bultos         = jsonObject.getJSONArray("ids_bultos");
                     JSONArray id_materiales     = jsonObject.getJSONArray("ids_materiales");
                     JSONArray id_color          = jsonObject.getJSONArray("id_color");
+                    JSONArray id_color_base = jsonObject.getJSONArray("id_color_base");
+
                     ids_tabla_completa = jsonObject.getJSONArray("ids_tabla_completa");
                     links_productos = links;
                     fecha_productos = fechas;
                     nombre_productos = nombre_real;
 
                     manager.eliminar_data(num_borrar);
-                    manager.insertar_productos(idProducto, idLinea, idModelo, nombres, fechas, precios_productos, id_bultos, id_materiales, nombre_real, id_color);
+                    manager.insertar_productos(idProducto, idLinea, idModelo, nombres, fechas,
+                            precios_productos, id_bultos, id_materiales, nombre_real, id_color,
+                            id_color_base);
                 }
             }
 
@@ -671,6 +684,59 @@ public class actualizar_DatosApp
             catch (JSONException e)
             {
                 Log.e("Error colores", "" + e);
+                pDialog.dismiss();
+                e.printStackTrace();
+            }
+
+            pDialog.incrementProgressBy(1);
+
+            return logstatus != 0;
+        }
+
+        else
+        {
+            Log.e("JSON  ", "ERROR: NO DATA");
+            return false;
+        }
+    }
+
+    /**
+     * Descarga los colores base de los productos desde la BD externa (web), hasta la BD local (android).
+     *
+     * @param num Numero entero que identifica la tabla a modificar, por ej 1 = modelos, 2 = productos.
+     * @return True si la operacion fue exitosa, False en caso contrario.
+     */
+    private boolean obtener_colores_base(int num)
+    {
+        int logstatus = -1;
+        cambiar_mensaje_dialogo("Cargando colores base...");
+        Log.d("Actualizando", "COLORES BASE");
+
+        ArrayList<NameValuePair> postparameters2send = new ArrayList<>();
+        String URL_obtener_colores = Constantes.IP_Server + "obtener_colores_base.php";
+        JSONArray jdata = post.getserverdata(postparameters2send, URL_obtener_colores);
+
+        if (jdata != null && jdata.length() > 0)
+        {
+            JSONObject json_data;
+            try
+            {
+                json_data = jdata.getJSONObject(0);
+                logstatus = json_data.getInt("logstatus");
+
+                for (int i = 0; i < jdata.length(); i++)
+                {
+                    JSONObject jsonObject = jdata.getJSONObject(i);
+                    JSONArray r1 = jsonObject.getJSONArray("ids");
+                    JSONArray r2 = jsonObject.getJSONArray("colores_base");
+
+                    manager.eliminar_data(num);
+                    manager.insertar_colores_base(r1, r2);
+                }
+            }
+            catch (JSONException e)
+            {
+                Log.e("Error colores base", "" + e);
                 pDialog.dismiss();
                 e.printStackTrace();
             }
@@ -1175,19 +1241,6 @@ public class actualizar_DatosApp
         }
 
         @Override
-        protected void onPreExecute()
-        {
-            pDialog = new ProgressDialog(contexto);
-            pDialog.setTitle("Actualizando la aplicacion...");
-            pDialog.setMessage("Cargando Datos...");
-            pDialog.setCancelable(false);
-            pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-            pDialog.setProgress(0);
-            pDialog.setMax(contador_actualizacion);
-            pDialog.show();
-        }
-
-        @Override
         protected String doInBackground(String... params)
         {
             try
@@ -1209,6 +1262,20 @@ public class actualizar_DatosApp
                 return "" + e;
             }
         }
+
+        @Override
+        protected void onPreExecute()
+        {
+            pDialog = new ProgressDialog(contexto);
+            pDialog.setTitle("Actualizando la aplicacion...");
+            pDialog.setMessage("Cargando Datos...");
+            pDialog.setCancelable(false);
+            pDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            pDialog.setProgress(0);
+            pDialog.setMax(contador_actualizacion);
+            pDialog.show();
+        }
+
 
         @Override
         protected void onPostExecute(String result)

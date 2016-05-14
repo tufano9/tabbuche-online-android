@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:gravity="center"
+              android:orientation="vertical">
 
     <com.devspark.robototextview.widget.RobotoButton
+        android:id="@+id/btn_actualizar"
+        style="@style/ButtonText"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@drawable/boton_azul"
-        style="@style/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:text="@string/actualizar_app"
         android:layout_gravity="center"
-        android:id="@+id/btn_actualizar"
-        app:fontFamily="roboto"
-        app:textWeight="medium"
+        android:background="@drawable/boton_azul"
+        android:gravity="center"
+        android:text="@string/actualizar_app"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:gravity="center" />
+        app:fontFamily="roboto"
+        app:textWeight="medium"/>
 
     <!--<Button
         style="?android:attr/buttonStyleSmall"
@@ -30,20 +32,20 @@
         android:textSize="20sp" />-->
 
     <com.devspark.robototextview.widget.RobotoButton
+        android:id="@+id/btn_actualizar_aplicacion"
+        style="@style/ButtonText"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:background="@drawable/boton_azul"
-        style="@style/ButtonText"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:text="@string/actualizar_application"
         android:layout_gravity="center"
-        android:id="@+id/btn_actualizar_aplicacion"
-        app:fontFamily="roboto"
-        app:textWeight="medium"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/boton_azul"
+        android:gravity="center"
+        android:text="@string/actualizar_application"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginTop="40dp"/>
+        app:fontFamily="roboto"
+        app:textWeight="medium"/>
 
 </LinearLayout>

@@ -380,6 +380,9 @@
     <string name="buscar_cliente">Buscar cliente por razon social..</string>
     <string name="buscar_cliente_sp">Buscar por Cliente</string>
     <string name="buscar_estatus_sp">Buscar por Estatus </string>
+    <string name="buscar_por_nombre">Buscar por nombre</string>
+    <string name="buscar_talla">Buscar talla</string>
+    <string name="cancelar">Cancelar</string>
     <string name="cantidad_bulto_producto">Pares:</string>
     <string name="cast_notification_connected_message">Connected to <ns2:g id="name">%1$s</ns2:g></string>
     <string name="cast_notification_connecting_message">Connecting to <ns2:g id="name">%1$s</ns2:g></string>
@@ -453,11 +456,14 @@
     <string name="estado">Estado:</string>
     <string name="estatus">Estatus</string>
     <string name="fecha">Fecha</string>
+    <string name="filter_menu">Filtrar</string>
+    <string name="filtrar">Filtrar</string>
     <string name="gcm_defaultSenderId" translatable="false">307400067998</string>
     <string name="google_app_id">1:307400067998:android:a154f655a47f556c</string>
     <string name="guion">-</string>
     <string name="hello_world">Hola mundo!</string>
     <string name="hint_contrasena_login">Contraseña..</string>
+    <string name="hint_filtrado_talla_nombre">Indique un nombre de talla.. (Por ej. 10, 12, 5000, 400)</string>
     <string name="hint_usuario_login">Cedula de identidad..</string>
     <string name="imagen">Imagen</string>
     <string name="ingresar">Ingresar</string>
@@ -476,6 +482,7 @@
     <string name="mr_media_route_controller_stop">Stop casting</string>
     <string name="mr_system_route_name">System</string>
     <string name="mr_user_route_category_name">Devices</string>
+    <string name="nombre_de_la_talla">Nombre de la talla..</string>
     <string name="nombre_producto">Nombre del producto:</string>
     <string name="nombre_usuario">Nombre</string>
     <string name="numeracion">Numeracion</string>
@@ -502,6 +509,7 @@
     <string name="rb_new">Mostrar destacados</string>
     <string name="rb_old">Mostrar otros</string>
     <string name="realizar_pedido">Realizar pedido</string>
+    <string name="reestablecer_filtros">Reestablecer filtros</string>
     <string name="rif">RIF:</string>
     <string name="seleccionar_cliente">Seleccionar Cliente</string>
     <string name="seleccione_productos">Seleccione los productos que desee eliminar..</string>

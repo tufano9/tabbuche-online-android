@@ -77,6 +77,7 @@ public class MainActivity extends Activity
         //EditText a = (EditText) findViewById(R.id.campo_usuario_login);
         //EditText b = (EditText) findViewById(R.id.campo_contrasena_login);
         //Funciones.setLoginCredentials("20179843", "Elg58led91", a, b);
+        //DBHelper.backUpDB(contexto);
     }
 
     @Override
@@ -466,8 +467,6 @@ public class MainActivity extends Activity
             pDialog.show();
         }
 
-
-
         /*
         Una vez terminado doInBackground segun lo que halla ocurrido
         pasamos a la sig. activity
@@ -583,6 +582,7 @@ public class MainActivity extends Activity
             String fecha_cliente           = ""; // cliente
             String fecha_pedido            = ""; // pedido
             String fecha_funciones_moviles = "";
+            String fecha_color_base = "";
 
             for (int i = 0; i < actualizar.length; i++)
                 actualizar[i] = 0;
@@ -597,6 +597,7 @@ public class MainActivity extends Activity
                 fecha_material = cursor.getString(3);
                 fecha_color = cursor.getString(4);
                 fecha_bulto = cursor.getString(5);
+                fecha_color_base = cursor.getString(6);
             }
 
             cursor = manager.cargarCursorActualizacionesClientes_ID(codigo_usuario);
@@ -645,6 +646,7 @@ public class MainActivity extends Activity
             String clientes_actualizacion          = "";
             String pedidos_actualizacion           = "";
             String funciones_moviles_actualizacion = "";
+            String colores_base_actualizacion = "";
 
             if (jdata != null && jdata.length() > 0)
             {
@@ -664,7 +666,7 @@ public class MainActivity extends Activity
                         clientes_actualizacion = jsonObject.getString("clientes");
                         pedidos_actualizacion = jsonObject.getString("pedidos");
                         funciones_moviles_actualizacion = jsonObject.getString("funciones");
-                        Log.i("fecha_externa", "(" + clientes_actualizacion + ")");
+                        colores_base_actualizacion = jsonObject.getString("colores_base");
                     }
                 }
                 catch (JSONException e)
@@ -681,7 +683,8 @@ public class MainActivity extends Activity
                     && fecha_usuario.equals(usuario_actualizacion) && fecha_material.equals(materiales_actualizacion)
                     && fecha_color.equals(colores_actualizacion) && fecha_bulto.equals(bultos_actualizacion)
                     && fecha_cliente.equals(clientes_actualizacion) && fecha_pedido.equals(pedidos_actualizacion)
-                    && fecha_funciones_moviles.equals(funciones_moviles_actualizacion))
+                    && fecha_funciones_moviles.equals(funciones_moviles_actualizacion)
+                    && fecha_color_base.equals(colores_base_actualizacion))
             {
                 // No actualizare
                 res = true;
@@ -739,9 +742,14 @@ public class MainActivity extends Activity
                     Log.d("MainActitivy", "Actualizare funcionalidades moviles");
                     actualizar[10] = 1;
                 }
+                if (!fecha_color_base.equals(colores_base_actualizacion))
+                {
+                    Log.d("MainActitivy", "Actualizare colores base");
+                    actualizar[11] = 1;
+                }
 
                 // Aca debere actualizar solamente lo que no esta, por ejemplo solo las lineas..
-                manager.actualizar_actualizacionesGenerales(lin, mod, pro, materiales_actualizacion, colores_actualizacion, bultos_actualizacion);
+                manager.actualizar_actualizacionesGenerales(lin, mod, pro, materiales_actualizacion, colores_actualizacion, bultos_actualizacion, colores_base_actualizacion);
                 manager.actualizar_actualizacionesPedido(codigo_usuario, pedidos_actualizacion);
                 manager.actualizar_actualizacionesCliente(codigo_usuario, clientes_actualizacion);
                 manager.actualizar_actualizacionesFunciones(codigo_usuario, funciones_moviles_actualizacion);

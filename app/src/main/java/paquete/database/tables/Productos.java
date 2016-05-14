@@ -16,6 +16,7 @@ public class Productos
     public static final String CN_ID_PRODUCTO_LINEA          = "id_linea";
     public static final String CN_ID_PRODUCTO_BULTO          = "id_bulto";
     public static final String CN_ID_PRODUCTO_COLOR          = "id_color";
+    public static final String ID_COLOR_BASE_PRODUCTO = "id_color_base";
     public static final String CN_ID_PRODUCTO_MATERIAL       = "id_material";
     public static final String CN_CODIGO_FABRICANTE_PRODUCTO = "codigo_fabricante";
     public static final String CN_PRECIO_PRODUCTO            = "precio";

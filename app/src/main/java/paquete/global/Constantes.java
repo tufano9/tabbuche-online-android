@@ -7,7 +7,7 @@ import java.io.File;
  */
 public class Constantes
 {
-    public final static int NUMERO_ACTUALIZACIONES = 11;
+    public final static int NUMERO_ACTUALIZACIONES = 12;
     public final static int NOTIFICACIONID         = 100;
     public final static int NOTIFICACIONID2        = 200;
 

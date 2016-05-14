@@ -214,6 +214,14 @@
     <string name="rb_new">Mostrar destacados</string>
     <string name="rb_old">Mostrar otros</string>
     <string name="rb_all">Mostrar todos</string>
+    <string name="filter_menu">Filtrar</string>
+    <string name="hint_filtrado_talla_nombre">Indique un nombre de talla.. (Por ej. 10, 12, 5000, 400)</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="reestablecer_filtros">Reestablecer filtros</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="nombre_de_la_talla">Nombre de la talla..</string>
+    <string name="buscar_talla">Buscar talla</string>
+    <string name="buscar_por_nombre">Buscar por nombre</string>
 
     <!-- Lista de tipos de estatus -->
     <string-array name="estatus_lista">
